@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PruebaFingerPrint",
+    "\\PruebaFingerPrint\\bin",
+    "\\PruebaFingerPrint\\bin\\Debug",
+    "\\PruebaFingerPrint\\My Project"
   ],
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
