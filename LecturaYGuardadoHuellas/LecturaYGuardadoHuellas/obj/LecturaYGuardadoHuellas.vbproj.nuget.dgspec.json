@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\georg\\source\\repos\\CryptoRA\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas.vbproj": {}
+    "C:\\Users\\mival\\source\\repos\\CryptoRA\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\georg\\source\\repos\\CryptoRA\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas.vbproj": {
+    "C:\\Users\\mival\\source\\repos\\CryptoRA\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\georg\\source\\repos\\CryptoRA\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas.vbproj",
+        "projectUniqueName": "C:\\Users\\mival\\source\\repos\\CryptoRA\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas.vbproj",
         "projectName": "LecturaYGuardadoHuellas",
-        "projectPath": "C:\\Users\\georg\\source\\repos\\CryptoRA\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas.vbproj",
-        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\georg\\source\\repos\\CryptoRA\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas\\obj\\",
+        "projectPath": "C:\\Users\\mival\\source\\repos\\CryptoRA\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas.vbproj",
+        "packagesPath": "C:\\Users\\mival\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mival\\source\\repos\\CryptoRA\\LecturaYGuardadoHuellas\\LecturaYGuardadoHuellas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mival\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

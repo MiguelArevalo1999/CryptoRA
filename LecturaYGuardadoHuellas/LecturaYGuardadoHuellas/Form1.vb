@@ -35,7 +35,7 @@ Public Class Form1
                 captura.EventHandler = Me
                 enroller = New DPFP.Processing.Enrollment()
                 Dim Text As New StringBuilder()
-                Text.AppendFormat("Necesitas pasar el dedo {0} veces", enroller.FeaturesNeeded)
+                Text.AppendFormat("Necesitas pasar el dedo {0} veces", enroller.FeaturesNeeded + 6)
                 vecesDedo.Text = Text.ToString()
             Else
                 MessageBox.Show("No se pudo instanciar la captura")
@@ -131,7 +131,7 @@ Public Class Form1
                 enroller.AddFeatures(caracteristicas)
             Finally
                 Dim Text As New StringBuilder()
-                Text.AppendFormat("Necesitas pasar el dedo {0} veces", enroller.FeaturesNeeded)
+                Text.AppendFormat("Necesitas pasar el dedo {0} veces", enroller.FeaturesNeeded + 6)
                 mostrarVeces(Text.ToString())
                 Select Case enroller.TemplateStatus
                     Case DPFP.Processing.Enrollment.Status.Ready
