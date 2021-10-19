@@ -1,0 +1,10 @@
+C:\Users\georg\source\repos\CryptoRA\Maqueta\bin\Debug\Maqueta.exe.config
+C:\Users\georg\source\repos\CryptoRA\Maqueta\bin\Debug\Maqueta.exe
+C:\Users\georg\source\repos\CryptoRA\Maqueta\bin\Debug\Maqueta.pdb
+C:\Users\georg\source\repos\CryptoRA\Maqueta\obj\Debug\Maqueta.csproj.AssemblyReference.cache
+C:\Users\georg\source\repos\CryptoRA\Maqueta\obj\Debug\Maqueta.FormInicio.resources
+C:\Users\georg\source\repos\CryptoRA\Maqueta\obj\Debug\Maqueta.Properties.Resources.resources
+C:\Users\georg\source\repos\CryptoRA\Maqueta\obj\Debug\Maqueta.csproj.GenerateResource.cache
+C:\Users\georg\source\repos\CryptoRA\Maqueta\obj\Debug\Maqueta.csproj.CoreCompileInputs.cache
+C:\Users\georg\source\repos\CryptoRA\Maqueta\obj\Debug\Maqueta.exe
+C:\Users\georg\source\repos\CryptoRA\Maqueta\obj\Debug\Maqueta.pdb
