@@ -1,5 +1,5 @@
 ﻿
-namespace WindowsFormsApp1
+namespace CryptoRA
 {
     partial class Form1
     {
