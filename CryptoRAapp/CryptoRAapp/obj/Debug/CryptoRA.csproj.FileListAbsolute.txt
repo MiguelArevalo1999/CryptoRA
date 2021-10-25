@@ -1,0 +1,9 @@
+C:\Users\mival\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\mival\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\mival\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\mival\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\CryptoRA.csproj.AssemblyReference.cache
+C:\Users\mival\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\mival\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\CryptoRA.csproj.GenerateResource.cache
+C:\Users\mival\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\CryptoRA.csproj.CoreCompileInputs.cache
+C:\Users\mival\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\mival\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
