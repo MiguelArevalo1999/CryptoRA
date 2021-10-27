@@ -69,5 +69,15 @@ namespace CryptoRA.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Titulo_CrytoRA {
+            get {
+                object obj = ResourceManager.GetObject("Titulo_CrytoRA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

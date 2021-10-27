@@ -7,4 +7,5 @@ C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.csproj
 C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.csproj.CoreCompileInputs.cache
 C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.exe
 C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.pdb
-C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.ventanaInicio.resources
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormInicio.resources
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormInicioSesionUsuario.resources

@@ -16,7 +16,7 @@ namespace CryptoRA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ventanaInicio());
+            Application.Run(new FormInicio());
         }
     }
 }
