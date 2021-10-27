@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace CryptoRA
 {
-    public partial class Form1 : Form
+    public partial class ventanaInicio : Form
     {
-        public Form1()
+        public ventanaInicio()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
