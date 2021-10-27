@@ -1,0 +1,10 @@
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\bin\Debug\CryptoRA.exe.config
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\bin\Debug\CryptoRA.exe
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\bin\Debug\CryptoRA.pdb
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.csproj.AssemblyReference.cache
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.Properties.Resources.resources
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.csproj.GenerateResource.cache
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.csproj.CoreCompileInputs.cache
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.exe
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.pdb
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.ventanaInicio.resources
