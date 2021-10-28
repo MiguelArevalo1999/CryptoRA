@@ -31,25 +31,25 @@ namespace CryptoRA
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicioSesionUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonRegresar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,16 +60,6 @@ namespace CryptoRA
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(367, 513);
             this.panel1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CryptoRA.Properties.Resources.pulgar4;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(323, 473);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -85,7 +75,7 @@ namespace CryptoRA
             this.panel5.Controls.Add(this.textBox1);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.buttonRegresar);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Location = new System.Drawing.Point(3, 194);
             this.panel5.Name = "panel5";
@@ -103,17 +93,17 @@ namespace CryptoRA
             this.button3.Text = "ADMINISTRAR";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonRegresar
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Location = new System.Drawing.Point(3, 301);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 34);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "REGRESAR";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRegresar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonRegresar.Location = new System.Drawing.Point(3, 301);
+            this.buttonRegresar.Name = "buttonRegresar";
+            this.buttonRegresar.Size = new System.Drawing.Size(143, 34);
+            this.buttonRegresar.TabIndex = 5;
+            this.buttonRegresar.Text = "REGRESAR";
+            this.buttonRegresar.UseVisualStyleBackColor = true;
+            this.buttonRegresar.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -134,15 +124,6 @@ namespace CryptoRA
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(567, 185);
             this.panel3.TabIndex = 3;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CryptoRA.Properties.Resources.Titulo_CrytoRA;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(500, 75);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
             // 
             // panel4
             // 
@@ -183,6 +164,25 @@ namespace CryptoRA
             this.textBox1.Size = new System.Drawing.Size(331, 22);
             this.textBox1.TabIndex = 8;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CryptoRA.Properties.Resources.Titulo_CrytoRA;
+            this.pictureBox2.Location = new System.Drawing.Point(33, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(500, 75);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CryptoRA.Properties.Resources.pulgar4;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(323, 473);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormInicioSesionUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,14 +197,14 @@ namespace CryptoRA
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CryptoRA";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,7 +216,7 @@ namespace CryptoRA
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonRegresar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
