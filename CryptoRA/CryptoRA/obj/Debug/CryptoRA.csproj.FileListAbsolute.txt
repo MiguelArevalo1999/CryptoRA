@@ -9,3 +9,4 @@ C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.exe
 C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.pdb
 C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormInicio.resources
 C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormInicioSesionUsuario.resources
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormInicioAdmin.resources
