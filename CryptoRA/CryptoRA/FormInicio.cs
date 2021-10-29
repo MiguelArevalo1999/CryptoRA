@@ -34,14 +34,21 @@ namespace CryptoRA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form formulario2 = new FormInicioSesionUsuario();
-            formulario2.Show();
+            Form formulario1 = new FormInicioSesionUsuario();
+            formulario1.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Form formulario1 = new FormInicioAdmin();
+            formulario1.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form formulario1 = new FormNuevoUsuario();
             formulario1.Show();
             this.Hide();
         }
