@@ -52,6 +52,12 @@
     <Compile Include="FormBaseDatos.Designer.cs">
       <DependentUpon>FormBaseDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCifrado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCifrado.Designer.cs">
+      <DependentUpon>FormCifrado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormBaseDatos.resx">
       <DependentUpon>FormBaseDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCifrado.resx">
+      <DependentUpon>FormCifrado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoUsuario.resx">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
@@ -139,6 +148,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Titulo_CrytoRA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\file.png" />
+    <Content Include="Resources\pubkey.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
