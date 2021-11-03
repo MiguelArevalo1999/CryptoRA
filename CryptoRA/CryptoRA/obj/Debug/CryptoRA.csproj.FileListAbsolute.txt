@@ -13,3 +13,4 @@ C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormIn
 C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormNuevoUsuario.resources
 C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormNuevoUsuarioAdmin.resources
 C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormBaseDatos.resources
+C:\Users\georg\Source\Repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormUsuario.resources

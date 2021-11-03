@@ -10,28 +10,16 @@ using System.Windows.Forms;
 
 namespace CryptoRA
 {
-    public partial class FormInicioSesionUsuario : Form
+    public partial class FormUsuario : Form
     {
-        public FormInicioSesionUsuario()
+        public FormUsuario()
         {
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonRegresar_Click(object sender, EventArgs e)
         {
             Form formulario1 = new FormInicio();
-            formulario1.Show();
-            this.Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form formulario1 = new FormUsuario();
             formulario1.Show();
             this.Hide();
         }
