@@ -52,5 +52,15 @@ namespace CryptoRA
             formulario1.Show();
             this.Hide();
         }
+
+        private void FormInicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
