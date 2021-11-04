@@ -33,22 +33,22 @@ namespace CryptoRA
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonRegresar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -84,15 +84,6 @@ namespace CryptoRA
             this.panel6.Size = new System.Drawing.Size(268, 341);
             this.panel6.TabIndex = 11;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(37, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 178);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -117,6 +108,7 @@ namespace CryptoRA
             this.button1.TabIndex = 9;
             this.button1.Text = "MENÚ DE DESCIFRADO";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonRegresar
             // 
@@ -151,16 +143,6 @@ namespace CryptoRA
             this.panel3.Size = new System.Drawing.Size(1269, 101);
             this.panel3.TabIndex = 3;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CryptoRA.Properties.Resources.Titulo_CrytoRA;
-            this.pictureBox2.Location = new System.Drawing.Point(599, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(667, 92);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
@@ -184,6 +166,25 @@ namespace CryptoRA
             this.label4.Text = "MENÚ PRINCIPAL";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(37, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 178);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CryptoRA.Properties.Resources.Titulo_CrytoRA;
+            this.pictureBox2.Location = new System.Drawing.Point(599, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(667, 92);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -199,11 +200,11 @@ namespace CryptoRA
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

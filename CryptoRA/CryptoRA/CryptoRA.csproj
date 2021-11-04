@@ -58,6 +58,12 @@
     <Compile Include="FormCifrado.Designer.cs">
       <DependentUpon>FormCifrado.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDescifrado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDescifrado.Designer.cs">
+      <DependentUpon>FormDescifrado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCifrado.resx">
       <DependentUpon>FormCifrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDescifrado.resx">
+      <DependentUpon>FormDescifrado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoUsuario.resx">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
@@ -151,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\file.png" />
+    <None Include="Resources\fingerprint.png" />
     <Content Include="Resources\pubkey.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

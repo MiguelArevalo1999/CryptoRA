@@ -1,7 +1,7 @@
 ﻿
 namespace CryptoRA
 {
-    partial class FormCifrado
+    partial class FormDescifrado
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,16 @@ namespace CryptoRA
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCifrado));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDescifrado));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -62,7 +62,7 @@ namespace CryptoRA
             this.panel2.Location = new System.Drawing.Point(372, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(573, 537);
-            this.panel2.TabIndex = 2;
+            this.panel2.TabIndex = 3;
             // 
             // panel5
             // 
@@ -76,6 +76,16 @@ namespace CryptoRA
             this.panel5.Size = new System.Drawing.Size(567, 384);
             this.panel5.TabIndex = 4;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(215, 292);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(125, 41);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Descifrar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -84,8 +94,9 @@ namespace CryptoRA
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 34);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Cargar llave pública";
+            this.button2.Text = "Validar llave privada";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -97,7 +108,6 @@ namespace CryptoRA
             this.button1.TabIndex = 4;
             this.button1.Text = "Seleccionar archivo";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -116,7 +126,6 @@ namespace CryptoRA
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(500, 42);
             this.panel4.TabIndex = 3;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // label4
             // 
@@ -125,9 +134,9 @@ namespace CryptoRA
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(247)))));
             this.label4.Location = new System.Drawing.Point(200, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 23);
+            this.label4.Size = new System.Drawing.Size(161, 23);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Menú de cifrado";
+            this.label4.Text = "Menú de descifrado";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
@@ -140,17 +149,7 @@ namespace CryptoRA
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(268, 502);
-            this.panel6.TabIndex = 12;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(215, 292);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 41);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Cifrar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.panel6.TabIndex = 13;
             // 
             // button4
             // 
@@ -176,7 +175,7 @@ namespace CryptoRA
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::CryptoRA.Properties.Resources.pubkey;
+            this.pictureBox3.Image = global::CryptoRA.Properties.Resources.fingerprint;
             this.pictureBox3.Location = new System.Drawing.Point(336, 62);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(143, 121);
@@ -203,9 +202,8 @@ namespace CryptoRA
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // FormCifrado
+            // FormDescifrado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,9 +212,8 @@ namespace CryptoRA
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormCifrado";
-            this.Text = "FormCifrado";
-            this.Load += new System.EventHandler(this.FormCifrado_Load);
+            this.Name = "FormDescifrado";
+            this.Text = "FormDescifrado";
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -235,17 +232,17 @@ namespace CryptoRA
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

@@ -31,3 +31,4 @@ C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.csproj
 C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.csproj.CoreCompileInputs.cache
 C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.exe
 C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.pdb
+C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormDescifrado.resources

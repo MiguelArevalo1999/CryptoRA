@@ -124,10 +124,13 @@
   <data name="Titulo_CrytoRA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Titulo_CrytoRA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pubkey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pubkey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="file" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pubkey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pubkey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fingerprint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fingerprint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
