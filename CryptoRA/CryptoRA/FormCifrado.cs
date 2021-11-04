@@ -24,7 +24,10 @@ namespace CryptoRA
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                //Aqui va el codigo para abrir y leer el archivo
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

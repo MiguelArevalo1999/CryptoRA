@@ -38,5 +38,23 @@ namespace CryptoRA
             formulario4.Show();
             this.Hide();
         }
+
+        private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog1.ShowDialog() == DialogResult.OK )
+            {
+                //Aqui va el codigo para abrir y leer el archivo
+            }
+        }
     }
 }
