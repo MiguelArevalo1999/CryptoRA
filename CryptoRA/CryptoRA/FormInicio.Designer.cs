@@ -64,7 +64,7 @@ namespace CryptoRA
             // 
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(399, 17);
+            this.panel2.Location = new System.Drawing.Point(399, 21);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(573, 537);
             this.panel2.TabIndex = 1;
@@ -85,7 +85,7 @@ namespace CryptoRA
             this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox1.Location = new System.Drawing.Point(153, 354);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 22);
+            this.textBox1.Size = new System.Drawing.Size(112, 26);
             this.textBox1.TabIndex = 7;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -150,7 +150,7 @@ namespace CryptoRA
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(247)))));
             this.label4.Location = new System.Drawing.Point(175, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 19);
+            this.label4.Size = new System.Drawing.Size(185, 23);
             this.label4.TabIndex = 0;
             this.label4.Text = "Bienvenido a CryptoRA";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,10 +174,11 @@ namespace CryptoRA
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(982, 570);
@@ -188,6 +189,7 @@ namespace CryptoRA
             this.Name = "FormInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CryptoRA";
+            this.Load += new System.EventHandler(this.FormInicio_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
