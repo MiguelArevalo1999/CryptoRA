@@ -14,7 +14,7 @@ kernel = np.ones((5,5), np.uint8)
 # you want to erode/dilate a given image.
 img_dilation = cv2.dilate(img, kernel, iterations=1)
 img_erosion = cv2.erode(img_dilation, kernel, iterations=1)
-img_opening = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel)
+img_opening = cv2.morphologyEx(img_erosion, cv2.MORPH_OPEN, kernel)
  
 cv2.imshow('Input', img)
 cv2.imshow('Erosion', img_erosion)
