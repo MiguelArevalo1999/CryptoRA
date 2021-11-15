@@ -34,20 +34,18 @@ namespace CryptoRA
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.sexoCBox = new System.Windows.Forms.ComboBox();
+            this.municipioTbox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.ciudadTbox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.edadCbox = new System.Windows.Forms.ComboBox();
+            this.paisTbox = new System.Windows.Forms.TextBox();
+            this.telefonoTbox = new System.Windows.Forms.TextBox();
+            this.apellidosTbox = new System.Windows.Forms.TextBox();
+            this.nombreTbox = new System.Windows.Forms.TextBox();
+            this.correoTbox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,9 +53,9 @@ namespace CryptoRA
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.usuarioTbox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.InscribirBtn = new System.Windows.Forms.Button();
             this.buttonRegresar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -102,20 +100,18 @@ namespace CryptoRA
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.textBox9);
+            this.panel5.Controls.Add(this.sexoCBox);
+            this.panel5.Controls.Add(this.municipioTbox);
             this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.textBox8);
+            this.panel5.Controls.Add(this.ciudadTbox);
             this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.radioButton2);
-            this.panel5.Controls.Add(this.radioButton1);
             this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.comboBox1);
-            this.panel5.Controls.Add(this.textBox7);
-            this.panel5.Controls.Add(this.textBox6);
-            this.panel5.Controls.Add(this.textBox5);
-            this.panel5.Controls.Add(this.textBox4);
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.textBox2);
+            this.panel5.Controls.Add(this.edadCbox);
+            this.panel5.Controls.Add(this.paisTbox);
+            this.panel5.Controls.Add(this.telefonoTbox);
+            this.panel5.Controls.Add(this.apellidosTbox);
+            this.panel5.Controls.Add(this.nombreTbox);
+            this.panel5.Controls.Add(this.correoTbox);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.label6);
@@ -123,21 +119,32 @@ namespace CryptoRA
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.usuarioTbox);
             this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.button3);
+            this.panel5.Controls.Add(this.InscribirBtn);
             this.panel5.Controls.Add(this.buttonRegresar);
             this.panel5.Location = new System.Drawing.Point(3, 150);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(567, 384);
             this.panel5.TabIndex = 4;
             // 
-            // textBox9
+            // sexoCBox
             // 
-            this.textBox9.Location = new System.Drawing.Point(132, 242);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(401, 22);
-            this.textBox9.TabIndex = 32;
+            this.sexoCBox.FormattingEnabled = true;
+            this.sexoCBox.Items.AddRange(new object[] {
+            "Hombre",
+            "Mujer"});
+            this.sexoCBox.Location = new System.Drawing.Point(383, 132);
+            this.sexoCBox.Name = "sexoCBox";
+            this.sexoCBox.Size = new System.Drawing.Size(121, 27);
+            this.sexoCBox.TabIndex = 33;
+            // 
+            // municipioTbox
+            // 
+            this.municipioTbox.Location = new System.Drawing.Point(132, 242);
+            this.municipioTbox.Name = "municipioTbox";
+            this.municipioTbox.Size = new System.Drawing.Size(401, 26);
+            this.municipioTbox.TabIndex = 32;
             // 
             // label11
             // 
@@ -146,16 +153,16 @@ namespace CryptoRA
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
             this.label11.Location = new System.Drawing.Point(20, 242);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 19);
+            this.label11.Size = new System.Drawing.Size(105, 23);
             this.label11.TabIndex = 31;
             this.label11.Text = "MUNICIPIO:";
             // 
-            // textBox8
+            // ciudadTbox
             // 
-            this.textBox8.Location = new System.Drawing.Point(132, 214);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(401, 22);
-            this.textBox8.TabIndex = 30;
+            this.ciudadTbox.Location = new System.Drawing.Point(132, 214);
+            this.ciudadTbox.Name = "ciudadTbox";
+            this.ciudadTbox.Size = new System.Drawing.Size(401, 26);
+            this.ciudadTbox.TabIndex = 30;
             // 
             // label10
             // 
@@ -164,31 +171,9 @@ namespace CryptoRA
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
             this.label10.Location = new System.Drawing.Point(20, 214);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 19);
+            this.label10.Size = new System.Drawing.Size(81, 23);
             this.label10.TabIndex = 29;
             this.label10.Text = "CIUDAD:";
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(477, 135);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(54, 17);
-            this.radioButton2.TabIndex = 28;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "mujer";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(378, 135);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 17);
-            this.radioButton1.TabIndex = 27;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "hombre";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -197,14 +182,14 @@ namespace CryptoRA
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
             this.label9.Location = new System.Drawing.Point(307, 131);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 19);
+            this.label9.Size = new System.Drawing.Size(58, 23);
             this.label9.TabIndex = 26;
             this.label9.Text = "SEXO:";
             // 
-            // comboBox1
+            // edadCbox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.edadCbox.FormattingEnabled = true;
+            this.edadCbox.Items.AddRange(new object[] {
             "<18",
             "19",
             "20",
@@ -248,52 +233,45 @@ namespace CryptoRA
             "58",
             "59",
             ">60"});
-            this.comboBox1.Location = new System.Drawing.Point(132, 131);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(91, 21);
-            this.comboBox1.TabIndex = 25;
+            this.edadCbox.Location = new System.Drawing.Point(132, 131);
+            this.edadCbox.Name = "edadCbox";
+            this.edadCbox.Size = new System.Drawing.Size(91, 27);
+            this.edadCbox.TabIndex = 25;
             // 
-            // textBox7
+            // paisTbox
             // 
-            this.textBox7.Location = new System.Drawing.Point(132, 186);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(401, 22);
-            this.textBox7.TabIndex = 24;
+            this.paisTbox.Location = new System.Drawing.Point(132, 186);
+            this.paisTbox.Name = "paisTbox";
+            this.paisTbox.Size = new System.Drawing.Size(401, 26);
+            this.paisTbox.TabIndex = 24;
             // 
-            // textBox6
+            // telefonoTbox
             // 
-            this.textBox6.Location = new System.Drawing.Point(132, 158);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(190, 22);
-            this.textBox6.TabIndex = 23;
+            this.telefonoTbox.Location = new System.Drawing.Point(132, 158);
+            this.telefonoTbox.Name = "telefonoTbox";
+            this.telefonoTbox.Size = new System.Drawing.Size(190, 26);
+            this.telefonoTbox.TabIndex = 23;
             // 
-            // textBox5
+            // apellidosTbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(343, 100);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(190, 22);
-            this.textBox5.TabIndex = 22;
+            this.apellidosTbox.Location = new System.Drawing.Point(132, 100);
+            this.apellidosTbox.Name = "apellidosTbox";
+            this.apellidosTbox.Size = new System.Drawing.Size(401, 26);
+            this.apellidosTbox.TabIndex = 21;
             // 
-            // textBox4
+            // nombreTbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(132, 100);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(190, 22);
-            this.textBox4.TabIndex = 21;
+            this.nombreTbox.Location = new System.Drawing.Point(132, 71);
+            this.nombreTbox.Name = "nombreTbox";
+            this.nombreTbox.Size = new System.Drawing.Size(401, 26);
+            this.nombreTbox.TabIndex = 20;
             // 
-            // textBox3
+            // correoTbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(132, 71);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(401, 22);
-            this.textBox3.TabIndex = 20;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(132, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(401, 22);
-            this.textBox2.TabIndex = 19;
+            this.correoTbox.Location = new System.Drawing.Point(132, 41);
+            this.correoTbox.Name = "correoTbox";
+            this.correoTbox.Size = new System.Drawing.Size(401, 26);
+            this.correoTbox.TabIndex = 19;
             // 
             // label8
             // 
@@ -302,7 +280,7 @@ namespace CryptoRA
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
             this.label8.Location = new System.Drawing.Point(20, 186);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 19);
+            this.label8.Size = new System.Drawing.Size(51, 23);
             this.label8.TabIndex = 18;
             this.label8.Text = "PAÍS:";
             // 
@@ -313,7 +291,7 @@ namespace CryptoRA
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
             this.label7.Location = new System.Drawing.Point(20, 158);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 19);
+            this.label7.Size = new System.Drawing.Size(100, 23);
             this.label7.TabIndex = 17;
             this.label7.Text = "TELÉFONO:";
             // 
@@ -324,7 +302,7 @@ namespace CryptoRA
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
             this.label6.Location = new System.Drawing.Point(20, 129);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 19);
+            this.label6.Size = new System.Drawing.Size(62, 23);
             this.label6.TabIndex = 16;
             this.label6.Text = "EDAD:";
             // 
@@ -335,7 +313,7 @@ namespace CryptoRA
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
             this.label5.Location = new System.Drawing.Point(20, 100);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 19);
+            this.label5.Size = new System.Drawing.Size(105, 23);
             this.label5.TabIndex = 15;
             this.label5.Text = "APELLIDOS:";
             // 
@@ -346,7 +324,7 @@ namespace CryptoRA
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
             this.label3.Location = new System.Drawing.Point(20, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 19);
+            this.label3.Size = new System.Drawing.Size(107, 23);
             this.label3.TabIndex = 14;
             this.label3.Text = "NOMBRE(s):";
             // 
@@ -357,7 +335,7 @@ namespace CryptoRA
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
             this.label2.Location = new System.Drawing.Point(20, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 19);
+            this.label2.Size = new System.Drawing.Size(99, 23);
             this.label2.TabIndex = 13;
             this.label2.Text = "CORREO-e:";
             // 
@@ -368,16 +346,16 @@ namespace CryptoRA
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
             this.label1.Location = new System.Drawing.Point(20, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 19);
+            this.label1.Size = new System.Drawing.Size(90, 23);
             this.label1.TabIndex = 12;
             this.label1.Text = "USUARIO:";
             // 
-            // textBox1
+            // usuarioTbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(401, 22);
-            this.textBox1.TabIndex = 11;
+            this.usuarioTbox.Location = new System.Drawing.Point(132, 12);
+            this.usuarioTbox.Name = "usuarioTbox";
+            this.usuarioTbox.Size = new System.Drawing.Size(401, 26);
+            this.usuarioTbox.TabIndex = 11;
             // 
             // button1
             // 
@@ -390,16 +368,17 @@ namespace CryptoRA
             this.button1.Text = "VALIDAR HUELLA DACTILAR";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // InscribirBtn
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button3.Location = new System.Drawing.Point(421, 346);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 34);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "INSCRIBIR";
-            this.button3.UseVisualStyleBackColor = true;
+            this.InscribirBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.InscribirBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.InscribirBtn.Location = new System.Drawing.Point(421, 346);
+            this.InscribirBtn.Name = "InscribirBtn";
+            this.InscribirBtn.Size = new System.Drawing.Size(143, 34);
+            this.InscribirBtn.TabIndex = 9;
+            this.InscribirBtn.Text = "INSCRIBIR";
+            this.InscribirBtn.UseVisualStyleBackColor = true;
+            this.InscribirBtn.Click += new System.EventHandler(this.InscribirBtn_Click);
             // 
             // buttonRegresar
             // 
@@ -447,14 +426,14 @@ namespace CryptoRA
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(247)))));
             this.label4.Location = new System.Drawing.Point(191, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 19);
+            this.label4.Size = new System.Drawing.Size(145, 23);
             this.label4.TabIndex = 0;
             this.label4.Text = "NUEVO USUARIO";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormNuevoUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(982, 570);
@@ -464,7 +443,8 @@ namespace CryptoRA
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNuevoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Nuevo Usuario";
+            this.Load += new System.EventHandler(this.FormNuevoUsuario_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -484,20 +464,17 @@ namespace CryptoRA
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox municipioTbox;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox ciudadTbox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox edadCbox;
+        private System.Windows.Forms.TextBox paisTbox;
+        private System.Windows.Forms.TextBox telefonoTbox;
+        private System.Windows.Forms.TextBox apellidosTbox;
+        private System.Windows.Forms.TextBox nombreTbox;
+        private System.Windows.Forms.TextBox correoTbox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -505,13 +482,14 @@ namespace CryptoRA
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox usuarioTbox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button InscribirBtn;
         private System.Windows.Forms.Button buttonRegresar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox sexoCBox;
     }
 }

@@ -1,0 +1,1 @@
+extract_minutiae_features(img, showResult=True)
