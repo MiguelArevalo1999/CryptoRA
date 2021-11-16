@@ -57,18 +57,6 @@ namespace CryptoRA
             }
         }
 
-        private void SeleccionarBtn_Click(object sender, EventArgs e)
-        {
-            
-        }
-        //private void DataGrid_Click(object sender, EventArgs e)
-        //{
-        //    FirebaseResponse res = client.Get(@"usuarios");
-        //    Dictionary<string, Usuario> data = JsonConvert.DeserializeObject<Dictionary<string, Usuario>>(res.Body.ToString());
-        //    PopulateDataGrid(data);
-        //}
-
-
         void PopulateDataGrid(Dictionary<string, Usuario> record)
         {
             dataGridView1.Rows.Clear();

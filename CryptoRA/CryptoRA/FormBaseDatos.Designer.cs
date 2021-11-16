@@ -34,7 +34,6 @@ namespace CryptoRA
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBaseDatos));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.SeleccionarBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonRegresar = new System.Windows.Forms.Button();
@@ -66,7 +65,6 @@ namespace CryptoRA
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.SeleccionarBtn);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonRegresar);
@@ -75,16 +73,6 @@ namespace CryptoRA
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1269, 48);
             this.panel1.TabIndex = 5;
-            // 
-            // SeleccionarBtn
-            // 
-            this.SeleccionarBtn.Location = new System.Drawing.Point(678, 3);
-            this.SeleccionarBtn.Name = "SeleccionarBtn";
-            this.SeleccionarBtn.Size = new System.Drawing.Size(191, 42);
-            this.SeleccionarBtn.TabIndex = 11;
-            this.SeleccionarBtn.Text = "SELECCIONAR";
-            this.SeleccionarBtn.UseVisualStyleBackColor = true;
-            this.SeleccionarBtn.Click += new System.EventHandler(this.SeleccionarBtn_Click);
             // 
             // button2
             // 
@@ -226,7 +214,6 @@ namespace CryptoRA
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button SeleccionarBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
