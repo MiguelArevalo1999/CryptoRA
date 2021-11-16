@@ -170,5 +170,8 @@
     </PackageReference>
     <PackageReference Include="Google.Cloud.Firestore" Version="1.1.0-beta01" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
