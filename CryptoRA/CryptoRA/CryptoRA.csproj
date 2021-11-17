@@ -168,7 +168,7 @@
     <PackageReference Include="FireSharp">
       <Version>2.0.4</Version>
     </PackageReference>
-    <PackageReference Include="Google.Cloud.Firestore" Version="1.1.0-beta01" />
+    <PackageReference Include="Google.Cloud.Firestore" Version="2.4.0" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
