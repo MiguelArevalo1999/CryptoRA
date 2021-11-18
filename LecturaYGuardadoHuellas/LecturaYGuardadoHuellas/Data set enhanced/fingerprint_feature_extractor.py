@@ -167,7 +167,7 @@ class FingerprintFeatureExtractor(object):
             (rr, cc) = skimage.draw.circle_perimeter(row, col, 3) 
             skimage.draw.set_color(DispImg, (rr, cc), (0, 0, 255)) 
 
-        cv2.imshow('a', DispImg) 
+        cv2.imshow('Minucias extraidas', DispImg) 
         cv2.waitKey(0)
 
 
