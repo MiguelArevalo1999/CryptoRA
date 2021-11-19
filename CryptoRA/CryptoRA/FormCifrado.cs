@@ -24,10 +24,7 @@ namespace CryptoRA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                //Aqui va el codigo para abrir y leer el archivo
-            }
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -55,6 +52,19 @@ namespace CryptoRA
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                //Aqui va el codigo para abrir y leer el archivo
+            }
         }
     }
 }

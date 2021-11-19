@@ -18,6 +18,7 @@ namespace CryptoRA
         public string Pais { get; set; }
         public string Ciudad { get; set; }
         public string Municipio { get; set; }
+        public bool isAdmin { get; set; }
        
     }
 }

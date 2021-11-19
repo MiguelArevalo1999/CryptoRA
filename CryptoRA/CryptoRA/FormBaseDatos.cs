@@ -71,10 +71,11 @@ namespace CryptoRA
             dataGridView1.Columns.Add("pais", "País");
             dataGridView1.Columns.Add("ciudad", "Ciudad");
             dataGridView1.Columns.Add("municipio", "Municipio");
+            dataGridView1.Columns.Add("isAdmin", "Admin");
 
             foreach (var item in record)
             {
-                dataGridView1.Rows.Add(item.Key, item.Value.Nombre, item.Value.Apellidos, item.Value.Correo, item.Value.Edad, item.Value.Sexo, item.Value.Pais, item.Value.Ciudad, item.Value.Municipio);
+                dataGridView1.Rows.Add(item.Key, item.Value.Nombre, item.Value.Apellidos, item.Value.Correo, item.Value.Edad, item.Value.Sexo, item.Value.Pais, item.Value.Ciudad, item.Value.Municipio,item.Value.isAdmin);
             }
         }
 
