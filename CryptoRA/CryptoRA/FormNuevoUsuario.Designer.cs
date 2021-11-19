@@ -61,6 +61,8 @@ namespace CryptoRA
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.isAdminCb = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -100,6 +102,8 @@ namespace CryptoRA
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.isAdminCb);
+            this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.sexoCBox);
             this.panel5.Controls.Add(this.municipioTbox);
             this.panel5.Controls.Add(this.label11);
@@ -361,7 +365,7 @@ namespace CryptoRA
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(212, 270);
+            this.button1.Location = new System.Drawing.Point(226, 317);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 38);
             this.button1.TabIndex = 10;
@@ -431,6 +435,29 @@ namespace CryptoRA
             this.label4.Text = "NUEVO USUARIO";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
+            this.label12.Location = new System.Drawing.Point(22, 276);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 23);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "ADMIN:";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // isAdminCb
+            // 
+            this.isAdminCb.FormattingEnabled = true;
+            this.isAdminCb.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.isAdminCb.Location = new System.Drawing.Point(132, 273);
+            this.isAdminCb.Name = "isAdminCb";
+            this.isAdminCb.Size = new System.Drawing.Size(121, 27);
+            this.isAdminCb.TabIndex = 35;
+            // 
             // FormNuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -491,5 +518,7 @@ namespace CryptoRA
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox sexoCBox;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox isAdminCb;
     }
 }

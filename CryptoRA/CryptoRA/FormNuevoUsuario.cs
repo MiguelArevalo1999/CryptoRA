@@ -46,7 +46,8 @@ namespace CryptoRA
                 Telefono = telefonoTbox.Text,
                 Pais = paisTbox.Text,
                 Ciudad = ciudadTbox.Text,
-                Municipio = municipioTbox.Text
+                Municipio = municipioTbox.Text,
+                isAdmin = Convert.ToBoolean(isAdminCb.SelectedItem),
 
             };
             var setter = client.Set("usuarios/"+usuarioTbox.Text,u);
@@ -63,6 +64,11 @@ namespace CryptoRA
             {
                 MessageBox.Show("Ha habido un problema en el internet");
             }
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
