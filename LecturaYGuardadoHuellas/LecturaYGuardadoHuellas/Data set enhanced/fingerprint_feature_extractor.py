@@ -167,8 +167,8 @@ class FingerprintFeatureExtractor(object):
             (rr, cc) = skimage.draw.circle_perimeter(row, col, 3) 
             skimage.draw.set_color(DispImg, (rr, cc), (0, 0, 255)) 
 
-        cv2.imshow('Minucias extraidas', DispImg) 
-        cv2.waitKey(0)
+        # cv2.imshow('Minucias extraidas', DispImg) 
+        # cv2.waitKey(0)
 
 
 def extract_minutiae_features(img, showResult=False):
@@ -178,4 +178,12 @@ def extract_minutiae_features(img, showResult=False):
     if(showResult):
         feature_extractor.showResults()
 
+    with open('Yvonne_features.txt', 'a') as f:    
+        for bifurcation in FeaturesBif:
+            f.write(str(list((bifurcation.locX, bifurcation.locY, bifurcation.Orientation, bifurcation.Type)))+'\n')
+            
+        for termination in FeaturesTerm:
+            f.write(str(list((termination.locX, termination.locY, termination.Orientation, termination.Type)))+'\n')
+            
+    f.close()
     return(FeaturesTerm, FeaturesBif)
