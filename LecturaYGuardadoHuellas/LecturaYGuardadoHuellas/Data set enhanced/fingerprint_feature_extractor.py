@@ -4,6 +4,7 @@ import skimage.morphology
 from skimage.morphology import convex_hull_image, erosion
 from skimage.morphology import square
 import math
+import json
 
 class MinutiaeFeature(object):
     def __init__(self, locX, locY, Orientation, Type):
