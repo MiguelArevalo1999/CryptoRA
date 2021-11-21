@@ -1,520 +1,520 @@
-[46, 112, [90.0, -0.0, -90.0], 'Bifurcation']
-[62, 84, [-180.0, -0.0, -90.0], 'Bifurcation']
-[66, 124, [90.0, -0.0, -90.0], 'Bifurcation']
-[68, 165, [90.0, -180.0, -0.0], 'Bifurcation']
-[70, 136, [90.0, -0.0, -90.0], 'Bifurcation']
-[71, 100, [90.0, -0.0, -90.0], 'Bifurcation']
-[81, 162, [45.0, -180.0, -45.0], 'Bifurcation']
-[87, 238, [45.0, -180.0, -90.0], 'Bifurcation']
-[98, 66, [90.0, 45.0, -135.0], 'Bifurcation']
-[97, 68, [135.0, -180.0, -45.0], 'Bifurcation']
-[191, 253, [90.0, -0.0, -135.0], 'Bifurcation']
-[195, 96, [90.0, -0.0, -90.0], 'Bifurcation']
-[243, 111, [45.0, -180.0, -90.0], 'Bifurcation']
-[36, 190, [-26.56505117707799], 'Termination']
-[36, 245, [-26.56505117707799], 'Termination']
-[37, 177, [-26.56505117707799], 'Termination']
-[37, 214, [-45.0], 'Termination']
-[38, 138, [-180.0], 'Termination']
-[38, 158, [-0.0], 'Termination']
-[56, 104, [-116.56505117707799], 'Termination']
-[62, 281, [90.0], 'Termination']
-[64, 138, [-135.0], 'Termination']
-[74, 192, [-90.0], 'Termination']
-[86, 141, [-90.0], 'Termination']
-[93, 205, [116.56505117707799], 'Termination']
-[105, 236, [90.0], 'Termination']
-[115, 178, [90.0], 'Termination']
-[119, 278, [-90.0], 'Termination']
-[121, 84, [116.56505117707799], 'Termination']
-[134, 280, [-116.56505117707799], 'Termination']
-[140, 193, [63.43494882292201], 'Termination']
-[141, 218, [63.43494882292201], 'Termination']
-[156, 218, [45.0], 'Termination']
-[168, 275, [-116.56505117707799], 'Termination']
-[169, 57, [-63.43494882292201], 'Termination']
-[170, 75, [135.0], 'Termination']
-[174, 292, [-116.56505117707799], 'Termination']
-[180, 215, [45.0], 'Termination']
-[187, 171, [-180.0], 'Termination']
-[198, 97, [116.56505117707799], 'Termination']
-[199, 214, [26.56505117707799], 'Termination']
-[221, 261, [-153.434948822922], 'Termination']
-[230, 229, [26.56505117707799], 'Termination']
-[245, 289, [90.0], 'Termination']
-[257, 252, [-153.434948822922], 'Termination']
-[259, 141, [153.434948822922], 'Termination']
-[261, 49, [135.0], 'Termination']
-[265, 67, [-63.43494882292201], 'Termination']
-[281, 165, [-0.0], 'Termination']
-[283, 238, [-153.434948822922], 'Termination']
-[298, 225, [-153.434948822922], 'Termination']
-[308, 216, [-180.0], 'Termination']
-[314, 123, [-26.56505117707799], 'Termination']
-[315, 44, [135.0], 'Termination']
-[318, 200, [153.434948822922], 'Termination']
-[58, 145, [90.0, -0.0, -135.0], 'Bifurcation']
-[67, 134, [90.0, -0.0, -135.0], 'Bifurcation']
-[69, 125, [90.0, -180.0, -0.0], 'Bifurcation']
-[97, 142, [90.0, -0.0, -135.0], 'Bifurcation']
-[101, 155, [90.0, -180.0, -90.0], 'Bifurcation']
-[102, 124, [90.0, -0.0, -90.0], 'Bifurcation']
-[105, 88, [135.0, -0.0, -90.0], 'Bifurcation']
-[114, 151, [90.0, -180.0, -45.0], 'Bifurcation']
-[117, 136, [135.0, -0.0, -90.0], 'Bifurcation']
-[120, 225, [45.0, -180.0, -90.0], 'Bifurcation']
-[157, 76, [45.0, -180.0, -90.0], 'Bifurcation']
-[205, 69, [90.0, -180.0, -45.0], 'Bifurcation']
-[275, 83, [-180.0, -0.0, -90.0], 'Bifurcation']
-[296, 133, [90.0, -0.0, -135.0], 'Bifurcation']
-[310, 83, [-180.0, -0.0, -90.0], 'Bifurcation']
-[37, 163, [-0.0], 'Termination']
-[37, 177, [-0.0], 'Termination']
-[90, 113, [45.0], 'Termination']
-[91, 97, [-116.56505117707799], 'Termination']
-[94, 68, [90.0], 'Termination']
-[106, 180, [-90.0], 'Termination']
-[107, 148, [-26.56505117707799], 'Termination']
-[112, 268, [-90.0], 'Termination']
-[125, 142, [-63.43494882292201], 'Termination']
-[125, 193, [90.0], 'Termination']
-[138, 224, [90.0], 'Termination']
-[146, 167, [116.56505117707799], 'Termination']
-[151, 268, [-116.56505117707799], 'Termination']
-[171, 182, [45.0], 'Termination']
-[187, 208, [45.0], 'Termination']
-[213, 203, [45.0], 'Termination']
-[218, 162, [-180.0], 'Termination']
-[220, 243, [26.56505117707799], 'Termination']
-[227, 258, [-153.434948822922], 'Termination']
-[228, 51, [-63.43494882292201], 'Termination']
-[232, 203, [26.56505117707799], 'Termination']
-[257, 250, [-153.434948822922], 'Termination']
-[264, 219, [-0.0], 'Termination']
-[279, 104, [-0.0], 'Termination']
-[282, 247, [-153.434948822922], 'Termination']
-[295, 238, [-153.434948822922], 'Termination']
-[315, 156, [-0.0], 'Termination']
-[320, 78, [-45.0], 'Termination']
-[86, 187, [90.0, -0.0, -90.0], 'Bifurcation']
-[90, 137, [135.0, -0.0, -135.0], 'Bifurcation']
-[100, 170, [90.0, -0.0, -135.0], 'Bifurcation']
-[103, 154, [45.0, -180.0, -45.0], 'Bifurcation']
-[157, 178, [90.0, -180.0, -45.0], 'Bifurcation']
-[181, 230, [-180.0, -0.0, -90.0], 'Bifurcation']
-[199, 91, [90.0, -90.0, -45.0], 'Bifurcation']
-[202, 91, [135.0, 90.0, -45.0], 'Bifurcation']
-[208, 98, [90.0, -180.0, -45.0], 'Bifurcation']
-[259, 86, [135.0, -0.0, -135.0], 'Bifurcation']
-[263, 98, [135.0, -0.0, -90.0], 'Bifurcation']
-[264, 109, [90.0, -0.0, -90.0], 'Bifurcation']
-[285, 78, [90.0, -180.0, -0.0], 'Bifurcation']
-[41, 198, [-45.0], 'Termination']
-[43, 78, [90.0], 'Termination']
-[54, 254, [135.0], 'Termination']
-[61, 281, [90.0], 'Termination']
-[65, 253, [116.56505117707799], 'Termination']
-[71, 81, [-116.56505117707799], 'Termination']
-[83, 91, [90.0], 'Termination']
-[84, 121, [-116.56505117707799], 'Termination']
-[86, 178, [153.434948822922], 'Termination']
-[86, 190, [-180.0], 'Termination']
-[92, 110, [90.0], 'Termination']
-[97, 165, [-0.0], 'Termination']
-[103, 178, [153.434948822922], 'Termination']
-[113, 73, [90.0], 'Termination']
-[124, 220, [90.0], 'Termination']
-[140, 191, [90.0], 'Termination']
-[164, 206, [45.0], 'Termination']
-[173, 229, [63.43494882292201], 'Termination']
-[178, 240, [26.56505117707799], 'Termination']
-[181, 259, [-135.0], 'Termination']
-[185, 228, [45.0], 'Termination']
-[202, 63, [135.0], 'Termination']
-[208, 222, [-0.0], 'Termination']
-[209, 182, [-180.0], 'Termination']
-[226, 221, [-0.0], 'Termination']
-[237, 269, [45.0], 'Termination']
-[238, 89, [153.434948822922], 'Termination']
-[248, 289, [90.0], 'Termination']
-[260, 235, [-0.0], 'Termination']
-[261, 78, [63.43494882292201], 'Termination']
-[268, 120, [-0.0], 'Termination']
-[273, 83, [45.0], 'Termination']
-[279, 143, [153.434948822922], 'Termination']
-[300, 233, [-0.0], 'Termination']
-[304, 168, [-0.0], 'Termination']
-[316, 44, [116.56505117707799], 'Termination']
-[319, 274, [-90.0], 'Termination']
-[322, 73, [-45.0], 'Termination']
-[334, 101, [-0.0], 'Termination']
-[55, 108, [90.0, -180.0, -90.0], 'Bifurcation']
-[64, 81, [135.0, 45.0, -90.0], 'Bifurcation']
-[71, 98, [90.0, -0.0, -90.0], 'Bifurcation']
-[72, 134, [90.0, -0.0, -135.0], 'Bifurcation']
-[72, 164, [90.0, -180.0, -90.0], 'Bifurcation']
-[79, 191, [90.0, -0.0, -135.0], 'Bifurcation']
-[99, 234, [-180.0, -0.0, -90.0], 'Bifurcation']
-[124, 81, [135.0, 45.0, -90.0], 'Bifurcation']
-[36, 167, [-26.56505117707799], 'Termination']
-[36, 181, [-26.56505117707799], 'Termination']
-[60, 123, [26.56505117707799], 'Termination']
-[68, 135, [-116.56505117707799], 'Termination']
-[101, 201, [90.0], 'Termination']
-[105, 288, [90.0], 'Termination']
-[117, 231, [90.0], 'Termination']
-[120, 173, [90.0], 'Termination']
-[123, 278, [-90.0], 'Termination']
-[145, 186, [45.0], 'Termination']
-[153, 275, [-135.0], 'Termination']
-[164, 69, [116.56505117707799], 'Termination']
-[165, 274, [-116.56505117707799], 'Termination']
-[188, 203, [-0.0], 'Termination']
-[191, 161, [153.434948822922], 'Termination']
-[199, 242, [26.56505117707799], 'Termination']
-[207, 202, [26.56505117707799], 'Termination']
-[214, 260, [-180.0], 'Termination']
-[216, 272, [45.0], 'Termination']
-[232, 62, [-45.0], 'Termination']
-[236, 49, [-116.56505117707799], 'Termination']
-[237, 268, [26.56505117707799], 'Termination']
-[239, 214, [-0.0], 'Termination']
-[243, 234, [-180.0], 'Termination']
-[245, 249, [-180.0], 'Termination']
-[246, 101, [-26.56505117707799], 'Termination']
-[247, 289, [90.0], 'Termination']
-[252, 50, [116.56505117707799], 'Termination']
-[258, 246, [-180.0], 'Termination']
-[259, 123, [153.434948822922], 'Termination']
-[270, 237, [-180.0], 'Termination']
-[274, 73, [-26.56505117707799], 'Termination']
-[282, 229, [-180.0], 'Termination']
-[284, 147, [-0.0], 'Termination']
-[285, 45, [90.0], 'Termination']
-[295, 218, [-180.0], 'Termination']
-[308, 201, [-180.0], 'Termination']
-[314, 98, [-0.0], 'Termination']
-[315, 164, [-180.0], 'Termination']
-[320, 274, [-90.0], 'Termination']
-[323, 143, [-180.0], 'Termination']
-[79, 110, [90.0, -180.0, -90.0], 'Bifurcation']
-[80, 131, [90.0, -180.0, -45.0], 'Bifurcation']
-[80, 147, [45.0, -180.0, -90.0], 'Bifurcation']
-[103, 163, [135.0, -0.0, -90.0], 'Bifurcation']
-[117, 134, [90.0, -180.0, -0.0], 'Bifurcation']
-[143, 230, [45.0, -180.0, -90.0], 'Bifurcation']
-[152, 136, [45.0, -0.0, -90.0], 'Bifurcation']
-[152, 138, [135.0, -180.0, -45.0], 'Bifurcation']
-[214, 62, [135.0, -0.0, -90.0], 'Bifurcation']
-[220, 67, [90.0, -180.0, -45.0], 'Bifurcation']
-[236, 68, [90.0, -180.0, -0.0], 'Bifurcation']
-[274, 77, [90.0, -0.0, -90.0], 'Bifurcation']
-[274, 84, [45.0, -180.0, -45.0], 'Bifurcation']
-[286, 65, [90.0, -180.0, -90.0], 'Bifurcation']
-[296, 116, [90.0, -180.0, -0.0], 'Bifurcation']
-[307, 64, [45.0, -180.0, -90.0], 'Bifurcation']
-[312, 234, [135.0, -0.0, -90.0], 'Bifurcation']
-[330, 80, [135.0, -0.0, -90.0], 'Bifurcation']
-[39, 130, [26.56505117707799], 'Termination']
-[49, 181, [-26.56505117707799], 'Termination']
-[66, 243, [-63.43494882292201], 'Termination']
-[76, 136, [-180.0], 'Termination']
-[79, 151, [-180.0], 'Termination']
-[82, 104, [45.0], 'Termination']
-[98, 70, [90.0], 'Termination']
-[99, 98, [-135.0], 'Termination']
-[99, 113, [26.56505117707799], 'Termination']
-[105, 86, [63.43494882292201], 'Termination']
-[106, 169, [135.0], 'Termination']
-[115, 143, [-26.56505117707799], 'Termination']
-[122, 154, [153.434948822922], 'Termination']
-[144, 195, [116.56505117707799], 'Termination']
-[152, 262, [-116.56505117707799], 'Termination']
-[154, 140, [135.0], 'Termination']
-[159, 164, [90.0], 'Termination']
-[161, 225, [90.0], 'Termination']
-[181, 155, [-180.0], 'Termination']
-[182, 177, [45.0], 'Termination']
-[192, 54, [-116.56505117707799], 'Termination']
-[205, 58, [-63.43494882292201], 'Termination']
-[206, 261, [-135.0], 'Termination']
-[217, 260, [-116.56505117707799], 'Termination']
-[223, 151, [-180.0], 'Termination']
-[225, 191, [-0.0], 'Termination']
-[227, 260, [-135.0], 'Termination']
-[227, 275, [45.0], 'Termination']
-[239, 233, [-0.0], 'Termination']
-[243, 191, [26.56505117707799], 'Termination']
-[274, 51, [45.0], 'Termination']
-[275, 202, [-0.0], 'Termination']
-[282, 230, [153.434948822922], 'Termination']
-[285, 252, [-180.0], 'Termination']
-[296, 53, [-0.0], 'Termination']
-[297, 252, [-180.0], 'Termination']
-[316, 134, [-0.0], 'Termination']
-[71, 130, [45.0, -180.0, -45.0], 'Bifurcation']
-[86, 99, [90.0, -180.0, -90.0], 'Bifurcation']
-[94, 72, [135.0, -0.0, -90.0], 'Bifurcation']
-[103, 88, [90.0, -0.0, -90.0], 'Bifurcation']
-[104, 125, [90.0, -0.0, -135.0], 'Bifurcation']
-[110, 145, [-180.0, -0.0, -135.0], 'Bifurcation']
-[112, 144, [135.0, 90.0, -45.0], 'Bifurcation']
-[132, 226, [-180.0, -0.0, -90.0], 'Bifurcation']
-[155, 71, [45.0, -180.0, -90.0], 'Bifurcation']
-[209, 63, [135.0, -0.0, -90.0], 'Bifurcation']
-[217, 69, [90.0, -180.0, -90.0], 'Bifurcation']
-[273, 84, [-180.0, -0.0, -90.0], 'Bifurcation']
-[286, 66, [90.0, -180.0, -0.0], 'Bifurcation']
-[308, 65, [45.0, -180.0, -90.0], 'Bifurcation']
-[38, 180, [-26.56505117707799], 'Termination']
-[49, 242, [-45.0], 'Termination']
-[59, 260, [135.0], 'Termination']
-[68, 132, [-116.56505117707799], 'Termination']
-[92, 114, [45.0], 'Termination']
-[98, 156, [153.434948822922], 'Termination']
-[114, 151, [135.0], 'Termination']
-[114, 181, [-90.0], 'Termination']
-[125, 271, [-116.56505117707799], 'Termination']
-[135, 193, [116.56505117707799], 'Termination']
-[148, 222, [63.43494882292201], 'Termination']
-[150, 272, [-90.0], 'Termination']
-[153, 163, [90.0], 'Termination']
-[165, 276, [-116.56505117707799], 'Termination']
-[179, 176, [63.43494882292201], 'Termination']
-[184, 200, [63.43494882292201], 'Termination']
-[197, 199, [26.56505117707799], 'Termination']
-[204, 274, [-116.56505117707799], 'Termination']
-[221, 194, [45.0], 'Termination']
-[223, 151, [153.434948822922], 'Termination']
-[231, 233, [26.56505117707799], 'Termination']
-[240, 191, [26.56505117707799], 'Termination']
-[242, 259, [-135.0], 'Termination']
-[246, 289, [90.0], 'Termination']
-[258, 47, [-63.43494882292201], 'Termination']
-[261, 57, [-26.56505117707799], 'Termination']
-[266, 68, [153.434948822922], 'Termination']
-[272, 203, [-0.0], 'Termination']
-[274, 250, [-153.434948822922], 'Termination']
-[276, 224, [-180.0], 'Termination']
-[287, 248, [-153.434948822922], 'Termination']
-[288, 70, [-0.0], 'Termination']
-[292, 113, [153.434948822922], 'Termination']
-[302, 244, [-180.0], 'Termination']
-[317, 136, [-0.0], 'Termination']
-[319, 61, [-45.0], 'Termination']
-[98, 176, [90.0, -180.0, -90.0], 'Bifurcation']
-[144, 102, [45.0, -180.0, -90.0], 'Bifurcation']
-[194, 94, [90.0, -180.0, -90.0], 'Bifurcation']
-[224, 266, [90.0, -180.0, -0.0], 'Bifurcation']
-[263, 120, [90.0, -180.0, -90.0], 'Bifurcation']
-[267, 95, [135.0, -0.0, -135.0], 'Bifurcation']
-[275, 102, [90.0, -180.0, -45.0], 'Bifurcation']
-[285, 149, [90.0, -0.0, -135.0], 'Bifurcation']
-[293, 85, [-180.0, -0.0, -90.0], 'Bifurcation']
-[296, 100, [-180.0, -0.0, -90.0], 'Bifurcation']
-[40, 125, [-153.434948822922], 'Termination']
-[52, 112, [45.0], 'Termination']
-[61, 281, [90.0], 'Termination']
-[75, 125, [-135.0], 'Termination']
-[77, 147, [45.0], 'Termination']
-[84, 186, [135.0], 'Termination']
-[89, 118, [90.0], 'Termination']
-[96, 260, [-63.43494882292201], 'Termination']
-[103, 214, [-63.43494882292201], 'Termination']
-[106, 263, [116.56505117707799], 'Termination']
-[120, 85, [-90.0], 'Termination']
-[120, 226, [90.0], 'Termination']
-[124, 268, [-116.56505117707799], 'Termination']
-[133, 274, [-116.56505117707799], 'Termination']
-[136, 257, [90.0], 'Termination']
-[138, 196, [90.0], 'Termination']
-[151, 275, [-116.56505117707799], 'Termination']
-[161, 74, [-90.0], 'Termination']
-[164, 210, [45.0], 'Termination']
-[169, 235, [63.43494882292201], 'Termination']
-[182, 235, [26.56505117707799], 'Termination']
-[207, 228, [-0.0], 'Termination']
-[210, 70, [-63.43494882292201], 'Termination']
-[210, 184, [153.434948822922], 'Termination']
-[223, 51, [90.0], 'Termination']
-[227, 70, [-45.0], 'Termination']
-[227, 225, [26.56505117707799], 'Termination']
-[234, 88, [135.0], 'Termination']
-[239, 50, [-116.56505117707799], 'Termination']
-[244, 73, [-63.43494882292201], 'Termination']
-[248, 289, [90.0], 'Termination']
-[249, 90, [-26.56505117707799], 'Termination']
-[256, 103, [153.434948822922], 'Termination']
-[260, 238, [-0.0], 'Termination']
-[263, 261, [-180.0], 'Termination']
-[266, 274, [-153.434948822922], 'Termination']
-[267, 99, [-180.0], 'Termination']
-[276, 75, [45.0], 'Termination']
-[277, 276, [-180.0], 'Termination']
-[285, 45, [90.0], 'Termination']
-[287, 76, [-63.43494882292201], 'Termination']
-[304, 97, [153.434948822922], 'Termination']
-[306, 172, [-0.0], 'Termination']
-[321, 74, [-26.56505117707799], 'Termination']
-[333, 103, [-26.56505117707799], 'Termination']
-[42, 104, [45.0, -180.0, -90.0], 'Bifurcation']
-[42, 125, [45.0, -180.0, -45.0], 'Bifurcation']
-[74, 120, [90.0, -0.0, -90.0], 'Bifurcation']
-[76, 83, [135.0, -0.0, -90.0], 'Bifurcation']
-[82, 141, [45.0, -180.0, -90.0], 'Bifurcation']
-[127, 68, [90.0, -180.0, -90.0], 'Bifurcation']
-[180, 61, [135.0, -0.0, -90.0], 'Bifurcation']
-[189, 68, [90.0, -180.0, -90.0], 'Bifurcation']
-[243, 84, [-180.0, -0.0, -90.0], 'Bifurcation']
-[245, 48, [90.0, -0.0, -90.0], 'Bifurcation']
-[247, 59, [135.0, -0.0, -135.0], 'Bifurcation']
-[256, 66, [90.0, -180.0, -45.0], 'Bifurcation']
-[257, 49, [90.0, -0.0, -135.0], 'Bifurcation']
-[266, 115, [90.0, -180.0, -0.0], 'Bifurcation']
-[276, 66, [45.0, -180.0, -90.0], 'Bifurcation']
-[38, 203, [-45.0], 'Termination']
-[57, 90, [-116.56505117707799], 'Termination']
-[62, 109, [26.56505117707799], 'Termination']
-[68, 150, [135.0], 'Termination']
-[69, 122, [-135.0], 'Termination']
-[84, 148, [135.0], 'Termination']
-[87, 177, [-63.43494882292201], 'Termination']
-[105, 190, [90.0], 'Termination']
-[117, 237, [-63.43494882292201], 'Termination']
-[122, 160, [90.0], 'Termination']
-[122, 220, [63.43494882292201], 'Termination']
-[129, 243, [-116.56505117707799], 'Termination']
-[146, 175, [63.43494882292201], 'Termination']
-[150, 260, [-116.56505117707799], 'Termination']
-[154, 197, [45.0], 'Termination']
-[167, 196, [26.56505117707799], 'Termination']
-[190, 192, [26.56505117707799], 'Termination']
-[191, 146, [-180.0], 'Termination']
-[209, 188, [26.56505117707799], 'Termination']
-[232, 57, [-26.56505117707799], 'Termination']
-[236, 69, [-180.0], 'Termination']
-[241, 203, [-0.0], 'Termination']
-[263, 234, [-180.0], 'Termination']
-[273, 232, [-153.434948822922], 'Termination']
-[281, 201, [-0.0], 'Termination']
-[281, 211, [-180.0], 'Termination']
-[284, 231, [-180.0], 'Termination']
-[285, 135, [-0.0], 'Termination']
-[296, 223, [-180.0], 'Termination']
-[309, 215, [-180.0], 'Termination']
-[320, 137, [-0.0], 'Termination']
-[320, 206, [-153.434948822922], 'Termination']
-[320, 274, [-116.56505117707799], 'Termination']
-[331, 161, [-180.0], 'Termination']
-[334, 84, [-26.56505117707799], 'Termination']
-[82, 72, [90.0, -180.0, -90.0], 'Bifurcation']
-[91, 186, [90.0, -180.0, -45.0], 'Bifurcation']
-[114, 241, [45.0, -90.0, -45.0], 'Bifurcation']
-[116, 238, [-180.0, -0.0, -45.0], 'Bifurcation']
-[117, 244, [135.0, -180.0, -0.0], 'Bifurcation']
-[118, 240, [135.0, 45.0, -90.0], 'Bifurcation']
-[195, 76, [90.0, -0.0, -90.0], 'Bifurcation']
-[194, 102, [135.0, -0.0, -90.0], 'Bifurcation']
-[196, 86, [135.0, -0.0, -135.0], 'Bifurcation']
-[198, 96, [135.0, -0.0, -90.0], 'Bifurcation']
-[217, 152, [90.0, -180.0, -0.0], 'Bifurcation']
-[232, 235, [45.0, -180.0, -45.0], 'Bifurcation']
-[238, 98, [90.0, -180.0, -45.0], 'Bifurcation']
-[243, 247, [45.0, -180.0, -90.0], 'Bifurcation']
-[250, 119, [-180.0, -0.0, -90.0], 'Bifurcation']
-[275, 92, [90.0, -180.0, -0.0], 'Bifurcation']
-[282, 108, [90.0, -180.0, -90.0], 'Bifurcation']
-[36, 254, [-63.43494882292201], 'Termination']
-[38, 151, [-116.56505117707799], 'Termination']
-[40, 104, [-90.0], 'Termination']
-[55, 267, [90.0], 'Termination']
-[60, 230, [90.0], 'Termination']
-[75, 73, [-90.0], 'Termination']
-[75, 201, [116.56505117707799], 'Termination']
-[78, 259, [63.43494882292201], 'Termination']
-[81, 283, [-90.0], 'Termination']
-[102, 213, [45.0], 'Termination']
-[110, 237, [45.0], 'Termination']
-[113, 67, [-90.0], 'Termination']
-[121, 238, [45.0], 'Termination']
-[126, 92, [135.0], 'Termination']
-[127, 66, [-63.43494882292201], 'Termination']
-[144, 188, [-180.0], 'Termination']
-[145, 230, [26.56505117707799], 'Termination']
-[156, 98, [-26.56505117707799], 'Termination']
-[157, 68, [-63.43494882292201], 'Termination']
-[162, 107, [135.0], 'Termination']
-[163, 228, [26.56505117707799], 'Termination']
-[169, 94, [153.434948822922], 'Termination']
-[170, 66, [-45.0], 'Termination']
-[179, 90, [-26.56505117707799], 'Termination']
-[188, 107, [153.434948822922], 'Termination']
-[196, 240, [-0.0], 'Termination']
-[198, 125, [-26.56505117707799], 'Termination']
-[202, 106, [-0.0], 'Termination']
-[230, 68, [-0.0], 'Termination']
-[232, 104, [-45.0], 'Termination']
-[233, 94, [-26.56505117707799], 'Termination']
-[236, 247, [-180.0], 'Termination']
-[236, 290, [-90.0], 'Termination']
-[237, 172, [-0.0], 'Termination']
-[241, 71, [-45.0], 'Termination']
-[246, 249, [135.0], 'Termination']
-[250, 268, [-180.0], 'Termination']
-[251, 72, [-26.56505117707799], 'Termination']
-[257, 124, [153.434948822922], 'Termination']
-[261, 74, [-45.0], 'Termination']
-[264, 259, [-180.0], 'Termination']
-[271, 92, [-90.0], 'Termination']
-[275, 251, [-180.0], 'Termination']
-[293, 233, [-180.0], 'Termination']
-[299, 98, [-26.56505117707799], 'Termination']
-[306, 136, [135.0], 'Termination']
-[47, 103, [135.0, -0.0, -90.0], 'Bifurcation']
-[75, 242, [-180.0, -0.0, -90.0], 'Bifurcation']
-[98, 86, [45.0, -180.0, -90.0], 'Bifurcation']
-[145, 76, [90.0, -180.0, -45.0], 'Bifurcation']
-[153, 80, [90.0, -0.0, -90.0], 'Bifurcation']
-[160, 86, [90.0, -180.0, -90.0], 'Bifurcation']
-[216, 101, [45.0, -180.0, -45.0], 'Bifurcation']
-[239, 131, [90.0, -180.0, -0.0], 'Bifurcation']
-[246, 81, [-180.0, -0.0, -90.0], 'Bifurcation']
-[36, 188, [-63.43494882292201], 'Termination']
-[36, 199, [-45.0], 'Termination']
-[36, 219, [-45.0], 'Termination']
-[37, 237, [-45.0], 'Termination']
-[57, 196, [-63.43494882292201], 'Termination']
-[77, 208, [90.0], 'Termination']
-[91, 263, [-90.0], 'Termination']
-[93, 238, [63.43494882292201], 'Termination']
-[95, 179, [90.0], 'Termination']
-[103, 268, [-90.0], 'Termination']
-[122, 192, [63.43494882292201], 'Termination']
-[140, 216, [26.56505117707799], 'Termination']
-[149, 264, [-153.434948822922], 'Termination']
-[157, 292, [90.0], 'Termination']
-[165, 209, [26.56505117707799], 'Termination']
-[166, 168, [-180.0], 'Termination']
-[176, 248, [-0.0], 'Termination']
-[182, 67, [135.0], 'Termination']
-[183, 206, [-0.0], 'Termination']
-[200, 51, [-63.43494882292201], 'Termination']
-[201, 73, [-45.0], 'Termination']
-[209, 86, [153.434948822922], 'Termination']
-[214, 253, [-180.0], 'Termination']
-[216, 219, [-0.0], 'Termination']
-[221, 71, [153.434948822922], 'Termination']
-[236, 290, [-90.0], 'Termination']
-[237, 251, [-180.0], 'Termination']
-[259, 151, [-0.0], 'Termination']
-[268, 49, [-0.0], 'Termination']
-[271, 238, [-180.0], 'Termination']
-[281, 54, [-26.56505117707799], 'Termination']
-[283, 230, [-180.0], 'Termination']
-[292, 149, [-0.0], 'Termination']
-[295, 221, [-153.434948822922], 'Termination']
-[303, 66, [-45.0], 'Termination']
-[305, 177, [-180.0], 'Termination']
-[310, 113, [-0.0], 'Termination']
-[322, 108, [153.434948822922], 'Termination']
-[323, 91, [-26.56505117707799], 'Termination']
+46,112,[90.0, -0.0, -90.0],Bifurcation
+62,84,[-180.0, -0.0, -90.0],Bifurcation
+66,124,[90.0, -0.0, -90.0],Bifurcation
+68,165,[90.0, -180.0, -0.0],Bifurcation
+70,136,[90.0, -0.0, -90.0],Bifurcation
+71,100,[90.0, -0.0, -90.0],Bifurcation
+81,162,[45.0, -180.0, -45.0],Bifurcation
+87,238,[45.0, -180.0, -90.0],Bifurcation
+98,66,[90.0, 45.0, -135.0],Bifurcation
+97,68,[135.0, -180.0, -45.0],Bifurcation
+191,253,[90.0, -0.0, -135.0],Bifurcation
+195,96,[90.0, -0.0, -90.0],Bifurcation
+243,111,[45.0, -180.0, -90.0],Bifurcation
+36,190,[-26.56505117707799],Termination
+36,245,[-26.56505117707799],Termination
+37,177,[-26.56505117707799],Termination
+37,214,[-45.0],Termination
+38,138,[-180.0],Termination
+38,158,[-0.0],Termination
+56,104,[-116.56505117707799],Termination
+62,281,[90.0],Termination
+64,138,[-135.0],Termination
+74,192,[-90.0],Termination
+86,141,[-90.0],Termination
+93,205,[116.56505117707799],Termination
+105,236,[90.0],Termination
+115,178,[90.0],Termination
+119,278,[-90.0],Termination
+121,84,[116.56505117707799],Termination
+134,280,[-116.56505117707799],Termination
+140,193,[63.43494882292201],Termination
+141,218,[63.43494882292201],Termination
+156,218,[45.0],Termination
+168,275,[-116.56505117707799],Termination
+169,57,[-63.43494882292201],Termination
+170,75,[135.0],Termination
+174,292,[-116.56505117707799],Termination
+180,215,[45.0],Termination
+187,171,[-180.0],Termination
+198,97,[116.56505117707799],Termination
+199,214,[26.56505117707799],Termination
+221,261,[-153.434948822922],Termination
+230,229,[26.56505117707799],Termination
+245,289,[90.0],Termination
+257,252,[-153.434948822922],Termination
+259,141,[153.434948822922],Termination
+261,49,[135.0],Termination
+265,67,[-63.43494882292201],Termination
+281,165,[-0.0],Termination
+283,238,[-153.434948822922],Termination
+298,225,[-153.434948822922],Termination
+308,216,[-180.0],Termination
+314,123,[-26.56505117707799],Termination
+315,44,[135.0],Termination
+318,200,[153.434948822922],Termination
+58,145,[90.0, -0.0, -135.0],Bifurcation
+67,134,[90.0, -0.0, -135.0],Bifurcation
+69,125,[90.0, -180.0, -0.0],Bifurcation
+97,142,[90.0, -0.0, -135.0],Bifurcation
+101,155,[90.0, -180.0, -90.0],Bifurcation
+102,124,[90.0, -0.0, -90.0],Bifurcation
+105,88,[135.0, -0.0, -90.0],Bifurcation
+114,151,[90.0, -180.0, -45.0],Bifurcation
+117,136,[135.0, -0.0, -90.0],Bifurcation
+120,225,[45.0, -180.0, -90.0],Bifurcation
+157,76,[45.0, -180.0, -90.0],Bifurcation
+205,69,[90.0, -180.0, -45.0],Bifurcation
+275,83,[-180.0, -0.0, -90.0],Bifurcation
+296,133,[90.0, -0.0, -135.0],Bifurcation
+310,83,[-180.0, -0.0, -90.0],Bifurcation
+37,163,[-0.0],Termination
+37,177,[-0.0],Termination
+90,113,[45.0],Termination
+91,97,[-116.56505117707799],Termination
+94,68,[90.0],Termination
+106,180,[-90.0],Termination
+107,148,[-26.56505117707799],Termination
+112,268,[-90.0],Termination
+125,142,[-63.43494882292201],Termination
+125,193,[90.0],Termination
+138,224,[90.0],Termination
+146,167,[116.56505117707799],Termination
+151,268,[-116.56505117707799],Termination
+171,182,[45.0],Termination
+187,208,[45.0],Termination
+213,203,[45.0],Termination
+218,162,[-180.0],Termination
+220,243,[26.56505117707799],Termination
+227,258,[-153.434948822922],Termination
+228,51,[-63.43494882292201],Termination
+232,203,[26.56505117707799],Termination
+257,250,[-153.434948822922],Termination
+264,219,[-0.0],Termination
+279,104,[-0.0],Termination
+282,247,[-153.434948822922],Termination
+295,238,[-153.434948822922],Termination
+315,156,[-0.0],Termination
+320,78,[-45.0],Termination
+86,187,[90.0, -0.0, -90.0],Bifurcation
+90,137,[135.0, -0.0, -135.0],Bifurcation
+100,170,[90.0, -0.0, -135.0],Bifurcation
+103,154,[45.0, -180.0, -45.0],Bifurcation
+157,178,[90.0, -180.0, -45.0],Bifurcation
+181,230,[-180.0, -0.0, -90.0],Bifurcation
+199,91,[90.0, -90.0, -45.0],Bifurcation
+202,91,[135.0, 90.0, -45.0],Bifurcation
+208,98,[90.0, -180.0, -45.0],Bifurcation
+259,86,[135.0, -0.0, -135.0],Bifurcation
+263,98,[135.0, -0.0, -90.0],Bifurcation
+264,109,[90.0, -0.0, -90.0],Bifurcation
+285,78,[90.0, -180.0, -0.0],Bifurcation
+41,198,[-45.0],Termination
+43,78,[90.0],Termination
+54,254,[135.0],Termination
+61,281,[90.0],Termination
+65,253,[116.56505117707799],Termination
+71,81,[-116.56505117707799],Termination
+83,91,[90.0],Termination
+84,121,[-116.56505117707799],Termination
+86,178,[153.434948822922],Termination
+86,190,[-180.0],Termination
+92,110,[90.0],Termination
+97,165,[-0.0],Termination
+103,178,[153.434948822922],Termination
+113,73,[90.0],Termination
+124,220,[90.0],Termination
+140,191,[90.0],Termination
+164,206,[45.0],Termination
+173,229,[63.43494882292201],Termination
+178,240,[26.56505117707799],Termination
+181,259,[-135.0],Termination
+185,228,[45.0],Termination
+202,63,[135.0],Termination
+208,222,[-0.0],Termination
+209,182,[-180.0],Termination
+226,221,[-0.0],Termination
+237,269,[45.0],Termination
+238,89,[153.434948822922],Termination
+248,289,[90.0],Termination
+260,235,[-0.0],Termination
+261,78,[63.43494882292201],Termination
+268,120,[-0.0],Termination
+273,83,[45.0],Termination
+279,143,[153.434948822922],Termination
+300,233,[-0.0],Termination
+304,168,[-0.0],Termination
+316,44,[116.56505117707799],Termination
+319,274,[-90.0],Termination
+322,73,[-45.0],Termination
+334,101,[-0.0],Termination
+55,108,[90.0, -180.0, -90.0],Bifurcation
+64,81,[135.0, 45.0, -90.0],Bifurcation
+71,98,[90.0, -0.0, -90.0],Bifurcation
+72,134,[90.0, -0.0, -135.0],Bifurcation
+72,164,[90.0, -180.0, -90.0],Bifurcation
+79,191,[90.0, -0.0, -135.0],Bifurcation
+99,234,[-180.0, -0.0, -90.0],Bifurcation
+124,81,[135.0, 45.0, -90.0],Bifurcation
+36,167,[-26.56505117707799],Termination
+36,181,[-26.56505117707799],Termination
+60,123,[26.56505117707799],Termination
+68,135,[-116.56505117707799],Termination
+101,201,[90.0],Termination
+105,288,[90.0],Termination
+117,231,[90.0],Termination
+120,173,[90.0],Termination
+123,278,[-90.0],Termination
+145,186,[45.0],Termination
+153,275,[-135.0],Termination
+164,69,[116.56505117707799],Termination
+165,274,[-116.56505117707799],Termination
+188,203,[-0.0],Termination
+191,161,[153.434948822922],Termination
+199,242,[26.56505117707799],Termination
+207,202,[26.56505117707799],Termination
+214,260,[-180.0],Termination
+216,272,[45.0],Termination
+232,62,[-45.0],Termination
+236,49,[-116.56505117707799],Termination
+237,268,[26.56505117707799],Termination
+239,214,[-0.0],Termination
+243,234,[-180.0],Termination
+245,249,[-180.0],Termination
+246,101,[-26.56505117707799],Termination
+247,289,[90.0],Termination
+252,50,[116.56505117707799],Termination
+258,246,[-180.0],Termination
+259,123,[153.434948822922],Termination
+270,237,[-180.0],Termination
+274,73,[-26.56505117707799],Termination
+282,229,[-180.0],Termination
+284,147,[-0.0],Termination
+285,45,[90.0],Termination
+295,218,[-180.0],Termination
+308,201,[-180.0],Termination
+314,98,[-0.0],Termination
+315,164,[-180.0],Termination
+320,274,[-90.0],Termination
+323,143,[-180.0],Termination
+79,110,[90.0, -180.0, -90.0],Bifurcation
+80,131,[90.0, -180.0, -45.0],Bifurcation
+80,147,[45.0, -180.0, -90.0],Bifurcation
+103,163,[135.0, -0.0, -90.0],Bifurcation
+117,134,[90.0, -180.0, -0.0],Bifurcation
+143,230,[45.0, -180.0, -90.0],Bifurcation
+152,136,[45.0, -0.0, -90.0],Bifurcation
+152,138,[135.0, -180.0, -45.0],Bifurcation
+214,62,[135.0, -0.0, -90.0],Bifurcation
+220,67,[90.0, -180.0, -45.0],Bifurcation
+236,68,[90.0, -180.0, -0.0],Bifurcation
+274,77,[90.0, -0.0, -90.0],Bifurcation
+274,84,[45.0, -180.0, -45.0],Bifurcation
+286,65,[90.0, -180.0, -90.0],Bifurcation
+296,116,[90.0, -180.0, -0.0],Bifurcation
+307,64,[45.0, -180.0, -90.0],Bifurcation
+312,234,[135.0, -0.0, -90.0],Bifurcation
+330,80,[135.0, -0.0, -90.0],Bifurcation
+39,130,[26.56505117707799],Termination
+49,181,[-26.56505117707799],Termination
+66,243,[-63.43494882292201],Termination
+76,136,[-180.0],Termination
+79,151,[-180.0],Termination
+82,104,[45.0],Termination
+98,70,[90.0],Termination
+99,98,[-135.0],Termination
+99,113,[26.56505117707799],Termination
+105,86,[63.43494882292201],Termination
+106,169,[135.0],Termination
+115,143,[-26.56505117707799],Termination
+122,154,[153.434948822922],Termination
+144,195,[116.56505117707799],Termination
+152,262,[-116.56505117707799],Termination
+154,140,[135.0],Termination
+159,164,[90.0],Termination
+161,225,[90.0],Termination
+181,155,[-180.0],Termination
+182,177,[45.0],Termination
+192,54,[-116.56505117707799],Termination
+205,58,[-63.43494882292201],Termination
+206,261,[-135.0],Termination
+217,260,[-116.56505117707799],Termination
+223,151,[-180.0],Termination
+225,191,[-0.0],Termination
+227,260,[-135.0],Termination
+227,275,[45.0],Termination
+239,233,[-0.0],Termination
+243,191,[26.56505117707799],Termination
+274,51,[45.0],Termination
+275,202,[-0.0],Termination
+282,230,[153.434948822922],Termination
+285,252,[-180.0],Termination
+296,53,[-0.0],Termination
+297,252,[-180.0],Termination
+316,134,[-0.0],Termination
+71,130,[45.0, -180.0, -45.0],Bifurcation
+86,99,[90.0, -180.0, -90.0],Bifurcation
+94,72,[135.0, -0.0, -90.0],Bifurcation
+103,88,[90.0, -0.0, -90.0],Bifurcation
+104,125,[90.0, -0.0, -135.0],Bifurcation
+110,145,[-180.0, -0.0, -135.0],Bifurcation
+112,144,[135.0, 90.0, -45.0],Bifurcation
+132,226,[-180.0, -0.0, -90.0],Bifurcation
+155,71,[45.0, -180.0, -90.0],Bifurcation
+209,63,[135.0, -0.0, -90.0],Bifurcation
+217,69,[90.0, -180.0, -90.0],Bifurcation
+273,84,[-180.0, -0.0, -90.0],Bifurcation
+286,66,[90.0, -180.0, -0.0],Bifurcation
+308,65,[45.0, -180.0, -90.0],Bifurcation
+38,180,[-26.56505117707799],Termination
+49,242,[-45.0],Termination
+59,260,[135.0],Termination
+68,132,[-116.56505117707799],Termination
+92,114,[45.0],Termination
+98,156,[153.434948822922],Termination
+114,151,[135.0],Termination
+114,181,[-90.0],Termination
+125,271,[-116.56505117707799],Termination
+135,193,[116.56505117707799],Termination
+148,222,[63.43494882292201],Termination
+150,272,[-90.0],Termination
+153,163,[90.0],Termination
+165,276,[-116.56505117707799],Termination
+179,176,[63.43494882292201],Termination
+184,200,[63.43494882292201],Termination
+197,199,[26.56505117707799],Termination
+204,274,[-116.56505117707799],Termination
+221,194,[45.0],Termination
+223,151,[153.434948822922],Termination
+231,233,[26.56505117707799],Termination
+240,191,[26.56505117707799],Termination
+242,259,[-135.0],Termination
+246,289,[90.0],Termination
+258,47,[-63.43494882292201],Termination
+261,57,[-26.56505117707799],Termination
+266,68,[153.434948822922],Termination
+272,203,[-0.0],Termination
+274,250,[-153.434948822922],Termination
+276,224,[-180.0],Termination
+287,248,[-153.434948822922],Termination
+288,70,[-0.0],Termination
+292,113,[153.434948822922],Termination
+302,244,[-180.0],Termination
+317,136,[-0.0],Termination
+319,61,[-45.0],Termination
+98,176,[90.0, -180.0, -90.0],Bifurcation
+144,102,[45.0, -180.0, -90.0],Bifurcation
+194,94,[90.0, -180.0, -90.0],Bifurcation
+224,266,[90.0, -180.0, -0.0],Bifurcation
+263,120,[90.0, -180.0, -90.0],Bifurcation
+267,95,[135.0, -0.0, -135.0],Bifurcation
+275,102,[90.0, -180.0, -45.0],Bifurcation
+285,149,[90.0, -0.0, -135.0],Bifurcation
+293,85,[-180.0, -0.0, -90.0],Bifurcation
+296,100,[-180.0, -0.0, -90.0],Bifurcation
+40,125,[-153.434948822922],Termination
+52,112,[45.0],Termination
+61,281,[90.0],Termination
+75,125,[-135.0],Termination
+77,147,[45.0],Termination
+84,186,[135.0],Termination
+89,118,[90.0],Termination
+96,260,[-63.43494882292201],Termination
+103,214,[-63.43494882292201],Termination
+106,263,[116.56505117707799],Termination
+120,85,[-90.0],Termination
+120,226,[90.0],Termination
+124,268,[-116.56505117707799],Termination
+133,274,[-116.56505117707799],Termination
+136,257,[90.0],Termination
+138,196,[90.0],Termination
+151,275,[-116.56505117707799],Termination
+161,74,[-90.0],Termination
+164,210,[45.0],Termination
+169,235,[63.43494882292201],Termination
+182,235,[26.56505117707799],Termination
+207,228,[-0.0],Termination
+210,70,[-63.43494882292201],Termination
+210,184,[153.434948822922],Termination
+223,51,[90.0],Termination
+227,70,[-45.0],Termination
+227,225,[26.56505117707799],Termination
+234,88,[135.0],Termination
+239,50,[-116.56505117707799],Termination
+244,73,[-63.43494882292201],Termination
+248,289,[90.0],Termination
+249,90,[-26.56505117707799],Termination
+256,103,[153.434948822922],Termination
+260,238,[-0.0],Termination
+263,261,[-180.0],Termination
+266,274,[-153.434948822922],Termination
+267,99,[-180.0],Termination
+276,75,[45.0],Termination
+277,276,[-180.0],Termination
+285,45,[90.0],Termination
+287,76,[-63.43494882292201],Termination
+304,97,[153.434948822922],Termination
+306,172,[-0.0],Termination
+321,74,[-26.56505117707799],Termination
+333,103,[-26.56505117707799],Termination
+42,104,[45.0, -180.0, -90.0],Bifurcation
+42,125,[45.0, -180.0, -45.0],Bifurcation
+74,120,[90.0, -0.0, -90.0],Bifurcation
+76,83,[135.0, -0.0, -90.0],Bifurcation
+82,141,[45.0, -180.0, -90.0],Bifurcation
+127,68,[90.0, -180.0, -90.0],Bifurcation
+180,61,[135.0, -0.0, -90.0],Bifurcation
+189,68,[90.0, -180.0, -90.0],Bifurcation
+243,84,[-180.0, -0.0, -90.0],Bifurcation
+245,48,[90.0, -0.0, -90.0],Bifurcation
+247,59,[135.0, -0.0, -135.0],Bifurcation
+256,66,[90.0, -180.0, -45.0],Bifurcation
+257,49,[90.0, -0.0, -135.0],Bifurcation
+266,115,[90.0, -180.0, -0.0],Bifurcation
+276,66,[45.0, -180.0, -90.0],Bifurcation
+38,203,[-45.0],Termination
+57,90,[-116.56505117707799],Termination
+62,109,[26.56505117707799],Termination
+68,150,[135.0],Termination
+69,122,[-135.0],Termination
+84,148,[135.0],Termination
+87,177,[-63.43494882292201],Termination
+105,190,[90.0],Termination
+117,237,[-63.43494882292201],Termination
+122,160,[90.0],Termination
+122,220,[63.43494882292201],Termination
+129,243,[-116.56505117707799],Termination
+146,175,[63.43494882292201],Termination
+150,260,[-116.56505117707799],Termination
+154,197,[45.0],Termination
+167,196,[26.56505117707799],Termination
+190,192,[26.56505117707799],Termination
+191,146,[-180.0],Termination
+209,188,[26.56505117707799],Termination
+232,57,[-26.56505117707799],Termination
+236,69,[-180.0],Termination
+241,203,[-0.0],Termination
+263,234,[-180.0],Termination
+273,232,[-153.434948822922],Termination
+281,201,[-0.0],Termination
+281,211,[-180.0],Termination
+284,231,[-180.0],Termination
+285,135,[-0.0],Termination
+296,223,[-180.0],Termination
+309,215,[-180.0],Termination
+320,137,[-0.0],Termination
+320,206,[-153.434948822922],Termination
+320,274,[-116.56505117707799],Termination
+331,161,[-180.0],Termination
+334,84,[-26.56505117707799],Termination
+82,72,[90.0, -180.0, -90.0],Bifurcation
+91,186,[90.0, -180.0, -45.0],Bifurcation
+114,241,[45.0, -90.0, -45.0],Bifurcation
+116,238,[-180.0, -0.0, -45.0],Bifurcation
+117,244,[135.0, -180.0, -0.0],Bifurcation
+118,240,[135.0, 45.0, -90.0],Bifurcation
+195,76,[90.0, -0.0, -90.0],Bifurcation
+194,102,[135.0, -0.0, -90.0],Bifurcation
+196,86,[135.0, -0.0, -135.0],Bifurcation
+198,96,[135.0, -0.0, -90.0],Bifurcation
+217,152,[90.0, -180.0, -0.0],Bifurcation
+232,235,[45.0, -180.0, -45.0],Bifurcation
+238,98,[90.0, -180.0, -45.0],Bifurcation
+243,247,[45.0, -180.0, -90.0],Bifurcation
+250,119,[-180.0, -0.0, -90.0],Bifurcation
+275,92,[90.0, -180.0, -0.0],Bifurcation
+282,108,[90.0, -180.0, -90.0],Bifurcation
+36,254,[-63.43494882292201],Termination
+38,151,[-116.56505117707799],Termination
+40,104,[-90.0],Termination
+55,267,[90.0],Termination
+60,230,[90.0],Termination
+75,73,[-90.0],Termination
+75,201,[116.56505117707799],Termination
+78,259,[63.43494882292201],Termination
+81,283,[-90.0],Termination
+102,213,[45.0],Termination
+110,237,[45.0],Termination
+113,67,[-90.0],Termination
+121,238,[45.0],Termination
+126,92,[135.0],Termination
+127,66,[-63.43494882292201],Termination
+144,188,[-180.0],Termination
+145,230,[26.56505117707799],Termination
+156,98,[-26.56505117707799],Termination
+157,68,[-63.43494882292201],Termination
+162,107,[135.0],Termination
+163,228,[26.56505117707799],Termination
+169,94,[153.434948822922],Termination
+170,66,[-45.0],Termination
+179,90,[-26.56505117707799],Termination
+188,107,[153.434948822922],Termination
+196,240,[-0.0],Termination
+198,125,[-26.56505117707799],Termination
+202,106,[-0.0],Termination
+230,68,[-0.0],Termination
+232,104,[-45.0],Termination
+233,94,[-26.56505117707799],Termination
+236,247,[-180.0],Termination
+236,290,[-90.0],Termination
+237,172,[-0.0],Termination
+241,71,[-45.0],Termination
+246,249,[135.0],Termination
+250,268,[-180.0],Termination
+251,72,[-26.56505117707799],Termination
+257,124,[153.434948822922],Termination
+261,74,[-45.0],Termination
+264,259,[-180.0],Termination
+271,92,[-90.0],Termination
+275,251,[-180.0],Termination
+293,233,[-180.0],Termination
+299,98,[-26.56505117707799],Termination
+306,136,[135.0],Termination
+47,103,[135.0, -0.0, -90.0],Bifurcation
+75,242,[-180.0, -0.0, -90.0],Bifurcation
+98,86,[45.0, -180.0, -90.0],Bifurcation
+145,76,[90.0, -180.0, -45.0],Bifurcation
+153,80,[90.0, -0.0, -90.0],Bifurcation
+160,86,[90.0, -180.0, -90.0],Bifurcation
+216,101,[45.0, -180.0, -45.0],Bifurcation
+239,131,[90.0, -180.0, -0.0],Bifurcation
+246,81,[-180.0, -0.0, -90.0],Bifurcation
+36,188,[-63.43494882292201],Termination
+36,199,[-45.0],Termination
+36,219,[-45.0],Termination
+37,237,[-45.0],Termination
+57,196,[-63.43494882292201],Termination
+77,208,[90.0],Termination
+91,263,[-90.0],Termination
+93,238,[63.43494882292201],Termination
+95,179,[90.0],Termination
+103,268,[-90.0],Termination
+122,192,[63.43494882292201],Termination
+140,216,[26.56505117707799],Termination
+149,264,[-153.434948822922],Termination
+157,292,[90.0],Termination
+165,209,[26.56505117707799],Termination
+166,168,[-180.0],Termination
+176,248,[-0.0],Termination
+182,67,[135.0],Termination
+183,206,[-0.0],Termination
+200,51,[-63.43494882292201],Termination
+201,73,[-45.0],Termination
+209,86,[153.434948822922],Termination
+214,253,[-180.0],Termination
+216,219,[-0.0],Termination
+221,71,[153.434948822922],Termination
+236,290,[-90.0],Termination
+237,251,[-180.0],Termination
+259,151,[-0.0],Termination
+268,49,[-0.0],Termination
+271,238,[-180.0],Termination
+281,54,[-26.56505117707799],Termination
+283,230,[-180.0],Termination
+292,149,[-0.0],Termination
+295,221,[-153.434948822922],Termination
+303,66,[-45.0],Termination
+305,177,[-180.0],Termination
+310,113,[-0.0],Termination
+322,108,[153.434948822922],Termination
+323,91,[-26.56505117707799],Termination

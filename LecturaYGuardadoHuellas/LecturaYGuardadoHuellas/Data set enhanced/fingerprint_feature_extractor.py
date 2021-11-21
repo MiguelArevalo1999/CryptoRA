@@ -178,12 +178,12 @@ def extract_minutiae_features(img, showResult=False):
     if(showResult):
         feature_extractor.showResults()
 
-    with open('Yvonne_features.txt', 'a') as f:    
+    with open('Alan_features.txt', 'a') as f:    
         for bifurcation in FeaturesBif:
-            f.write(str(list((bifurcation.locX, bifurcation.locY, bifurcation.Orientation, bifurcation.Type)))+'\n')
+            f.write(f'{bifurcation.locX},{bifurcation.locY},{bifurcation.Orientation},{bifurcation.Type}\n')
             
         for termination in FeaturesTerm:
-            f.write(str(list((termination.locX, termination.locY, termination.Orientation, termination.Type)))+'\n')
+            f.write(f'{termination.locX},{termination.locY},{termination.Orientation},{termination.Type}\n')
             
     f.close()
     return(FeaturesTerm, FeaturesBif)
