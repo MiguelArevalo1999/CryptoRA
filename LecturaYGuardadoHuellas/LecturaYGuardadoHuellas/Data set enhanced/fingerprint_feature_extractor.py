@@ -1,3 +1,4 @@
+from sys import path
 import cv2
 import numpy as np
 import skimage.morphology
@@ -110,7 +111,7 @@ class FingerprintFeatureExtractor(object):
         self.minutiaeTerm = skimage.measure.label(self.minutiaeTerm, connectivity=2) 
         RP = skimage.measure.regionprops(np.uint8(self.minutiaeTerm))
 
-        WindowSize = 2  # --> For Termination, the block size must can be 3x3, or 5x5. Hence the window selected is 1 or 2
+        WindowSize = 3  # --> For Termination, the block size must can be 3x3, or 5x5. Hence the window selected is 1 or 2
         FeaturesTerm = []
         for num, i in enumerate(RP):
             (row, col) = np.int16(np.round(i['Centroid']))
@@ -122,7 +123,7 @@ class FingerprintFeatureExtractor(object):
         FeaturesBif = []
         self.minutiaeBif = skimage.measure.label(self.minutiaeBif, connectivity=2) 
         RP = skimage.measure.regionprops(np.uint8(self.minutiaeBif))
-        WindowSize = 1  # --> For Bifurcation, the block size must be 3x3. Hence the window selected is 1
+        WindowSize = 3  # --> For Bifurcation, the block size must be 3x3. Hence the window selected is 1
         for i in RP:
             (row, col) = np.int16(np.round(i['Centroid']))
             block = self._skel[row - WindowSize:row + WindowSize + 1, col - WindowSize:col + WindowSize + 1]
@@ -141,7 +142,7 @@ class FingerprintFeatureExtractor(object):
         FeaturesTerm, FeaturesBif = self.__performFeatureExtraction()
         return(FeaturesTerm, FeaturesBif)
 
-    def showResults(self):
+    def showResults(self,path,iteracion):
         BifLabel = skimage.measure.label(self.minutiaeBif, connectivity=2) 
         TermLabel = skimage.measure.label(self.minutiaeTerm, connectivity=2) 
 
@@ -167,24 +168,23 @@ class FingerprintFeatureExtractor(object):
             minutiaeTerm[row, col] = 1 
             (rr, cc) = skimage.draw.circle_perimeter(row, col, 3) 
             skimage.draw.set_color(DispImg, (rr, cc), (0, 0, 255)) 
-
+        cv2.imwrite(path,DispImg)
         # cv2.imshow('Minucias extraidas', DispImg) 
         # cv2.waitKey(0)
 
-
-def extract_minutiae_features(img, showResult=False):
+def extract_minutiae_features(img,path,iteracion, showResult=False):
     feature_extractor = FingerprintFeatureExtractor()
     FeaturesTerm, FeaturesBif = feature_extractor.extractMinutiaeFeatures(img)
 
     if(showResult):
-        feature_extractor.showResults()
+        feature_extractor.showResults(path,iteracion)
 
-    with open('Alan_features.txt', 'a') as f:    
-        for bifurcation in FeaturesBif:
-            f.write(f'{bifurcation.locX},{bifurcation.locY},{bifurcation.Orientation},{bifurcation.Type}\n')
+    # with open('Alan_features.txt', 'a') as f:    
+    #     for bifurcation in FeaturesBif:
+    #         f.write(f'{bifurcation.locX},{bifurcation.locY},{bifurcation.Orientation},{bifurcation.Type}\n')
             
-        for termination in FeaturesTerm:
-            f.write(f'{termination.locX},{termination.locY},{termination.Orientation},{termination.Type}\n')
+    #     for termination in FeaturesTerm:
+    #         f.write(f'{termination.locX},{termination.locY},{termination.Orientation},{termination.Type}\n')
             
-    f.close()
+    # f.close()
     return(FeaturesTerm, FeaturesBif)
