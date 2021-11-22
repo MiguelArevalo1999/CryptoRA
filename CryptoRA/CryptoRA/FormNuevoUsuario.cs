@@ -41,12 +41,6 @@ namespace CryptoRA
                 Correo = correoTbox.Text,
                 Nombre = nombreTbox.Text,
                 Apellidos = apellidosTbox.Text,
-                Edad = Convert.ToInt16(edadCbox.SelectedItem),
-                Sexo = Convert.ToString(sexoCBox.SelectedItem),
-                Telefono = telefonoTbox.Text,
-                Pais = paisTbox.Text,
-                Ciudad = ciudadTbox.Text,
-                Municipio = municipioTbox.Text,
                 isAdmin = Convert.ToBoolean(isAdminCb.SelectedItem),
 
             };

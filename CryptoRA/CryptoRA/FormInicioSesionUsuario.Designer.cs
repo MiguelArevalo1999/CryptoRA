@@ -96,7 +96,7 @@ namespace CryptoRA
             // 
             this.textBox1.Location = new System.Drawing.Point(118, 128);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(331, 22);
+            this.textBox1.Size = new System.Drawing.Size(331, 26);
             this.textBox1.TabIndex = 8;
             // 
             // label1
@@ -104,7 +104,7 @@ namespace CryptoRA
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(54, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(71, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "USUARIO:";
             // 
@@ -174,10 +174,10 @@ namespace CryptoRA
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(247)))));
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(90, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(320, 57);
+            this.label4.Size = new System.Drawing.Size(400, 69);
             this.label4.TabIndex = 0;
             this.label4.Text = "Bienvenido a CryptoRA\r\nEl criptosistema que te pemite cifrar y descifrar\r\ntus doc" +
     "umentos importantes con tu huella dactilar.";
@@ -186,7 +186,7 @@ namespace CryptoRA
             // 
             // FormInicioSesionUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(982, 570);
