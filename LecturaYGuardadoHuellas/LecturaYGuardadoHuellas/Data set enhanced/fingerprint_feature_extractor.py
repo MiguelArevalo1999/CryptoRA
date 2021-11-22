@@ -5,7 +5,7 @@ import skimage.morphology
 from skimage.morphology import convex_hull_image, erosion
 from skimage.morphology import square
 import math
-import json
+import matplotlib.pyplot as plt
 
 class MinutiaeFeature(object):
     def __init__(self, locX, locY, Orientation, Type):
@@ -168,7 +168,17 @@ class FingerprintFeatureExtractor(object):
             minutiaeTerm[row, col] = 1 
             (rr, cc) = skimage.draw.circle_perimeter(row, col, 3) 
             skimage.draw.set_color(DispImg, (rr, cc), (0, 0, 255)) 
-        cv2.imwrite(path,DispImg)
+        height, width, channels = DispImg.shape
+        # print(height, width,channels)
+        img_size = height*width*channels
+        img_1D_vector = DispImg.reshape(img_size)
+        print(img_1D_vector.tolist())
+        # img2 = img_1D_vector.reshape(rows,cols,channels)
+        # plt.imshow(img_1D_vector) # followed by 
+        # plt.show() # to show the first image, then 
+        #plt.imshow(img2) # followed by
+        #plt.show() # to show you the second image
+        #cv2.imwrite(path,DispImg)
         # cv2.imshow('Minucias extraidas', DispImg) 
         # cv2.waitKey(0)
 
