@@ -1,7 +1,7 @@
 ﻿
 namespace CryptoRA
 {
-    partial class FormCifrado
+    partial class FormFirma
     {
         /// <summary>
         /// Required designer variable.
@@ -29,22 +29,17 @@ namespace CryptoRA
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCifrado));
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFirma));
             this.panel5 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = " ";
             // 
             // panel5
             // 
@@ -58,17 +53,16 @@ namespace CryptoRA
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(739, 447);
-            this.panel5.TabIndex = 5;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            this.panel5.TabIndex = 8;
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(296, 234);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 42);
             this.button3.TabIndex = 13;
-            this.button3.Text = "CIFRAR DOCUMENTO";
+            this.button3.Text = "FIRMAR DOCUMENTO";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -76,18 +70,30 @@ namespace CryptoRA
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button4.Location = new System.Drawing.Point(516, 176);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 36);
+            this.button4.Size = new System.Drawing.Size(133, 39);
             this.button4.TabIndex = 5;
-            this.button4.Text = "SELECCIONAR LLAVE PÚBLICA";
+            this.button4.Text = "VALIDAR LLAVE PRIVADA";
             this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button5.Location = new System.Drawing.Point(88, 176);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(142, 39);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "SELECCIONAR ARCHIVO";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::CryptoRA.Properties.Resources.pubkey;
+            this.pictureBox3.Image = global::CryptoRA.Properties.Resources.fingerprint;
             this.pictureBox3.Location = new System.Drawing.Point(459, 39);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(240, 133);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -98,40 +104,25 @@ namespace CryptoRA
             // 
             this.pictureBox4.Image = global::CryptoRA.Properties.Resources.file;
             this.pictureBox4.Location = new System.Drawing.Point(38, 39);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(240, 133);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
-            // button5
-            // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button5.Location = new System.Drawing.Point(86, 176);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(144, 36);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "SELECCIONAR ARCHIVO";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // FormCifrado
+            // FormFirma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(739, 447);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "FormCifrado";
+            this.Name = "FormFirma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CryptoRA";
-            this.Load += new System.EventHandler(this.FormCifrado_Load);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -140,7 +131,7 @@ namespace CryptoRA
         }
 
         #endregion
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
