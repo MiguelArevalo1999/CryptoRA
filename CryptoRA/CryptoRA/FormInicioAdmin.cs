@@ -26,7 +26,7 @@ namespace CryptoRA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form formulario1 = new FormNuevoUsuarioAdmin();
+            Form formulario1 = new FormNuevoUsuario();
             formulario1.Show();
             this.Hide();
         }

@@ -24,7 +24,6 @@ C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormNu
 C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormInicio.resources
 C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormInicioSesionUsuario.resources
 C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormInicioAdmin.resources
-C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormNuevoUsuarioAdmin.resources
 C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormUsuario.resources
 C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.Properties.Resources.resources
 C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.csproj.GenerateResource.cache
