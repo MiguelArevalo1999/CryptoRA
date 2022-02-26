@@ -10,22 +10,37 @@ using System.Windows.Forms;
 using FireSharp.Config;
 using FireSharp.Response;
 using FireSharp.Interfaces;
+using System.Security.Cryptography;
 
 namespace CryptoRA
 {
     public partial class FormNuevoUsuario : Form
     {
+        // Declare CspParmeters and RsaCryptoServiceProvider
+        // objects with global scope of your Form class.
+        readonly CspParameters _cspp = new CspParameters();
+        RSACryptoServiceProvider _rsa;
+
+        // Path variables for source, encryption, and
+        // decryption folders. Must end with a backslash.
+        const string EncrFolder = @"C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\Resources\Cifrado\";
+        const string DecrFolder = @"C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\Resources\Descifrado\";
+        const string SrcFolder = @"C:\Users\mival\source\repos\CryptoRA\CryptoRA\CryptoRA\Resources\Docs\";
+
+        // Public key file
+        const string PubKeyFile = @"c:\encrypt\rsaPublicKey.txt";
+
+        // Key container name for
+        // private/public key value pair.
+        const string KeyName = "Key01";
+
         public FormNuevoUsuario()
         {
             InitializeComponent();
         }
-        IFirebaseConfig fcon = new FirebaseConfig()
-        {
-            AuthSecret = "ZkLlTzxNuSCCHTaaP4orjzLhww0YSpYaNcrp5VK4",
-            BasePath = "https://cryptora-5859e-default-rtdb.firebaseio.com/"
-        };
+       
 
-        IFirebaseClient client;
+       
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
             Form formulario1 = new FormInicio();
@@ -37,14 +52,26 @@ namespace CryptoRA
         {
             Usuario u = new Usuario()
             {
-                NombreUsuario = usuarioTbox.Text,
-                Correo = correoTbox.Text,
-                Nombre = nombreTbox.Text,
-                Apellidos = apellidosTbox.Text,
-                isAdmin = Convert.ToBoolean(isAdminCb.SelectedItem),
+                //NombreUsuario = usuarioTbox.Text,
+                //Correo = correoTbox.Text,
+                //Nombre = nombreTbox.Text,
+                //Apellidos = apellidosTbox.Text,
+                //isAdmin = Convert.ToBoolean(isAdminCb.SelectedItem),
 
             };
-            var setter = client.Set("usuarios/"+usuarioTbox.Text,u);
+           
+
+            // Stores a key pair in the key container.
+            _cspp.KeyContainerName = KeyName;
+            _rsa = new RSACryptoServiceProvider(_cspp)
+            {
+                PersistKeyInCsp = true
+            };
+
+            label1.Text = _rsa.PublicOnly
+                ? $"Key: {_cspp.KeyContainerName} - Public Only"
+                : $"Key: {_cspp.KeyContainerName} - Full Key Pair";
+
             MessageBox.Show("Usuario inscrito correctamente");
         }
 
@@ -52,11 +79,11 @@ namespace CryptoRA
         {
             try
             {
-                client = new FireSharp.FirebaseClient(fcon);
+              
             }
             catch
             {
-                MessageBox.Show("Ha habido un problema en el internet");
+                
             }
         }
 

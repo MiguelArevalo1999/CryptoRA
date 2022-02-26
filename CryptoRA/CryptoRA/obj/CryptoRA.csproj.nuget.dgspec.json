@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\georg\\Source\\Repos\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj": {}
+    "C:\\Users\\mival\\Source\\Repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\georg\\Source\\Repos\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj": {
+    "C:\\Users\\mival\\Source\\Repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\georg\\Source\\Repos\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj",
+        "projectUniqueName": "C:\\Users\\mival\\Source\\Repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj",
         "projectName": "CryptoRA",
-        "projectPath": "C:\\Users\\georg\\Source\\Repos\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj",
-        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\georg\\Source\\Repos\\CryptoRA\\CryptoRA\\CryptoRA\\obj\\",
+        "projectPath": "C:\\Users\\mival\\Source\\Repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj",
+        "packagesPath": "C:\\Users\\mival\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mival\\Source\\Repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mival\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,6 +41,10 @@
             "Google.Cloud.Firestore": {
               "target": "Package",
               "version": "[2.4.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.28, )"
             }
           }
         }
