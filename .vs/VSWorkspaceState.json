@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CryptoRA",
+    "\\CryptoRA\\CryptoRA"
   ],
-  "SelectedNode": "\\CryptoRA.sln",
+  "SelectedNode": "\\CryptoRA\\CryptoRA\\FormNuevoUsuario.cs",
   "PreviewInSolutionExplorer": false
 }

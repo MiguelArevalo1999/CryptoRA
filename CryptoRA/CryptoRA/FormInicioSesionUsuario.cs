@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CryptoRA.DA_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,9 +32,21 @@ namespace CryptoRA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form formulario1 = new FormUsuario();
-            formulario1.Show();
-            this.Hide();
+            string nombreUsuario = txBoxNombreUsuario.Text;
+
+            Usuario aUser = UsuariosDA.RegresaUsuario(nombreUsuario);
+
+            if (aUser.NombreUsuario.Equals(nombreUsuario))
+            {
+                Form formulario1 = new FormUsuario(aUser);
+                formulario1.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Inicio de sesión fallido, intente de nuevo");
+                txBoxNombreUsuario.Text = "";
+            }
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mival\\Source\\Repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj": {}
+    "C:\\Users\\mival\\source\\repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mival\\Source\\Repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj": {
+    "C:\\Users\\mival\\source\\repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mival\\Source\\Repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj",
+        "projectUniqueName": "C:\\Users\\mival\\source\\repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj",
         "projectName": "CryptoRA",
-        "projectPath": "C:\\Users\\mival\\Source\\Repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj",
+        "projectPath": "C:\\Users\\mival\\source\\repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\CryptoRA.csproj",
         "packagesPath": "C:\\Users\\mival\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mival\\Source\\Repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\obj\\",
+        "outputPath": "C:\\Users\\mival\\source\\repos\\MiguelArevalo1999\\CryptoRA\\CryptoRA\\CryptoRA\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -32,22 +32,7 @@
         }
       },
       "frameworks": {
-        "net472": {
-          "dependencies": {
-            "FireSharp": {
-              "target": "Package",
-              "version": "[2.0.4, )"
-            },
-            "Google.Cloud.Firestore": {
-              "target": "Package",
-              "version": "[2.4.0, )"
-            },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[8.0.28, )"
-            }
-          }
-        }
+        "net472": {}
       },
       "runtimes": {
         "win": {

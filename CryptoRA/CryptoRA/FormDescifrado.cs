@@ -34,8 +34,8 @@ namespace CryptoRA
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form formulario4 = new FormUsuario();
-            formulario4.Show();
+            //Form formulario4 = new FormUsuario();
+            //formulario4.Show();
             this.Hide();
         }
 

@@ -7,9 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FireSharp.Config;
-using FireSharp.Response;
-using FireSharp.Interfaces;
 using System.Security.Cryptography;
 
 namespace CryptoRA
@@ -50,15 +47,15 @@ namespace CryptoRA
 
         private void InscribirBtn_Click(object sender, EventArgs e)
         {
-            Usuario u = new Usuario()
-            {
-                //NombreUsuario = usuarioTbox.Text,
-                //Correo = correoTbox.Text,
-                //Nombre = nombreTbox.Text,
-                //Apellidos = apellidosTbox.Text,
-                //isAdmin = Convert.ToBoolean(isAdminCb.SelectedItem),
+            //Usuario u = new Usuario()
+            //{
+            //    NombreUsuario = usuarioTbox.Text,
+            //    Correo = correoTbox.Text,
+            //    Nombre = nombreTbox.Text,
+            //    Apellidos = apellidosTbox.Text,
+            //    isAdmin = Convert.ToBoolean(isAdminCb.SelectedItem),
 
-            };
+            //};
            
 
             // Stores a key pair in the key container.

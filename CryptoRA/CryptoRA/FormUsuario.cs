@@ -12,9 +12,13 @@ namespace CryptoRA
 {
     public partial class FormUsuario : Form
     {
-        public FormUsuario()
+        public Usuario aUser1 = null;
+
+        public FormUsuario(Usuario aUser)
         {
             InitializeComponent();
+            aUser1 = aUser;
+            
         }
 
         private void buttonRegresar_Click(object sender, EventArgs e)
@@ -37,6 +41,9 @@ namespace CryptoRA
         private void FormUsuario_Load(object sender, EventArgs e)
         {
 
+            imgProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            imgProfile.Load(@"C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\Resources\me_cobrakai.jpg");
+            
         }
 
         private void AbrirFormularios<FormCifrado>() where FormCifrado:Form, new()

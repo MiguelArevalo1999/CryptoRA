@@ -7,9 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FireSharp.Config;
-using FireSharp.Response;
-using FireSharp.Interfaces;
+using CryptoRA.Helper;
 
 namespace CryptoRA
 {
@@ -18,6 +16,8 @@ namespace CryptoRA
         public FormInicio()
         {
             InitializeComponent();
+            DBHelper.EstablishConnection();
+            
         }
      
         private void label1_Click(object sender, EventArgs e)
