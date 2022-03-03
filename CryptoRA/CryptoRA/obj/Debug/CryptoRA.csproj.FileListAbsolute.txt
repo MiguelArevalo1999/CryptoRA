@@ -172,3 +172,9 @@ C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\bin\Deb
 C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\bin\Debug\K4os.Compression.LZ4.dll
 C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\bin\Debug\K4os.Hash.xxHash.dll
 C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\bin\Debug\MySql.Data.xml
+C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormVerificarH.resources
+C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\bin\Debug\DPFPDevNET.dll
+C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\bin\Debug\DPFPEngNET.dll
+C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\bin\Debug\DPFPShrNET.dll
+C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\bin\Debug\DPFPVerNET.dll
+C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.CaptureForm.resources

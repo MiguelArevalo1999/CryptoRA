@@ -36,10 +36,16 @@ namespace CryptoRA
 
             Usuario aUser = UsuariosDA.RegresaUsuario(nombreUsuario);
 
-            if (aUser.NombreUsuario.Equals(nombreUsuario))
+            if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(false))
             {
                 Form formulario1 = new FormUsuario(aUser);
                 formulario1.Show();
+                this.Hide();
+            }
+            else if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(true))
+            {
+                Form formulario2 = new FormInicioAdmin(aUser);
+                formulario2.Show();
                 this.Hide();
             }
             else

@@ -44,9 +44,7 @@ namespace CryptoRA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form formulario1 = new FormInicioAdmin();
-            formulario1.Show();
-            this.Hide();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)

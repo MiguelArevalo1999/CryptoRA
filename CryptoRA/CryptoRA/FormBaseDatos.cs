@@ -28,8 +28,8 @@ namespace CryptoRA
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
-            Form formulario1 = new FormInicioAdmin();
-            formulario1.Show();
+            //Form formulario1 = new FormInicioAdmin();
+            //formulario1.Show();
             this.Hide();
         }
 

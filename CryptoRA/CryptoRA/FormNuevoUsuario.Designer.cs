@@ -33,31 +33,31 @@ namespace CryptoRA
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.isAdminCb = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.apellidosTbox = new System.Windows.Forms.TextBox();
+            this.nombreTbox = new System.Windows.Forms.TextBox();
+            this.correoTbox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.usuarioTbox = new System.Windows.Forms.TextBox();
+            this.ValidarBtn = new System.Windows.Forms.Button();
+            this.InscribirBtn = new System.Windows.Forms.Button();
+            this.buttonRegresar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.buttonRegresar = new System.Windows.Forms.Button();
-            this.InscribirBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.usuarioTbox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.correoTbox = new System.Windows.Forms.TextBox();
-            this.nombreTbox = new System.Windows.Forms.TextBox();
-            this.apellidosTbox = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.isAdminCb = new System.Windows.Forms.ComboBox();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -87,6 +87,158 @@ namespace CryptoRA
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(573, 537);
             this.panel2.TabIndex = 3;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.isAdminCb);
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.apellidosTbox);
+            this.panel5.Controls.Add(this.nombreTbox);
+            this.panel5.Controls.Add(this.correoTbox);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.usuarioTbox);
+            this.panel5.Controls.Add(this.ValidarBtn);
+            this.panel5.Controls.Add(this.InscribirBtn);
+            this.panel5.Controls.Add(this.buttonRegresar);
+            this.panel5.Location = new System.Drawing.Point(3, 150);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(567, 384);
+            this.panel5.TabIndex = 4;
+            // 
+            // isAdminCb
+            // 
+            this.isAdminCb.FormattingEnabled = true;
+            this.isAdminCb.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.isAdminCb.Location = new System.Drawing.Point(131, 134);
+            this.isAdminCb.Name = "isAdminCb";
+            this.isAdminCb.Size = new System.Drawing.Size(121, 27);
+            this.isAdminCb.TabIndex = 35;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(51, 134);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 23);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "ADMIN:";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // apellidosTbox
+            // 
+            this.apellidosTbox.Location = new System.Drawing.Point(132, 100);
+            this.apellidosTbox.Name = "apellidosTbox";
+            this.apellidosTbox.Size = new System.Drawing.Size(401, 26);
+            this.apellidosTbox.TabIndex = 21;
+            // 
+            // nombreTbox
+            // 
+            this.nombreTbox.Location = new System.Drawing.Point(132, 71);
+            this.nombreTbox.Name = "nombreTbox";
+            this.nombreTbox.Size = new System.Drawing.Size(401, 26);
+            this.nombreTbox.TabIndex = 20;
+            // 
+            // correoTbox
+            // 
+            this.correoTbox.Location = new System.Drawing.Point(132, 41);
+            this.correoTbox.Name = "correoTbox";
+            this.correoTbox.Size = new System.Drawing.Size(401, 26);
+            this.correoTbox.TabIndex = 19;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(20, 100);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 23);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "APELLIDOS:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(20, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 23);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "NOMBRE(s):";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(20, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 23);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "CORREO-e:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(20, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 23);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "USUARIO:";
+            // 
+            // usuarioTbox
+            // 
+            this.usuarioTbox.Location = new System.Drawing.Point(132, 12);
+            this.usuarioTbox.Name = "usuarioTbox";
+            this.usuarioTbox.Size = new System.Drawing.Size(401, 26);
+            this.usuarioTbox.TabIndex = 11;
+            // 
+            // ValidarBtn
+            // 
+            this.ValidarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ValidarBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ValidarBtn.Location = new System.Drawing.Point(243, 202);
+            this.ValidarBtn.Name = "ValidarBtn";
+            this.ValidarBtn.Size = new System.Drawing.Size(143, 38);
+            this.ValidarBtn.TabIndex = 10;
+            this.ValidarBtn.Text = "VALIDAR HUELLA DACTILAR";
+            this.ValidarBtn.UseVisualStyleBackColor = true;
+            this.ValidarBtn.Click += new System.EventHandler(this.ValidarBtn_Click);
+            // 
+            // InscribirBtn
+            // 
+            this.InscribirBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.InscribirBtn.Enabled = false;
+            this.InscribirBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.InscribirBtn.Location = new System.Drawing.Point(390, 270);
+            this.InscribirBtn.Name = "InscribirBtn";
+            this.InscribirBtn.Size = new System.Drawing.Size(143, 34);
+            this.InscribirBtn.TabIndex = 9;
+            this.InscribirBtn.Text = "INSCRIBIR";
+            this.InscribirBtn.UseVisualStyleBackColor = true;
+            this.InscribirBtn.Click += new System.EventHandler(this.InscribirBtn_Click);
+            // 
+            // buttonRegresar
+            // 
+            this.buttonRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRegresar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonRegresar.Location = new System.Drawing.Point(24, 270);
+            this.buttonRegresar.Name = "buttonRegresar";
+            this.buttonRegresar.Size = new System.Drawing.Size(143, 34);
+            this.buttonRegresar.TabIndex = 8;
+            this.buttonRegresar.Text = "REGRESAR";
+            this.buttonRegresar.UseVisualStyleBackColor = true;
+            this.buttonRegresar.Click += new System.EventHandler(this.buttonRegresar_Click);
             // 
             // panel3
             // 
@@ -127,156 +279,6 @@ namespace CryptoRA
             this.label4.Text = "NUEVO USUARIO";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonRegresar
-            // 
-            this.buttonRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRegresar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonRegresar.Location = new System.Drawing.Point(24, 270);
-            this.buttonRegresar.Name = "buttonRegresar";
-            this.buttonRegresar.Size = new System.Drawing.Size(143, 34);
-            this.buttonRegresar.TabIndex = 8;
-            this.buttonRegresar.Text = "REGRESAR";
-            this.buttonRegresar.UseVisualStyleBackColor = true;
-            this.buttonRegresar.Click += new System.EventHandler(this.buttonRegresar_Click);
-            // 
-            // InscribirBtn
-            // 
-            this.InscribirBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.InscribirBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.InscribirBtn.Location = new System.Drawing.Point(390, 270);
-            this.InscribirBtn.Name = "InscribirBtn";
-            this.InscribirBtn.Size = new System.Drawing.Size(143, 34);
-            this.InscribirBtn.TabIndex = 9;
-            this.InscribirBtn.Text = "INSCRIBIR";
-            this.InscribirBtn.UseVisualStyleBackColor = true;
-            this.InscribirBtn.Click += new System.EventHandler(this.InscribirBtn_Click);
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(243, 202);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 38);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "VALIDAR HUELLA DACTILAR";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // usuarioTbox
-            // 
-            this.usuarioTbox.Location = new System.Drawing.Point(132, 12);
-            this.usuarioTbox.Name = "usuarioTbox";
-            this.usuarioTbox.Size = new System.Drawing.Size(401, 26);
-            this.usuarioTbox.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(20, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 23);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "USUARIO:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(20, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 23);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "CORREO-e:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(20, 71);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 23);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "NOMBRE(s):";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(20, 100);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 23);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "APELLIDOS:";
-            // 
-            // correoTbox
-            // 
-            this.correoTbox.Location = new System.Drawing.Point(132, 41);
-            this.correoTbox.Name = "correoTbox";
-            this.correoTbox.Size = new System.Drawing.Size(401, 26);
-            this.correoTbox.TabIndex = 19;
-            // 
-            // nombreTbox
-            // 
-            this.nombreTbox.Location = new System.Drawing.Point(132, 71);
-            this.nombreTbox.Name = "nombreTbox";
-            this.nombreTbox.Size = new System.Drawing.Size(401, 26);
-            this.nombreTbox.TabIndex = 20;
-            // 
-            // apellidosTbox
-            // 
-            this.apellidosTbox.Location = new System.Drawing.Point(132, 100);
-            this.apellidosTbox.Name = "apellidosTbox";
-            this.apellidosTbox.Size = new System.Drawing.Size(401, 26);
-            this.apellidosTbox.TabIndex = 21;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(51, 134);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 23);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "ADMIN:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // isAdminCb
-            // 
-            this.isAdminCb.FormattingEnabled = true;
-            this.isAdminCb.Items.AddRange(new object[] {
-            "True",
-            "False"});
-            this.isAdminCb.Location = new System.Drawing.Point(131, 134);
-            this.isAdminCb.Name = "isAdminCb";
-            this.isAdminCb.Size = new System.Drawing.Size(121, 27);
-            this.isAdminCb.TabIndex = 35;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.isAdminCb);
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.apellidosTbox);
-            this.panel5.Controls.Add(this.nombreTbox);
-            this.panel5.Controls.Add(this.correoTbox);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.usuarioTbox);
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.InscribirBtn);
-            this.panel5.Controls.Add(this.buttonRegresar);
-            this.panel5.Location = new System.Drawing.Point(3, 150);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(567, 384);
-            this.panel5.TabIndex = 4;
-            // 
             // FormNuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -294,12 +296,12 @@ namespace CryptoRA
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -324,7 +326,7 @@ namespace CryptoRA
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox usuarioTbox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ValidarBtn;
         private System.Windows.Forms.Button InscribirBtn;
         private System.Windows.Forms.Button buttonRegresar;
     }

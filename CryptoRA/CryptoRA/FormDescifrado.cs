@@ -61,5 +61,11 @@ namespace CryptoRA
                 //Aqui va el codigo para abrir y leer el archivo
             }
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            FormVerificarH verificar = new FormVerificarH();
+            verificar.ShowDialog();
+        }
     }
 }

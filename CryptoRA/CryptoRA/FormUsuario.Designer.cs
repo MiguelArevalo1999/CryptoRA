@@ -113,7 +113,7 @@ namespace CryptoRA
             // 
             this.imgProfile.Location = new System.Drawing.Point(28, 14);
             this.imgProfile.Name = "imgProfile";
-            this.imgProfile.Size = new System.Drawing.Size(145, 145);
+            this.imgProfile.Size = new System.Drawing.Size(134, 191);
             this.imgProfile.TabIndex = 0;
             this.imgProfile.TabStop = false;
             // 
