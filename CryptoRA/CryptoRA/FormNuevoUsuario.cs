@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using CryptoRA.Helper;
+using CryptoRA.Cryptography;
 
 namespace CryptoRA
 {
@@ -30,10 +31,26 @@ namespace CryptoRA
 
         private void InscribirBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                byte[] streamHuella = Template.Bytes;
+                byte[] hashHuella = CryptoHelper.ComputeHash512(streamHuella);
 
+                Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
+                Console.WriteLine("Hash: " + ByteArrayToString(hashHuella));
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
             MessageBox.Show("Usuario inscrito correctamente");
         }
-
+        public static string ByteArrayToString(byte[] ba)
+        {
+            return BitConverter.ToString(ba).Replace("-", "");
+        }
         private void FormNuevoUsuario_Load(object sender, EventArgs e)
         {
             DBHelper.EstablishConnection();

@@ -78,6 +78,7 @@
     <Compile Include="CaptureForm.designer.cs">
       <DependentUpon>CaptureForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cryptography\CryptoHelper.cs" />
     <Compile Include="DA Layer\UsuariosDA.cs" />
     <Compile Include="FormBaseDatos.cs">
       <SubType>Form</SubType>
