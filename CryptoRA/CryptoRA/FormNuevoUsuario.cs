@@ -39,7 +39,8 @@ namespace CryptoRA
                 Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
                 Console.WriteLine("Hash: " + ByteArrayToString(hashHuella));
                 Console.WriteLine(hashHuella.Length);
-                CryptoHelper.getPrimes();
+                
+                CryptoHelper.getPublicKey(hashHuella);
 
             }
             catch (Exception ex)
