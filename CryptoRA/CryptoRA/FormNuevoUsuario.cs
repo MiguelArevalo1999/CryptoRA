@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using CryptoRA.Helper;
 using CryptoRA.Cryptography;
-
+using System.Numerics;
+using CryptoRA.DA_Layer;
 namespace CryptoRA
 {
     public partial class FormNuevoUsuario : Form
@@ -31,24 +32,37 @@ namespace CryptoRA
 
         private void InscribirBtn_Click(object sender, EventArgs e)
         {
+            string nombreUsuario,correo, nombre, apellidos, esAdmin;
+
             try
             {
                 byte[] streamHuella = Template.Bytes;
                 byte[] hashHuella = CryptoHelper.ComputeHash512(streamHuella);
 
-                Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
-                Console.WriteLine("Hash: " + ByteArrayToString(hashHuella));
-                Console.WriteLine(hashHuella.Length);
-                
-                CryptoHelper.getPublicKey(hashHuella);
+                //Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
+                //Console.WriteLine("Hash: " + ByteArrayToString(hashHuella));
 
+                BigInteger pubkey = CryptoHelper.getPublicKey(hashHuella);
+                byte [] pubkey_bytes = pubkey.ToByteArray();
+                Console.WriteLine("Pubkey len: "+pubkey_bytes.Length);
+
+                nombreUsuario = Convert.ToString(usuarioTbox.Text);
+                correo = Convert.ToString(correoTbox.Text);
+                nombre = Convert.ToString(nombreTbox.Text);
+                apellidos = Convert.ToString(apellidosTbox.Text);
+                esAdmin = Convert.ToString(isAdminCb.SelectedItem);
+
+
+                UsuariosDA.InsertaUsuario(nombreUsuario, correo, nombre, apellidos, hashHuella, pubkey_bytes, esAdmin);
+
+                MessageBox.Show("Usuario inscrito correctamente");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 throw;
             }
-            MessageBox.Show("Usuario inscrito correctamente");
+           
         }
         public static string ByteArrayToString(byte[] ba)
         {
@@ -87,6 +101,11 @@ namespace CryptoRA
                     MessageBox.Show("La plantilla de huella dactilar no es válida. Repita el registro de huellas dactilares.", "Inscripción de huellas dactilares");
                 }
             }));
+        }
+
+        private void isAdminCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

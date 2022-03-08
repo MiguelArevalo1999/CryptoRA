@@ -23,14 +23,18 @@ namespace CryptoRA.Cryptography
 
         public static BigInteger getPublicKey(byte[] hashHuella)
         {
-            BigInteger hashHuella_BigInt = new BigInteger(hashHuella);
-            
-            if (hashHuella_BigInt.IsEven) { hashHuella_BigInt++; }
-            
-            Console.WriteLine("HashBigInt: " + hashHuella_BigInt);
-            BigInteger publickey =  generatePublicKey(hashHuella_BigInt);
+            BigInteger privateKey = getPrivateKey(hashHuella);
+            BigInteger publickey =  generatePublicKey(privateKey);
             
             return publickey;
+        }
+
+        public static BigInteger getPrivateKey(byte[] hashHuella)
+        {
+            BigInteger privateKey = new BigInteger(hashHuella);
+
+            if (privateKey.IsEven) { privateKey++; }
+            return privateKey;
         }
 
         public static BigInteger generatePublicKey(BigInteger hashHuella_BigInt)
@@ -46,16 +50,16 @@ namespace CryptoRA.Cryptography
                 BigInteger p = new BigInteger(a.P.Reverse().Concat(new byte[1]).ToArray());
                 BigInteger q = new BigInteger(a.Q.Reverse().Concat(new byte[1]).ToArray());
                 BigInteger n = new BigInteger(a.Modulus.Reverse().Concat(new byte[1]).ToArray());
-                Console.WriteLine(p * q == n);
-                Console.WriteLine("p: " + p);
-                Console.WriteLine("q: " + q);
-                Console.WriteLine("n: " + n);
-                Console.WriteLine("Phi(n): " + Phi(p, q));
+                //Console.WriteLine(p * q == n);
+                //Console.WriteLine("p: " + p);
+                //Console.WriteLine("q: " + q);
+                //Console.WriteLine("n: " + n);
+                //Console.WriteLine("Phi(n): " + Phi(p, q));
 
                 pubkey = ModInverse(hashHuella_BigInt, Phi(p, q));
                 if((pubkey * hashHuella_BigInt)%Phi(p,q) == 1)
                 {
-                    Console.WriteLine("Pubkey: " + pubkey);
+                    //Console.WriteLine("Pubkey: " + pubkey);
                     correctPrimes = false;
                 }
 
@@ -96,7 +100,7 @@ namespace CryptoRA.Cryptography
 
                 gcd = right;
             }
-            Console.WriteLine(gcd);
+            //Console.WriteLine(gcd);
             return gcd;
         }
 

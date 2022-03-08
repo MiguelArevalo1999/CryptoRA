@@ -118,6 +118,7 @@ namespace CryptoRA
             this.isAdminCb.Name = "isAdminCb";
             this.isAdminCb.Size = new System.Drawing.Size(121, 27);
             this.isAdminCb.TabIndex = 35;
+            this.isAdminCb.SelectedIndexChanged += new System.EventHandler(this.isAdminCb_SelectedIndexChanged);
             // 
             // label12
             // 

@@ -60,5 +60,40 @@ namespace CryptoRA.Helper
             }
             return cmd;
         }
+
+        public static MySqlCommand InsertQuery(string query, string nombreUsuario,
+                                          string correo, string nombre,
+                                          string apellidos, byte[] hashHuella,
+                                          byte[] pubkey, string esAdmin)
+        {
+
+            try
+            {
+                if (connection != null)
+                {
+                    connection.Open();
+                    cmd = connection.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.Add("@nombreUsuario", MySqlDbType.VarChar).Value = nombreUsuario;
+                    cmd.Parameters.Add("@correo", MySqlDbType.VarChar).Value = correo;
+                    cmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = nombre;
+                    cmd.Parameters.Add("@apellidos", MySqlDbType.VarChar).Value = apellidos;
+                    cmd.Parameters.Add("@hashHuella", MySqlDbType.Blob).Value = hashHuella;
+                    cmd.Parameters.Add("@pubkey", MySqlDbType.Blob).Value = pubkey;
+                    cmd.Parameters.Add("@esAdmin", MySqlDbType.VarChar).Value = esAdmin;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return cmd;
+        }
     }
 }
