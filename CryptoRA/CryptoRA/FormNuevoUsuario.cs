@@ -12,6 +12,8 @@ using CryptoRA.Helper;
 using CryptoRA.Cryptography;
 using System.Numerics;
 using CryptoRA.DA_Layer;
+using System.IO;
+
 namespace CryptoRA
 {
     public partial class FormNuevoUsuario : Form
@@ -39,8 +41,8 @@ namespace CryptoRA
                 byte[] streamHuella = Template.Bytes;
                 byte[] hashHuella = CryptoHelper.ComputeHash512(streamHuella);
 
-                //Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
-                //Console.WriteLine("Hash: " + ByteArrayToString(hashHuella));
+                Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
+                Console.WriteLine("Hash: " + ByteArrayToString(hashHuella));
 
                 BigInteger pubkey = CryptoHelper.getPublicKey(hashHuella);
                 byte [] pubkey_bytes = pubkey.ToByteArray();
@@ -80,13 +82,17 @@ namespace CryptoRA
 
         private void ValidarBtn_Click(object sender, EventArgs e)
         {
-           CapturarHuella capturar = new CapturarHuella();
+            
+            CapturarHuella capturar = new CapturarHuella();
             capturar.OnTemplate += this.OnTemplate;
             capturar.ShowDialog();
+
+            
         }
 
         private void OnTemplate(DPFP.Template template)
         {
+            
             this.Invoke(new Function(delegate ()
             {
                 Template = template;

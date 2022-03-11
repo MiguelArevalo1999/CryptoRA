@@ -68,14 +68,14 @@ namespace CryptoRA
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            AbrirFormularios<FormFirma>();
-        }
+        //private void button3_Click(object sender, EventArgs e)
+        //{
+        //    AbrirFormularios<FormFirma>();
+        //}
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            AbrirFormularios<FormVerificacion>();
-        }
+        //private void button4_Click(object sender, EventArgs e)
+        //{
+        //    AbrirFormularios<FormVerificacion>();
+        //}
     }
 }

@@ -32,8 +32,6 @@ namespace CryptoRA
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuario));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.imgProfile = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -65,8 +63,6 @@ namespace CryptoRA
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -75,30 +71,6 @@ namespace CryptoRA
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(207, 447);
             this.panel1.TabIndex = 5;
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button3.Location = new System.Drawing.Point(31, 316);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 34);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "MENÚ DE FIRMA";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button4.Location = new System.Drawing.Point(31, 356);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 34);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "MENÚ DE VERIFICACIÓN";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel6
             // 
@@ -240,7 +212,5 @@ namespace CryptoRA
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox imgProfile;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
     }
 }

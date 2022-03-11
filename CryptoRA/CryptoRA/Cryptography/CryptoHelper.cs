@@ -46,6 +46,8 @@ namespace CryptoRA.Cryptography
             {
                 RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(2048);
 
+                
+
                 var a = rsa.ExportParameters(true);
                 BigInteger p = new BigInteger(a.P.Reverse().Concat(new byte[1]).ToArray());
                 BigInteger q = new BigInteger(a.Q.Reverse().Concat(new byte[1]).ToArray());
@@ -116,7 +118,11 @@ namespace CryptoRA.Cryptography
 
             return x % modulo;
         }
-
+        
+        public static void rsaImportarLlave(byte[] pubkeyblob)
+        {
+            
+        }
 
 
     }

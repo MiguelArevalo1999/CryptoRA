@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -65,6 +66,13 @@ namespace CryptoRA
             {
                 //Aqui va el codigo para abrir y leer el archivo
             }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Aes aes = Aes.Create();
+            aes.GenerateIV();
+            aes.GenerateKey();
         }
     }
 }

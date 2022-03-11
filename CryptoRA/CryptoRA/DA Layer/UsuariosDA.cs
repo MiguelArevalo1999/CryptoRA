@@ -36,10 +36,13 @@ namespace CryptoRA.DA_Layer
                     string uCorreo = dataRow["correo"].ToString();
                     string uNombre = dataRow["Nombre"].ToString();
                     string uApellidos = dataRow["Apellidos"].ToString();
-                    bool uIsAdmin = dataRow["esAdmin"].ToString().Equals("True");Console.WriteLine(uIsAdmin);
+                    byte[] uHuella = (byte[])dataRow["Huella"];
+                    bool uIsAdmin = dataRow["esAdmin"].ToString().Equals("True");
                     string uImagenPerfil = dataRow["imagenPerfil"].ToString();
 
-                    aUsuario = new Usuario(uNombreUsuario,uCorreo,uNombre,uApellidos,uIsAdmin,uImagenPerfil);
+                    
+
+                    aUsuario = new Usuario(uNombreUsuario,uCorreo,uNombre,uApellidos,uHuella,uIsAdmin,uImagenPerfil);
                 }
             }
 

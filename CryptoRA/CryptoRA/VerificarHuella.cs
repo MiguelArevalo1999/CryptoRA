@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CryptoRA
 {
-    public partial class CapturarHuella : CaptureForm
+    public partial class VerificarHuella : CaptureForm
     {
         public delegate void OnTemplateEventHandler(DPFP.Template template);
 
@@ -18,15 +19,14 @@ namespace CryptoRA
 
         private DPFP.Processing.Enrollment Enroller;
 
+
         protected override void Init()
         {
             base.Init();
-            base.Text = "Dar de alta huella";
+            base.Text = "Verificar huella";
             Enroller = new DPFP.Processing.Enrollment();            // Create an enrollment.
-            Enroller.Clear();
             UpdateStatus();
         }
-
         protected override void Process(DPFP.Sample Sample)
         {
             base.Process(Sample);
@@ -69,8 +69,7 @@ namespace CryptoRA
             // Show number of samples needed.
             SetStatus(String.Format("Número de muestras necesarias: {0}", Enroller.FeaturesNeeded));
         }
-
-        public CapturarHuella()
+        public VerificarHuella()
         {
             InitializeComponent();
         }

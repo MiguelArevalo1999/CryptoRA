@@ -1,3 +1,4 @@
+using DPFP;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -175,5 +176,6 @@ namespace CryptoRA
 
 		private DPFP.Capture.Capture Capturer;
 
-	}
+        public Action<Template> OnTemplate { get; internal set; }
+    }
 }

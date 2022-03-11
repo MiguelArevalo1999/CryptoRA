@@ -64,8 +64,7 @@ namespace CryptoRA
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            FormVerificarH verificar = new FormVerificarH();
-            verificar.ShowDialog();
+           
         }
     }
 }
