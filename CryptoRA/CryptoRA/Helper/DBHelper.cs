@@ -64,7 +64,8 @@ namespace CryptoRA.Helper
         public static MySqlCommand InsertQuery(string query, string nombreUsuario,
                                           string correo, string nombre,
                                           string apellidos, byte[] hashHuella,
-                                          byte[] pubkey, string esAdmin)
+                                          byte[] pubkey, string esAdmin, byte[] DPbytes,
+                                          byte[] DQbytes, byte[] inverseQbytes, byte[] Pbytes, byte[] Qbytes)
         {
 
             try
@@ -82,6 +83,10 @@ namespace CryptoRA.Helper
                     cmd.Parameters.Add("@hashHuella", MySqlDbType.Blob).Value = hashHuella;
                     cmd.Parameters.Add("@pubkey", MySqlDbType.Blob).Value = pubkey;
                     cmd.Parameters.Add("@esAdmin", MySqlDbType.VarChar).Value = esAdmin;
+                    cmd.Parameters.Add("@DPbytes", MySqlDbType.Blob).Value = DPbytes;
+                    cmd.Parameters.Add("@DQbytes", MySqlDbType.Blob).Value = DQbytes;
+                    cmd.Parameters.Add("@inverseQbytes", MySqlDbType.Blob).Value = inverseQbytes;
+                    cmd.Parameters.Add("@Pbytes", MySqlDbType.Blob).Value = Pbytes;
                     cmd.ExecuteNonQuery();
                 }
             }

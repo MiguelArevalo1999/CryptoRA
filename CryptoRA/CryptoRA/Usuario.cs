@@ -18,7 +18,8 @@ namespace CryptoRA
         private string imagenperfil;
 
         public  Usuario(string nombreUsuario, string correo, string nombre, 
-                        string apellidos,byte[] huella, bool isadmin,string imagenperfil)
+                        string apellidos,byte[] huella, bool isadmin,string imagenperfil, byte[] dp, byte[] dq
+                        , byte[] inverseq, byte[] p, byte[] q)
         {
             NombreUsuario = nombreUsuario;
             Correo = correo;
@@ -27,6 +28,11 @@ namespace CryptoRA
             Huella = huella;
             isAdmin = isadmin;
             imagenPerfil = imagenperfil;
+            DP = dp;
+            DQ = dq;
+            InverseQ = inverseq;
+            P = p;
+            Q = q;
 
 
         }
@@ -42,6 +48,18 @@ namespace CryptoRA
         public string llavePublica { get; set; }
         public bool isAdmin { get; set; }
         public string imagenPerfil { get; set; }
+
+        public byte[] DP { get; set; }
+
+        public byte[] DQ { get; set; }
+
+        public byte[] InverseQ { get; set; }
+        public byte[] P { get; set; }
+
+        public byte[] Q { get; set; }
+
+
+
 
     }
 }

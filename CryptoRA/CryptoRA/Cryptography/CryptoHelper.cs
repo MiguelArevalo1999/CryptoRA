@@ -21,12 +21,12 @@ namespace CryptoRA.Cryptography
             return result;
         }
 
-        public static BigInteger getPublicKey(byte[] hashHuella)
+        public static RSAParameters getAsymmetricParameters(byte[] hashHuella)
         {
             BigInteger privateKey = getPrivateKey(hashHuella);
-            BigInteger publickey =  generatePublicKey(privateKey);
+            RSAParameters asymmetricParameters = generateAsymmetricParameters(privateKey);
             
-            return publickey;
+            return asymmetricParameters;
         }
 
         public static BigInteger getPrivateKey(byte[] hashHuella)
@@ -37,16 +37,16 @@ namespace CryptoRA.Cryptography
             return privateKey;
         }
 
-        public static BigInteger generatePublicKey(BigInteger hashHuella_BigInt)
+        public static RSAParameters generateAsymmetricParameters(BigInteger hashHuella_BigInt)
         {
             bool correctPrimes = true;
             BigInteger pubkey = 0;
 
+            RSAParameters rsaParameters = new RSAParameters();
+
             while (correctPrimes)
             {
                 RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(2048);
-
-                
 
                 var a = rsa.ExportParameters(true);
                 BigInteger p = new BigInteger(a.P.Reverse().Concat(new byte[1]).ToArray());
@@ -61,12 +61,21 @@ namespace CryptoRA.Cryptography
                 pubkey = ModInverse(hashHuella_BigInt, Phi(p, q));
                 if((pubkey * hashHuella_BigInt)%Phi(p,q) == 1)
                 {
-                    //Console.WriteLine("Pubkey: " + pubkey);
+                    a.D = hashHuella_BigInt.ToByteArray();
+                    a.DP = (hashHuella_BigInt%(p-1)).ToByteArray();
+                    a.DQ = (hashHuella_BigInt % (q - 1)).ToByteArray();
+                    a.InverseQ = (ModInverse(q,p)).ToByteArray();
+                    a.Exponent = pubkey.ToByteArray();
+                   
+
                     correctPrimes = false;
+                    rsaParameters = a;
+                    
                 }
 
             }
-            return pubkey;
+            return rsaParameters;
+
         }
      
         public static BigInteger Phi(BigInteger p, BigInteger q)
@@ -119,11 +128,8 @@ namespace CryptoRA.Cryptography
             return x % modulo;
         }
         
-        public static void rsaImportarLlave(byte[] pubkeyblob)
-        {
-            
-        }
-
+      
+       
 
     }
 }

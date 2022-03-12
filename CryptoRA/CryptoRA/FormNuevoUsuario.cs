@@ -44,9 +44,13 @@ namespace CryptoRA
                 Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
                 Console.WriteLine("Hash: " + ByteArrayToString(hashHuella));
 
-                BigInteger pubkey = CryptoHelper.getPublicKey(hashHuella);
-                byte [] pubkey_bytes = pubkey.ToByteArray();
-                Console.WriteLine("Pubkey len: "+pubkey_bytes.Length);
+                RSAParameters rsaParameters = CryptoHelper.getAsymmetricParameters(hashHuella);
+                byte[] pubkey_bytes = rsaParameters.Exponent;
+                byte[] DPbytes = rsaParameters.DP;
+                byte[] DQbytes = rsaParameters.DQ;
+                byte[] inverseQbytes = rsaParameters.InverseQ;
+                byte[] Pbytes = rsaParameters.P;
+                byte[] Qbytes = rsaParameters.Q;
 
                 nombreUsuario = Convert.ToString(usuarioTbox.Text);
                 correo = Convert.ToString(correoTbox.Text);
@@ -55,7 +59,8 @@ namespace CryptoRA
                 esAdmin = Convert.ToString(isAdminCb.SelectedItem);
 
 
-                UsuariosDA.InsertaUsuario(nombreUsuario, correo, nombre, apellidos, hashHuella, pubkey_bytes, esAdmin);
+                UsuariosDA.InsertaUsuario(nombreUsuario, correo, nombre, apellidos, hashHuella, pubkey_bytes, 
+                                            esAdmin,DPbytes,DQbytes,inverseQbytes,Pbytes,Qbytes);
 
                 MessageBox.Show("Usuario inscrito correctamente");
             }
