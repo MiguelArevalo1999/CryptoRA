@@ -51,6 +51,8 @@ namespace CryptoRA
                 byte[] inverseQbytes = rsaParameters.InverseQ;
                 byte[] Pbytes = rsaParameters.P;
                 byte[] Qbytes = rsaParameters.Q;
+                byte[] Dbytes = rsaParameters.D;
+                byte[] Nbytes = rsaParameters.Modulus;
 
                 nombreUsuario = Convert.ToString(usuarioTbox.Text);
                 correo = Convert.ToString(correoTbox.Text);
@@ -59,8 +61,8 @@ namespace CryptoRA
                 esAdmin = Convert.ToString(isAdminCb.SelectedItem);
 
 
-                UsuariosDA.InsertaUsuario(nombreUsuario, correo, nombre, apellidos, hashHuella, pubkey_bytes, 
-                                            esAdmin,DPbytes,DQbytes,inverseQbytes,Pbytes,Qbytes);
+                UsuariosDA.InsertaUsuario(nombreUsuario, correo, nombre, apellidos, streamHuella, hashHuella, pubkey_bytes, 
+                                            esAdmin,DPbytes,DQbytes,inverseQbytes,Pbytes,Qbytes,Dbytes,Nbytes);
 
                 MessageBox.Show("Usuario inscrito correctamente");
             }

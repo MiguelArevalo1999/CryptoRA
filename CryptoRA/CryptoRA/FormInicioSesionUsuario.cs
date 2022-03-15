@@ -38,36 +38,34 @@ namespace CryptoRA
             string nombreUsuario = null;
             byte[] streamHuella = null;
             byte[] hashHuella = null;
-            
-            try 
+            bool verified = false;
+
+            try
             {
                 nombreUsuario = txBoxNombreUsuario.Text;
                 aUser = UsuariosDA.RegresaUsuario(nombreUsuario);
+                using (VerificarHuella verifica = new VerificarHuella(nombreUsuario))
+                {
+                    verifica.OnTemplate += this.OnTemplate;
+                    verifica.ShowDialog();
+                    verified = verifica.ReturnVerification;
+                }
 
-                VerificarHuella verifica = new VerificarHuella();
-                verifica.OnTemplate += this.OnTemplate;
-                verifica.ShowDialog();
 
-                streamHuella = Template.Bytes;
-                hashHuella = CryptoHelper.ComputeHash512(streamHuella);
-
-                Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
-                Console.WriteLine("Hash: " + ByteArrayToString(hashHuella));
-                
-                Console.WriteLine("HashBD: " + ByteArrayToString(aUser.Huella));
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);    
+                MessageBox.Show(ex.Message);
             }
 
-            if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(false) && aUser.Huella.SequenceEqual(hashHuella))
+
+            if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(false) && verified)
             {
                 Form formulario1 = new FormUsuario(aUser);
                 formulario1.Show();
                 this.Hide();
             }
-            else if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(true) && aUser.Huella.SequenceEqual(hashHuella))
+            else if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(true) && verified)
             {
                 Form formulario2 = new FormInicioAdmin(aUser);
                 formulario2.Show();
@@ -79,9 +77,9 @@ namespace CryptoRA
                 txBoxNombreUsuario.Text = "";
             }
             Template = null;
-            Array.Clear(streamHuella,0, streamHuella.Length);
-            Array.Clear(hashHuella,0, hashHuella.Length);
-            
+            //Form formulario2 = new FormInicioAdmin(aUser);
+            //formulario2.Show();
+            //this.Hide();
 
         }
         public static string ByteArrayToString(byte[] ba)

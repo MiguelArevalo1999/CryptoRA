@@ -8,70 +8,92 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CryptoRA.DA_Layer;
 
 namespace CryptoRA
 {
     public partial class VerificarHuella : CaptureForm
     {
-        public delegate void OnTemplateEventHandler(DPFP.Template template);
-
-        public event OnTemplateEventHandler OnTemplate;
-
-        private DPFP.Processing.Enrollment Enroller;
-
+        private DPFP.Template Template;
+        private DPFP.Verification.Verification Verificator;
+        private string nombreusuario;
+        public void Verify(DPFP.Template template)
+        {
+            Template = template;
+            ShowDialog();
+        }
 
         protected override void Init()
         {
             base.Init();
-            base.Text = "Verificar huella";
-            Enroller = new DPFP.Processing.Enrollment();            // Create an enrollment.
-            UpdateStatus();
+            base.Text = "Verificación de huella dactilar";
+            Verificator = new DPFP.Verification.Verification();     // Create a fingerprint template verificator
+            UpdateStatus(0);
         }
+
+        private void UpdateStatus(int FAR)
+        {
+            // Show "False accept rate" value
+            SetStatus(String.Format("False Accept Rate (FAR) = {0}", FAR));
+        }
+
         protected override void Process(DPFP.Sample Sample)
         {
             base.Process(Sample);
 
             // Process the sample and create a feature set for the enrollment purpose.
-            DPFP.FeatureSet features = ExtractFeatures(Sample, DPFP.Processing.DataPurpose.Enrollment);
+            DPFP.FeatureSet features = ExtractFeatures(Sample, DPFP.Processing.DataPurpose.Verification);
 
-            // Check quality of the sample and add to enroller if it's good
-            if (features != null) try
+            // Check quality of the sample and start verification if it's good
+            // TODO: move to a separate task
+            if (features != null)
+            {
+                try
                 {
-                    MakeReport("Las características de la huella han sido extraídas.");
-                    Enroller.AddFeatures(features);     // Add feature set to template.
-                }
-                finally
-                {
-                    UpdateStatus();
+                    // Compare the feature set with our template
+                    DPFP.Verification.Verification.Result result = new DPFP.Verification.Verification.Result();
 
-                    // Check if template has been created.
-                    switch (Enroller.TemplateStatus)
+                    DPFP.Template template = new DPFP.Template();
+                    Stream stream;
+                    Usuario user =  UsuariosDA.RegresaUsuario(nombreusuario);
+                    byte[] streamHuella = user.Template;
+                    Console.WriteLine(ByteArrayToString(streamHuella));
+                    stream = new MemoryStream(streamHuella);
+                    template = new DPFP.Template(stream);
+
+                    Verificator.Verify(features, template, ref result);
+                    UpdateStatus(result.FARAchieved);
+                    if (result.Verified)
                     {
-                        case DPFP.Processing.Enrollment.Status.Ready:   // report success and stop capturing
-                            OnTemplate(Enroller.Template);
-                            SetPrompt("Escaneo exitoso.");
-                            Stop();
-                            break;
-
-                        case DPFP.Processing.Enrollment.Status.Failed:  // report failure and restart capturing
-                            Enroller.Clear();
-                            Stop();
-                            UpdateStatus();
-                            OnTemplate(null);
-                            Start();
-                            break;
+                        MakeReport("La huella dactilar fue verificada " + nombreusuario);
+                        ReturnVerification = result.Verified;
+                    }
+                    else
+                    {
+                        MakeReport("Huella dactilar no verificada,intente nuevamente." + nombreusuario);
+                        ReturnVerification = result.Verified;
                     }
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+
+            }
+
+        }
+        public VerificarHuella(string nombreUsuario)
+        {
+            nombreusuario = nombreUsuario;
+            InitializeComponent();
+
         }
 
-        private void UpdateStatus()
+        public static string ByteArrayToString(byte[] ba)
         {
-            // Show number of samples needed.
-            SetStatus(String.Format("Número de muestras necesarias: {0}", Enroller.FeaturesNeeded));
+            return BitConverter.ToString(ba).Replace("-", "");
         }
-        public VerificarHuella()
-        {
-            InitializeComponent();
-        }
+
+        public bool ReturnVerification { get; set; }
     }
 }

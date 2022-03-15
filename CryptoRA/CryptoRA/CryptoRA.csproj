@@ -196,6 +196,8 @@
     <None Include="Resources\Titulo_CrytoRA.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Docs\2022-03-03 01-39-14.mkv" />
+    <Content Include="Docs\TextFile1.txt" />
     <Content Include="Resources\file.png" />
     <None Include="Resources\fingerprint.png" />
     <Content Include="Resources\me_cobrakai.jpg" />
@@ -203,6 +205,10 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Cifrado\" />
+    <Folder Include="Descifrado\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

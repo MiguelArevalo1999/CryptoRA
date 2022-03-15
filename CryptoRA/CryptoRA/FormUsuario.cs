@@ -30,12 +30,14 @@ namespace CryptoRA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormularios<FormCifrado>();
+            Form cifrado = new FormCifrado(aUser1);
+            AbrirFormularios(cifrado);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormularios<FormDescifrado>();
+            Form descifrado = new FormDescifrado(aUser1);
+            AbrirFormularios(descifrado);
         }
 
         private void FormUsuario_Load(object sender, EventArgs e)
@@ -46,26 +48,27 @@ namespace CryptoRA
             
         }
 
-        private void AbrirFormularios<FormCifrado>() where FormCifrado:Form, new()
+        private void AbrirFormularios(Form subform) 
         {
-            Form formularios;
-            formularios = panel5.Controls.OfType<FormCifrado>().FirstOrDefault();
-            if (formularios == null)
-            {
-                formularios = new FormCifrado
-                {
-                    TopLevel = false,
-                    Dock = DockStyle.Fill
-                };
-                panel5.Controls.Add(formularios);
-                panel5.Tag = formularios;
-                formularios.Show();
-                formularios.BringToFront();
-            }
-            else
-            {
-                formularios.BringToFront();
-            }
+
+            //    formularios = new FormCifrado()
+            //    {
+            //        TopLevel = false,
+            //        Dock = DockStyle.Fill
+            //    };
+            subform.TopLevel = false;
+            panel5.Controls.Add(subform);
+            subform.Dock = DockStyle.Fill;
+            subform.Show();
+            subform.BringToFront();
+            //    panel5.Tag = formularios;
+            //    formularios.Show();
+            //    formularios.BringToFront();
+            //}
+            //else
+            //{
+            //    formularios.BringToFront();
+            //}
         }
 
         //private void button3_Click(object sender, EventArgs e)

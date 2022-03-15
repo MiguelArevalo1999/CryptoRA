@@ -13,12 +13,10 @@ namespace CryptoRA.Cryptography
     {
         public static byte[] ComputeHash512(byte[] streamHuella)
         {
-            byte[] data = new byte[streamHuella.Length];
-            byte[] result;
-            SHA512 shaM = new SHA512Managed();
-            result = shaM.ComputeHash(data);
-
-            return result;
+            using (SHA512 sha = new SHA512Managed())
+            {
+                return sha.ComputeHash(streamHuella);
+            }
         }
 
         public static RSAParameters getAsymmetricParameters(byte[] hashHuella)
@@ -61,12 +59,9 @@ namespace CryptoRA.Cryptography
                 pubkey = ModInverse(hashHuella_BigInt, Phi(p, q));
                 if((pubkey * hashHuella_BigInt)%Phi(p,q) == 1)
                 {
-                    a.D = hashHuella_BigInt.ToByteArray();
-                    a.DP = (hashHuella_BigInt%(p-1)).ToByteArray();
-                    a.DQ = (hashHuella_BigInt % (q - 1)).ToByteArray();
-                    a.InverseQ = (ModInverse(q,p)).ToByteArray();
-                    a.Exponent = pubkey.ToByteArray();
-                   
+                    //a.D = hashHuella_BigInt.ToByteArray();
+                    //a.DP = (hashHuella_BigInt%(p-1)).ToByteArray();
+                    //a.DQ = (hashHuella_BigInt % (q - 1)).ToByteArray();
 
                     correctPrimes = false;
                     rsaParameters = a;
@@ -127,9 +122,12 @@ namespace CryptoRA.Cryptography
 
             return x % modulo;
         }
-        
-      
-       
+        public static string ByteArrayToString(byte[] ba)
+        {
+            return BitConverter.ToString(ba).Replace("-", "");
+        }
+
+
 
     }
 }
