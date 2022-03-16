@@ -130,6 +130,12 @@
       <DependentUpon>FormUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\DBHelper.cs" />
+    <Compile Include="FormLlavesPublicasUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLlavesPublicasUsuarios.Designer.cs">
+      <DependentUpon>FormLlavesPublicasUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuario.resx">
       <DependentUpon>FormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLlavesPublicasUsuarios.resx">
+      <DependentUpon>FormLlavesPublicasUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

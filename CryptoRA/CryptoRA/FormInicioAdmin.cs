@@ -12,7 +12,8 @@ namespace CryptoRA
 {
     public partial class FormInicioAdmin : Form
     {
-        public FormInicioAdmin(Usuario aUser)
+        
+        public FormInicioAdmin()
         {
             InitializeComponent();
         }

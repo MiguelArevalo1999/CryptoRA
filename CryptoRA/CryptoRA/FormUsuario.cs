@@ -16,8 +16,8 @@ namespace CryptoRA
 
         public FormUsuario(Usuario aUser)
         {
-            InitializeComponent();
             aUser1 = aUser;
+            InitializeComponent();
             
         }
 
@@ -42,33 +42,32 @@ namespace CryptoRA
 
         private void FormUsuario_Load(object sender, EventArgs e)
         {
+            try
+            {
+                imgProfile.ImageLocation = aUser1.imagenPerfil;
+                imgProfile.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                imgProfile.ImageLocation = @"C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\Resources\userGeneric.png";
+            }
 
-            imgProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            imgProfile.Load(@"C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\Resources\me_cobrakai.jpg");
-            
         }
 
         private void AbrirFormularios(Form subform) 
         {
-
-            //    formularios = new FormCifrado()
-            //    {
-            //        TopLevel = false,
-            //        Dock = DockStyle.Fill
-            //    };
             subform.TopLevel = false;
             panel5.Controls.Add(subform);
             subform.Dock = DockStyle.Fill;
             subform.Show();
             subform.BringToFront();
-            //    panel5.Tag = formularios;
-            //    formularios.Show();
-            //    formularios.BringToFront();
-            //}
-            //else
-            //{
-            //    formularios.BringToFront();
-            //}
+
+        }
+
+        private void imgProfile_Click(object sender, EventArgs e)
+        {
+
         }
 
         //private void button3_Click(object sender, EventArgs e)

@@ -57,6 +57,36 @@ namespace CryptoRA.DA_Layer
             return aUsuario;
         }
 
+        public static DataTable RegresaTabla()
+        {
+            string query = "SELECT nombreUsuario,correo,Nombre,Apellidos,esAdmin," +
+                           "imagenPerfil FROM cryptora.users";
+            cmd = DBHelper.RunQueryPopulate(query);
+
+            if (cmd != null)
+            {
+                dt = new DataTable();
+                sda = new MySqlDataAdapter(cmd);
+                sda.Fill(dt);
+
+            }
+            return dt;
+        }
+        public static DataTable TablaLlavePublica()
+        {
+            string query = "SELECT nombreUsuario,correo,Nombre,Apellidos FROM cryptora.users";
+            cmd = DBHelper.RunQueryPopulate(query);
+
+            if (cmd != null)
+            {
+                dt = new DataTable();
+                sda = new MySqlDataAdapter(cmd);
+                sda.Fill(dt);
+
+            }
+            return dt;
+        }
+
         public static byte[] RegresaTemplate(string nombreUsuario)
         {
             string query = "SELECT Template FROM cryptora.users WHERE nombreUsuario = (@nombreUsuario)";

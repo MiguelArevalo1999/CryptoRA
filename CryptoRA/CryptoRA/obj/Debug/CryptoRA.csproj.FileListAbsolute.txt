@@ -175,3 +175,4 @@ C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\bin\Deb
 C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\bin\Debug\DPFPShrNET.dll
 C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\bin\Debug\DPFPVerNET.dll
 C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.CaptureForm.resources
+C:\Users\mival\source\repos\MiguelArevalo1999\CryptoRA\CryptoRA\CryptoRA\obj\Debug\CryptoRA.FormLlavesPublicasUsuarios.resources

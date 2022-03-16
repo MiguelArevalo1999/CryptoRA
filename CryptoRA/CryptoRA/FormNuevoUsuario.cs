@@ -27,7 +27,7 @@ namespace CryptoRA
        
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
-            Form formulario1 = new FormInicio();
+            Form formulario1 = new FormInicioAdmin();
             formulario1.Show();
             this.Hide();
         }
@@ -41,8 +41,8 @@ namespace CryptoRA
                 byte[] streamHuella = Template.Bytes;
                 byte[] hashHuella = CryptoHelper.ComputeHash512(streamHuella);
 
-                Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
-                Console.WriteLine("Hash: " + ByteArrayToString(hashHuella));
+                //Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
+                //Console.WriteLine("Hash: " + ByteArrayToString(hashHuella));
 
                 RSAParameters rsaParameters = CryptoHelper.getAsymmetricParameters(hashHuella);
                 byte[] pubkey_bytes = rsaParameters.Exponent;

@@ -36,8 +36,6 @@ namespace CryptoRA
         {
             Usuario aUser = null;
             string nombreUsuario = null;
-            byte[] streamHuella = null;
-            byte[] hashHuella = null;
             bool verified = false;
 
             try
@@ -67,7 +65,7 @@ namespace CryptoRA
             }
             else if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(true) && verified)
             {
-                Form formulario2 = new FormInicioAdmin(aUser);
+                Form formulario2 = new FormInicioAdmin();
                 formulario2.Show();
                 this.Hide();
             }

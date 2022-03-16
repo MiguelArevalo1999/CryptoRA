@@ -53,16 +53,7 @@ namespace CryptoRA
         private void FormCifrado_Load(object sender, EventArgs e)
         {
             cifrarButton.Enabled = false;
-            try
-            {
-                _rsa = new RSACryptoServiceProvider();
-                generateRSAParameters();
-                _rsa.ImportParameters(rsaParameters);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }            
+                        
           
 
         }
@@ -92,9 +83,10 @@ namespace CryptoRA
         private void button5_Click(object sender, EventArgs e)
         {
             
+
             if (_rsa is null)
             {
-                MessageBox.Show("Key not set.");
+                MessageBox.Show("Llave pública no configurada.");
             }
             else
             {
@@ -130,8 +122,7 @@ namespace CryptoRA
         {
             rsaParameters = new RSAParameters();
             try
-            {
-                
+            { 
                 rsaParameters.D = aUser1.D;
                 rsaParameters.P = aUser1.P;
                 rsaParameters.Q = aUser1.Q;
@@ -142,24 +133,6 @@ namespace CryptoRA
                 rsaParameters.P = aUser1.P;
                 rsaParameters.Q = aUser1.Q;
                 rsaParameters.Modulus = aUser1.N;
-
-                Console.WriteLine("D:");
-                Console.WriteLine(rsaParameters.D.Length);
-                Console.WriteLine("P:");
-                Console.WriteLine(rsaParameters.P.Length);
-                Console.WriteLine("Q:");
-                Console.WriteLine(rsaParameters.Q.Length);
-                Console.WriteLine("Exponent:");
-                Console.WriteLine(rsaParameters.Exponent.Length);
-                Console.WriteLine("DP:");
-                Console.WriteLine(rsaParameters.DP.Length);
-                Console.WriteLine("DQ:");
-                Console.WriteLine(rsaParameters.DQ.Length);
-                Console.WriteLine("P:");
-                Console.WriteLine(rsaParameters.P.Length);
-                Console.WriteLine("Q:");
-                Console.WriteLine(rsaParameters.Q.Length);
-
 
             }
             catch (Exception ex)
@@ -243,5 +216,26 @@ namespace CryptoRA
                 }
             }
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {   
+             using (FormLlavesPublicasUsuarios formllavesPublicas = new FormLlavesPublicasUsuarios())
+                {
+                    formllavesPublicas.ShowDialog();
+                    aUser1 = formllavesPublicas.llavePublicaUsuario;
+                try
+                {
+                    _rsa = new RSACryptoServiceProvider();
+                    generateRSAParameters();
+                    _rsa.ImportParameters(rsaParameters);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(Text, ex.Message);
+                }
+            }
+        }
+           
+        
     }
 }

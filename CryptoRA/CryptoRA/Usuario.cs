@@ -8,14 +8,7 @@ namespace CryptoRA
 {
     public class Usuario
     {
-        private string nombreUsuario;
-        private string correo;
-        private string nombre;
-        private string apellidos;
-        private string huella;
-        private string llavepub;
-        private bool isadmin;
-        private string imagenperfil;
+       
 
         public  Usuario(string nombreUsuario, string correo, string nombre, 
                         string apellidos, byte[] template, byte[] huella,byte[] llavepublica, bool isadmin,string imagenperfil, byte[] dp, byte[] dq

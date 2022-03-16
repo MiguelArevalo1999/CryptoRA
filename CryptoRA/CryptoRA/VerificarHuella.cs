@@ -65,12 +65,12 @@ namespace CryptoRA
                     UpdateStatus(result.FARAchieved);
                     if (result.Verified)
                     {
-                        MakeReport("La huella dactilar fue verificada " + nombreusuario);
+                        MakeReport("La huella dactilar de " + nombreusuario + " fué verificada.");
                         ReturnVerification = result.Verified;
                     }
                     else
                     {
-                        MakeReport("Huella dactilar no verificada,intente nuevamente." + nombreusuario);
+                        MakeReport("Huella dactilar de " + nombreusuario+ " no fué verificada,intente nuevamente");
                         ReturnVerification = result.Verified;
                     }
                 }

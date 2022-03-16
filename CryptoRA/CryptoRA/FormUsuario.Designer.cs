@@ -83,11 +83,12 @@ namespace CryptoRA
             // 
             // imgProfile
             // 
-            this.imgProfile.Location = new System.Drawing.Point(28, 14);
+            this.imgProfile.Location = new System.Drawing.Point(28, 0);
             this.imgProfile.Name = "imgProfile";
-            this.imgProfile.Size = new System.Drawing.Size(134, 191);
+            this.imgProfile.Size = new System.Drawing.Size(144, 222);
             this.imgProfile.TabIndex = 0;
             this.imgProfile.TabStop = false;
+            this.imgProfile.Click += new System.EventHandler(this.imgProfile_Click);
             // 
             // button2
             // 

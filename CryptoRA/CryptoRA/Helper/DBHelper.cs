@@ -13,8 +13,7 @@ namespace CryptoRA.Helper
     {
         private static MySqlConnection connection;
         private static MySqlCommand  cmd = null;
-        private static DataTable dt;
-        private static MySqlDataAdapter sda;
+       
 
         public static void EstablishConnection()
         {
@@ -48,6 +47,31 @@ namespace CryptoRA.Helper
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@nombreUsuario", username);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return cmd;
+        }
+
+        public static MySqlCommand RunQueryPopulate(string query)
+        {
+
+            try
+            {
+                if (connection != null)
+                {
+                    connection.Open();
+                    cmd = connection.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
                     cmd.ExecuteNonQuery();
                 }
             }

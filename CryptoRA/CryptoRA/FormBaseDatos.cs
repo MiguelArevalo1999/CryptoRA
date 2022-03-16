@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CryptoRA.Helper;
+using CryptoRA.DA_Layer;
+using System;
 using System.Collections.Generic;
 
 using System.ComponentModel;
@@ -16,6 +18,7 @@ namespace CryptoRA
     {
         public FormBaseDatos()
         {
+            DBHelper.EstablishConnection();
             InitializeComponent();
 
         }
@@ -28,8 +31,8 @@ namespace CryptoRA
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
-            //Form formulario1 = new FormInicioAdmin();
-            //formulario1.Show();
+            Form formulario1 = new FormInicioAdmin();
+            formulario1.Show();
             this.Hide();
         }
 
@@ -37,29 +40,12 @@ namespace CryptoRA
         {
             try
             {
-               
+                dataGridView1.DataSource = UsuariosDA.RegresaTabla();
             }
-            catch
+            catch (Exception ex)
             {
-               
+               MessageBox.Show(ex.Message); 
             }
-        }
-
-        void PopulateDataGrid(Dictionary<string, Usuario> record)
-        {
-            //dataGridView1.Rows.Clear();
-            //dataGridView1.Columns.Clear();
-
-            //dataGridView1.Columns.Add("NombreUsuario", "Nombre de usuario");
-            //dataGridView1.Columns.Add("nombre", "Nombre");
-            //dataGridView1.Columns.Add("apellidos", "Apellidos");
-            //dataGridView1.Columns.Add("correo", "Correo");
-            //dataGridView1.Columns.Add("isAdmin", "Admin");
-
-            //foreach (var item in record)
-            //{
-            //    dataGridView1.Rows.Add(item.Key, item.Value.Nombre, item.Value.Apellidos, item.Value.Correo,item.Value.isAdmin);
-            //}
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

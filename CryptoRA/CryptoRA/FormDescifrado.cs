@@ -22,6 +22,8 @@ namespace CryptoRA
         RSAParameters rsaParameters;
         string fName;
         OpenFileDialog _decryptOpenFileDialog = new OpenFileDialog();
+        private DPFP.Template Template;
+        bool verified = false;
 
         // Path variables for source, encryption, and
         // decryption folders. Must end with a backslash.
@@ -75,22 +77,13 @@ namespace CryptoRA
         private void FormDescifrado_Load(object sender, EventArgs e)
         {
             descifrarButton.Enabled = false;
-            try
-            {
-                _rsa = new RSACryptoServiceProvider();
-                generateRSAParameters();
-                _rsa.ImportParameters(rsaParameters);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
         }
         private void button5_Click(object sender, EventArgs e)
         {
             if (_rsa is null)
             {
-                MessageBox.Show("Llave de RSA no configurada.");
+                MessageBox.Show("Llave privada no configurada.");
             }
             else
             {
@@ -99,10 +92,9 @@ namespace CryptoRA
                 if (_decryptOpenFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     fName = _decryptOpenFileDialog.FileName;
-                    if (fName != null)
+                    if (fName != null && verified)
                     {
                         descifrarButton.Enabled=true;
-                      
                     }
                 }
             }
@@ -228,7 +220,23 @@ namespace CryptoRA
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-           
+            using (VerificarHuella verifica = new VerificarHuella(aUser1.NombreUsuario))
+            {
+                verifica.OnTemplate += this.OnTemplate;
+                verifica.ShowDialog();
+                verified = verifica.ReturnVerification;
+                descifrarButton.Enabled = verified;
+                try
+                {
+                    _rsa = new RSACryptoServiceProvider();
+                    generateRSAParameters();
+                    _rsa.ImportParameters(rsaParameters);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -247,6 +255,22 @@ namespace CryptoRA
                 MessageBox.Show("Error al descifrar: " + ex.Message);
             }
             
+        }
+        private void OnTemplate(DPFP.Template template)
+        {
+            this.Invoke(new Function(delegate ()
+            {
+                Template = template;
+                if (Template != null)
+                {
+                    MessageBox.Show("La plantilla de huellas dactilares está lista.", "Verificación de huella dactilar");
+
+                }
+                else
+                {
+                    MessageBox.Show("La plantilla de huella dactilar no es válida. Repita el registro de huellas dactilares.", "Verificación de huella dactilar");
+                }
+            }));
         }
     }
 }
