@@ -37,41 +37,44 @@ namespace CryptoRA
             Usuario aUser = null;
             string nombreUsuario = null;
             bool verified = false;
-
-            try
+            nombreUsuario = txBoxNombreUsuario.Text;
+            aUser = UsuariosDA.RegresaUsuario(nombreUsuario);
+            if (aUser != null)
             {
-                nombreUsuario = txBoxNombreUsuario.Text;
-                aUser = UsuariosDA.RegresaUsuario(nombreUsuario);
-                using (VerificarHuella verifica = new VerificarHuella(nombreUsuario))
-                {
-                    verifica.OnTemplate += this.OnTemplate;
-                    verifica.ShowDialog();
-                    verified = verifica.ReturnVerification;
+                try
+                {   
+                    using (VerificarHuella verifica = new VerificarHuella(nombreUsuario))
+                    {
+                        verifica.OnTemplate += this.OnTemplate;
+                        verifica.ShowDialog();
+                        verified = verifica.ReturnVerification;
+                    }
+                    if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(false) && verified)
+                    {
+                        Form formulario1 = new FormUsuario(aUser);
+                        formulario1.Show();
+                        this.Hide();
+                    }
+                    else if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(true) && verified)
+                    {
+                        Form formulario2 = new FormInicioAdmin();
+                        formulario2.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Inicio de sesión fallido, intente de nuevo");
+                        txBoxNombreUsuario.Text = "";
+                    }
                 }
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-
-            if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(false) && verified)
-            {
-                Form formulario1 = new FormUsuario(aUser);
-                formulario1.Show();
-                this.Hide();
-            }
-            else if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(true) && verified)
-            {
-                Form formulario2 = new FormInicioAdmin();
-                formulario2.Show();
-                this.Hide();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
             else
             {
-                MessageBox.Show("Inicio de sesión fallido, intente de nuevo");
+                MessageBox.Show("Nombre de usuario inexistente, verifique e intente de nuevo");
                 txBoxNombreUsuario.Text = "";
             }
             Template = null;

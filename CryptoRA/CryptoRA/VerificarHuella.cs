@@ -56,6 +56,7 @@ namespace CryptoRA
                     DPFP.Template template = new DPFP.Template();
                     Stream stream;
                     Usuario user =  UsuariosDA.RegresaUsuario(nombreusuario);
+                    
                     byte[] streamHuella = user.Template;
                     Console.WriteLine(ByteArrayToString(streamHuella));
                     stream = new MemoryStream(streamHuella);
@@ -76,7 +77,7 @@ namespace CryptoRA
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.ToString());
+                    MessageBox.Show(ex.Message);
                 }
 
             }
