@@ -99,6 +99,12 @@
     <Compile Include="FormDescifrado.Designer.cs">
       <DependentUpon>FormDescifrado.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarUsuario.Designer.cs">
+      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDescifrado.resx">
       <DependentUpon>FormDescifrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarUsuario.resx">
+      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoUsuario.resx">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>

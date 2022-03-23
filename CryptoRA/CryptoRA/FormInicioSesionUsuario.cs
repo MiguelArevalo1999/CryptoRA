@@ -39,6 +39,8 @@ namespace CryptoRA
             bool verified = false;
             nombreUsuario = txBoxNombreUsuario.Text;
             aUser = UsuariosDA.RegresaUsuario(nombreUsuario);
+            Console.WriteLine("Hash:"+ByteArrayToString(aUser.Huella));
+           
             if (aUser != null)
             {
                 try
@@ -49,15 +51,15 @@ namespace CryptoRA
                         verifica.ShowDialog();
                         verified = verifica.ReturnVerification;
                     }
-                    if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(false) && verified)
+                    if (aUser.NombreUsuario.Equals(nombreUsuario,StringComparison.CurrentCulture) && aUser.isAdmin.Equals(false) && verified)
                     {
                         Form formulario1 = new FormUsuario(aUser);
                         formulario1.Show();
                         this.Hide();
                     }
-                    else if (aUser.NombreUsuario.Equals(nombreUsuario) && aUser.isAdmin.Equals(true) && verified)
+                    else if (aUser.NombreUsuario.Equals(nombreUsuario, StringComparison.CurrentCulture) && aUser.isAdmin.Equals(true) && verified)
                     {
-                        Form formulario2 = new FormInicioAdmin();
+                        Form formulario2 = new FormInicioAdmin(aUser);
                         formulario2.Show();
                         this.Hide();
                     }

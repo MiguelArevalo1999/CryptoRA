@@ -1,7 +1,6 @@
-﻿
-namespace CryptoRA
+﻿namespace CryptoRA
 {
-    partial class FormNuevoUsuario
+    partial class FormModificarUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +28,9 @@ namespace CryptoRA
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormModificarUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.isAdminCb = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.apellidosTbox = new System.Windows.Forms.TextBox();
@@ -43,60 +41,42 @@ namespace CryptoRA
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.usuarioTbox = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.ValidarBtn = new System.Windows.Forms.Button();
-            this.InscribirBtn = new System.Windows.Forms.Button();
+            this.ModificarBtn = new System.Windows.Forms.Button();
             this.buttonRegresar = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(26, 29);
+            this.panel1.Location = new System.Drawing.Point(21, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(367, 513);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 3;
             // 
-            // panel2
+            // pictureBox1
             // 
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(399, 17);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(573, 537);
-            this.panel2.TabIndex = 3;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.isAdminCb);
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.apellidosTbox);
-            this.panel5.Controls.Add(this.nombreTbox);
-            this.panel5.Controls.Add(this.correoTbox);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.usuarioTbox);
-            this.panel5.Controls.Add(this.ValidarBtn);
-            this.panel5.Controls.Add(this.InscribirBtn);
-            this.panel5.Controls.Add(this.buttonRegresar);
-            this.panel5.Location = new System.Drawing.Point(3, 150);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(567, 384);
-            this.panel5.TabIndex = 4;
+            this.pictureBox1.Image = global::CryptoRA.Properties.Resources.pulgar4;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(323, 473);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // isAdminCb
             // 
@@ -106,9 +86,8 @@ namespace CryptoRA
             "False"});
             this.isAdminCb.Location = new System.Drawing.Point(131, 134);
             this.isAdminCb.Name = "isAdminCb";
-            this.isAdminCb.Size = new System.Drawing.Size(121, 27);
+            this.isAdminCb.Size = new System.Drawing.Size(121, 24);
             this.isAdminCb.TabIndex = 35;
-            this.isAdminCb.SelectedIndexChanged += new System.EventHandler(this.isAdminCb_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -120,27 +99,26 @@ namespace CryptoRA
             this.label12.Size = new System.Drawing.Size(74, 23);
             this.label12.TabIndex = 34;
             this.label12.Text = "ADMIN:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // apellidosTbox
             // 
             this.apellidosTbox.Location = new System.Drawing.Point(132, 100);
             this.apellidosTbox.Name = "apellidosTbox";
-            this.apellidosTbox.Size = new System.Drawing.Size(401, 26);
+            this.apellidosTbox.Size = new System.Drawing.Size(401, 22);
             this.apellidosTbox.TabIndex = 21;
             // 
             // nombreTbox
             // 
             this.nombreTbox.Location = new System.Drawing.Point(132, 71);
             this.nombreTbox.Name = "nombreTbox";
-            this.nombreTbox.Size = new System.Drawing.Size(401, 26);
+            this.nombreTbox.Size = new System.Drawing.Size(401, 22);
             this.nombreTbox.TabIndex = 20;
             // 
             // correoTbox
             // 
             this.correoTbox.Location = new System.Drawing.Point(132, 41);
             this.correoTbox.Name = "correoTbox";
-            this.correoTbox.Size = new System.Drawing.Size(401, 26);
+            this.correoTbox.Size = new System.Drawing.Size(401, 22);
             this.correoTbox.TabIndex = 19;
             // 
             // label5
@@ -191,8 +169,37 @@ namespace CryptoRA
             // 
             this.usuarioTbox.Location = new System.Drawing.Point(132, 12);
             this.usuarioTbox.Name = "usuarioTbox";
-            this.usuarioTbox.Size = new System.Drawing.Size(401, 26);
+            this.usuarioTbox.Size = new System.Drawing.Size(401, 22);
             this.usuarioTbox.TabIndex = 11;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Location = new System.Drawing.Point(394, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(573, 537);
+            this.panel2.TabIndex = 5;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.isAdminCb);
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.apellidosTbox);
+            this.panel5.Controls.Add(this.nombreTbox);
+            this.panel5.Controls.Add(this.correoTbox);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.usuarioTbox);
+            this.panel5.Controls.Add(this.ValidarBtn);
+            this.panel5.Controls.Add(this.ModificarBtn);
+            this.panel5.Controls.Add(this.buttonRegresar);
+            this.panel5.Location = new System.Drawing.Point(3, 150);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(567, 384);
+            this.panel5.TabIndex = 4;
             // 
             // ValidarBtn
             // 
@@ -206,18 +213,18 @@ namespace CryptoRA
             this.ValidarBtn.UseVisualStyleBackColor = true;
             this.ValidarBtn.Click += new System.EventHandler(this.ValidarBtn_Click);
             // 
-            // InscribirBtn
+            // ModificarBtn
             // 
-            this.InscribirBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.InscribirBtn.Enabled = false;
-            this.InscribirBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.InscribirBtn.Location = new System.Drawing.Point(390, 270);
-            this.InscribirBtn.Name = "InscribirBtn";
-            this.InscribirBtn.Size = new System.Drawing.Size(143, 34);
-            this.InscribirBtn.TabIndex = 9;
-            this.InscribirBtn.Text = "INSCRIBIR";
-            this.InscribirBtn.UseVisualStyleBackColor = true;
-            this.InscribirBtn.Click += new System.EventHandler(this.InscribirBtn_Click);
+            this.ModificarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ModificarBtn.Enabled = false;
+            this.ModificarBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ModificarBtn.Location = new System.Drawing.Point(390, 270);
+            this.ModificarBtn.Name = "ModificarBtn";
+            this.ModificarBtn.Size = new System.Drawing.Size(143, 34);
+            this.ModificarBtn.TabIndex = 9;
+            this.ModificarBtn.Text = "MODIFICAR";
+            this.ModificarBtn.UseVisualStyleBackColor = true;
+            this.ModificarBtn.Click += new System.EventHandler(this.ModificarBtn_Click);
             // 
             // buttonRegresar
             // 
@@ -231,92 +238,76 @@ namespace CryptoRA
             this.buttonRegresar.UseVisualStyleBackColor = true;
             this.buttonRegresar.Click += new System.EventHandler(this.buttonRegresar_Click);
             // 
-            // panel3
+            // panel6
             // 
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(567, 141);
-            this.panel3.TabIndex = 3;
+            this.panel6.Controls.Add(this.pictureBox3);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(567, 141);
+            this.panel6.TabIndex = 3;
             // 
-            // panel4
+            // pictureBox3
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(33, 86);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(500, 42);
-            this.panel4.TabIndex = 3;
+            this.pictureBox3.Image = global::CryptoRA.Properties.Resources.Titulo_CrytoRA;
+            this.pictureBox3.Location = new System.Drawing.Point(33, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(500, 90);
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // label4
+            // panel7
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(191, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "NUEVO USUARIO";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(104)))), ((int)(((byte)(230)))));
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Location = new System.Drawing.Point(33, 86);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(500, 42);
+            this.panel7.TabIndex = 3;
             // 
-            // pictureBox2
+            // label6
             // 
-            this.pictureBox2.Image = global::CryptoRA.Properties.Resources.Titulo_CrytoRA;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(500, 75);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(191, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(177, 23);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "MODIFICAR USUARIO";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // pictureBox1
+            // FormModificarUsuario
             // 
-            this.pictureBox1.Image = global::CryptoRA.Properties.Resources.pulgar4;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(323, 473);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // FormNuevoUsuario
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(982, 570);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormNuevoUsuario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nuevo Usuario";
-            this.Load += new System.EventHandler(this.FormNuevoUsuario_Load);
+            this.Name = "FormModificarUsuario";
+            this.Text = "FormModificarUsuario";
+            this.Load += new System.EventHandler(this.FormModificarUsuario_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox isAdminCb;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox apellidosTbox;
@@ -327,8 +318,14 @@ namespace CryptoRA
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox usuarioTbox;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button ValidarBtn;
-        private System.Windows.Forms.Button InscribirBtn;
+        private System.Windows.Forms.Button ModificarBtn;
         private System.Windows.Forms.Button buttonRegresar;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label6;
     }
 }

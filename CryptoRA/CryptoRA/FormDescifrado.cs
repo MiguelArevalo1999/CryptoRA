@@ -116,7 +116,7 @@ namespace CryptoRA
 
             // Construct the file name for the decrypted file.
             string outFile =
-                Path.ChangeExtension(file.FullName.Replace("Cifrado", "Descifrado"), ".txt");
+                Path.ChangeExtension(file.FullName.Replace("Cifrado", "Descifrado"),"." + extTxBox.Text);
 
             // Use FileStream objects to read the encrypted
             // file (inFs) and save the decrypted file (outFs).
@@ -189,7 +189,7 @@ namespace CryptoRA
                             outStreamDecrypted.Write(data, 0, count);
                         } while (count > 0);
 
-                        outStreamDecrypted.FlushFinalBlock();Console.WriteLine("Si llega");
+                        outStreamDecrypted.FlushFinalBlock(); MessageBox.Show("Archivo descifrado correctamente.");
                     }
                 }
             }
@@ -226,15 +226,18 @@ namespace CryptoRA
                 verifica.ShowDialog();
                 verified = verifica.ReturnVerification;
                 descifrarButton.Enabled = verified;
-                try
+                if (verified)
                 {
-                    _rsa = new RSACryptoServiceProvider();
-                    generateRSAParameters();
-                    _rsa.ImportParameters(rsaParameters);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                    try
+                    {
+                        _rsa = new RSACryptoServiceProvider();
+                        generateRSAParameters();
+                        _rsa.ImportParameters(rsaParameters);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
         }
@@ -246,15 +249,21 @@ namespace CryptoRA
 
         private void descifrarButton_Click(object sender, EventArgs e)
         {
-            try
+            if(String.IsNullOrEmpty(extTxBox.Text))
             {
-                DecryptFile(new FileInfo(fName));
+                MessageBox.Show("Extensión no válida, escriba la extensión del archivo. Ejemplo: txt, mp4, png");
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show("Error al descifrar: " + ex.Message);
+                try
+                {
+                    DecryptFile(new FileInfo(fName));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al descifrar: " + ex.Message);
+                }
             }
-            
         }
         private void OnTemplate(DPFP.Template template)
         {
@@ -271,6 +280,16 @@ namespace CryptoRA
                     MessageBox.Show("La plantilla de huella dactilar no es válida. Repita el registro de huellas dactilares.", "Verificación de huella dactilar");
                 }
             }));
+        }
+
+        private void extTxBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

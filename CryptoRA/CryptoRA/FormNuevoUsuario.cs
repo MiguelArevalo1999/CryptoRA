@@ -18,16 +18,18 @@ namespace CryptoRA
 {
     public partial class FormNuevoUsuario : Form
     {
+        Usuario aUser;
         private DPFP.Template Template;
-        public FormNuevoUsuario()
+        public FormNuevoUsuario(Usuario useradmin)
         {
+            aUser = useradmin;
             InitializeComponent();
         }
 
        
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
-            Form formulario1 = new FormInicioAdmin();
+            Form formulario1 = new FormInicioAdmin(aUser);
             formulario1.Show();
             this.Hide();
         }
@@ -64,7 +66,7 @@ namespace CryptoRA
                 UsuariosDA.InsertaUsuario(nombreUsuario, correo, nombre, apellidos, streamHuella, hashHuella, pubkey_bytes, 
                                             esAdmin,DPbytes,DQbytes,inverseQbytes,Pbytes,Qbytes,Dbytes,Nbytes);
 
-                MessageBox.Show("Usuario inscrito correctamente");
+
             }
             catch (Exception ex)
             {

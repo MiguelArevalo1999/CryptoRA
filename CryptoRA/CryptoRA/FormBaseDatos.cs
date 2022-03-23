@@ -16,8 +16,15 @@ namespace CryptoRA
 {
     public partial class FormBaseDatos : Form
     {
-        public FormBaseDatos()
+        Usuario aUser;
+        string nombreUsuario;
+        string correo;
+        string nombre;
+        string apellidos;
+        string esAdmin;
+        public FormBaseDatos(Usuario usuario)
         {
+            aUser = usuario;
             DBHelper.EstablishConnection();
             InitializeComponent();
 
@@ -31,7 +38,7 @@ namespace CryptoRA
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
-            Form formulario1 = new FormInicioAdmin();
+            Form formulario1 = new FormInicioAdmin(aUser);
             formulario1.Show();
             this.Hide();
         }
@@ -40,7 +47,7 @@ namespace CryptoRA
         {
             try
             {
-                dataGridView1.DataSource = UsuariosDA.RegresaTabla();
+                dataGridViewDB.DataSource = UsuariosDA.RegresaTabla();
             }
             catch (Exception ex)
             {
@@ -51,6 +58,27 @@ namespace CryptoRA
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridViewDB.SelectedRows)
+            {
+                nombreUsuario = row.Cells[0].Value.ToString();
+                correo = row.Cells[1].Value.ToString();
+                nombre = row.Cells[2].Value.ToString();
+                apellidos = row.Cells[3].Value.ToString();
+                esAdmin = row.Cells[4].Value.ToString();
+
+                break;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form modificarUsuario = new FormModificarUsuario(aUser,nombreUsuario, correo, nombre, apellidos, esAdmin);
+            modificarUsuario.Show();
+            this.Hide();
         }
     }
 }

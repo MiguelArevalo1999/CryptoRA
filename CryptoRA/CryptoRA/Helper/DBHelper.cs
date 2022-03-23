@@ -24,9 +24,11 @@ namespace CryptoRA.Helper
                 builder.UserID = "root";
                 builder.Password = "e4e5Cf3Cc6Ab5+";
                 builder.Database = "cryptora";
+                builder.AllowUserVariables = true;
                 builder.SslMode = MySqlSslMode.None;
                 connection = new MySqlConnection(builder.ToString());
-                MessageBox.Show("Database connection successfull", "Connection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                //MessageBox.Show("Database connection successfull", "Connection", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -75,7 +77,40 @@ namespace CryptoRA.Helper
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch (Exception e)
+            catch (MySqlException e)
+            {
+                
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return cmd;
+        }
+
+        public static MySqlCommand RunQueryUpdate(string query, string nombreUsuario,
+                                          string correo, string nombre,
+                                          string apellidos, string esAdmin)
+        {
+            try
+            {
+                if (connection != null)
+                {
+                    connection.Open();
+                    cmd = connection.CreateCommand();
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+                    cmd.Parameters.AddWithValue("@correo", correo);
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
+                    cmd.Parameters.AddWithValue("@Apellidos", apellidos);
+                    cmd.Parameters.AddWithValue("@esAdmin", esAdmin);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Usuario modificado con éxito");
+
+                }
+            }
+            catch (MySqlException e)
             {
                 MessageBox.Show(e.Message);
             }
@@ -117,7 +152,9 @@ namespace CryptoRA.Helper
                     cmd.Parameters.Add("@Qbytes", MySqlDbType.Blob).Value = Qbytes;
                     cmd.Parameters.Add("@Dbytes", MySqlDbType.Blob).Value = Dbytes;
                     cmd.Parameters.Add("@Nbytes", MySqlDbType.Blob).Value = Nbytes;
-                    cmd.ExecuteNonQuery();
+                    int a = cmd.ExecuteNonQuery();
+                    if (a == 0) { MessageBox.Show("Usuario no inscrito"); }
+                    else { MessageBox.Show("Usuario inscrito con éxito"); }
                 }
             }
             catch (Exception e)

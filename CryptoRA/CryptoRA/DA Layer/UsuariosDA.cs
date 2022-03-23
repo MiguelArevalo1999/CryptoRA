@@ -124,8 +124,18 @@ namespace CryptoRA.DA_Layer
             cmd = DBHelper.InsertQuery(query, nombreUsuario,correo,nombre,apellidos,streamHuella, 
                                         hashHuella,pubkey,esAdmin,DPbytes,DQbytes,inverseQbytes,Pbytes,
                                         Qbytes,Dbytes, Nbytes);
+           
+        }
+        public static void ModificaUsuario(string nombreUsuario,
+                                          string correo, string nombre,
+                                          string apellidos, string esAdmin)
+        {
+            string query = "UPDATE cryptora.users SET correo = (@correo), Nombre =  (@nombre)," +
+                "                                     Apellidos = (@apellidos), esAdmin = (@esAdmin)" +
+                "           WHERE nombreUsuario = (@nombreUsuario)";
+           
+            cmd = DBHelper.RunQueryUpdate(query,  nombreUsuario,correo, nombre, apellidos, esAdmin);
 
-                Console.WriteLine(query);
         }
     }
 }

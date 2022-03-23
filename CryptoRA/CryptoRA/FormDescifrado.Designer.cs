@@ -34,6 +34,8 @@ namespace CryptoRA
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDescifrado));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.extTxBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.descifrarButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -52,6 +54,8 @@ namespace CryptoRA
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.panel5.Controls.Add(this.extTxBox);
+            this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.descifrarButton);
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.pictureBox3);
@@ -64,6 +68,26 @@ namespace CryptoRA
             this.panel5.Size = new System.Drawing.Size(985, 550);
             this.panel5.TabIndex = 6;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // extTxBox
+            // 
+            this.extTxBox.Location = new System.Drawing.Point(151, 402);
+            this.extTxBox.Name = "extTxBox";
+            this.extTxBox.Size = new System.Drawing.Size(100, 26);
+            this.extTxBox.TabIndex = 15;
+            this.extTxBox.TextChanged += new System.EventHandler(this.extTxBox_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 356);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(357, 57);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Escribe la extensión a intercambiar del archivo a descifrar:\r\ntxt, mp4, png, docx" +
+    ", pdf.\r\n\r\n";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // descifrarButton
             // 
@@ -139,6 +163,7 @@ namespace CryptoRA
             this.Text = "CryptoRA";
             this.Load += new System.EventHandler(this.FormDescifrado_Load);
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -155,5 +180,7 @@ namespace CryptoRA
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox extTxBox;
+        private System.Windows.Forms.Label label1;
     }
 }

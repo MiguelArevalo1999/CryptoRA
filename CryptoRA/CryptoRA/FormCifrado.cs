@@ -212,7 +212,7 @@ namespace CryptoRA
                             bytesRead += blockSizeBytes;
                         } while (count > 0);
                     }
-                    outStreamEncrypted.FlushFinalBlock();
+                    outStreamEncrypted.FlushFinalBlock(); MessageBox.Show("Documento cifrado");
                 }
             }
         }

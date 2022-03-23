@@ -37,13 +37,12 @@ namespace CryptoRA.Cryptography
 
         public static RSAParameters generateAsymmetricParameters(BigInteger hashHuella_BigInt)
         {
-            bool correctPrimes = true;
+          //  bool correctPrimes = true;
             BigInteger pubkey = 0;
 
             RSAParameters rsaParameters = new RSAParameters();
 
-            while (correctPrimes)
-            {
+           
                 RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(2048);
 
                 var a = rsa.ExportParameters(true);
@@ -57,18 +56,9 @@ namespace CryptoRA.Cryptography
                 //Console.WriteLine("Phi(n): " + Phi(p, q));
 
                 pubkey = ModInverse(hashHuella_BigInt, Phi(p, q));
-                if((pubkey * hashHuella_BigInt)%Phi(p,q) == 1)
-                {
-                    //a.D = hashHuella_BigInt.ToByteArray();
-                    //a.DP = (hashHuella_BigInt%(p-1)).ToByteArray();
-                    //a.DQ = (hashHuella_BigInt % (q - 1)).ToByteArray();
+                rsaParameters = a;
+                
 
-                    correctPrimes = false;
-                    rsaParameters = a;
-                    
-                }
-
-            }
             return rsaParameters;
 
         }

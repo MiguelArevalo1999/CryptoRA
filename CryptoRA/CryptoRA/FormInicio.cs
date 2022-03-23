@@ -49,9 +49,7 @@ namespace CryptoRA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form formulario1 = new FormNuevoUsuario();
-            formulario1.Show();
-            this.Hide();
+           
         }
 
         private void FormInicio_Load(object sender, EventArgs e)

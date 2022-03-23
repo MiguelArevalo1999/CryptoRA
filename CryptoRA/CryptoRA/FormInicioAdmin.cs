@@ -12,9 +12,11 @@ namespace CryptoRA
 {
     public partial class FormInicioAdmin : Form
     {
+        Usuario aUser;
         
-        public FormInicioAdmin()
+        public FormInicioAdmin(Usuario usuario)
         {
+            aUser = usuario;
             InitializeComponent();
         }
 
@@ -27,14 +29,14 @@ namespace CryptoRA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form formulario1 = new FormNuevoUsuario();
+            Form formulario1 = new FormNuevoUsuario(aUser);
             formulario1.Show();
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form formulario1 = new FormBaseDatos();
+            Form formulario1 = new FormBaseDatos(aUser);
             formulario1.Show();
             this.Hide();
         }
