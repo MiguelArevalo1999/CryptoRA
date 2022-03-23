@@ -32,12 +32,15 @@ namespace CryptoRA
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCifrado));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.abrirCifradoDir = new System.Windows.Forms.PictureBox();
             this.cifrarButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.abrirCifradoDir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +52,8 @@ namespace CryptoRA
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.abrirCifradoDir);
             this.panel5.Controls.Add(this.cifrarButton);
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.pictureBox3);
@@ -62,6 +67,30 @@ namespace CryptoRA
             this.panel5.TabIndex = 5;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(684, 451);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 19);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Abrir carpeta de cifrado";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // abrirCifradoDir
+            // 
+            this.abrirCifradoDir.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.abrirCifradoDir.ErrorImage = ((System.Drawing.Image)(resources.GetObject("abrirCifradoDir.ErrorImage")));
+            this.abrirCifradoDir.Image = ((System.Drawing.Image)(resources.GetObject("abrirCifradoDir.Image")));
+            this.abrirCifradoDir.InitialImage = ((System.Drawing.Image)(resources.GetObject("abrirCifradoDir.InitialImage")));
+            this.abrirCifradoDir.Location = new System.Drawing.Point(873, 435);
+            this.abrirCifradoDir.Name = "abrirCifradoDir";
+            this.abrirCifradoDir.Size = new System.Drawing.Size(50, 50);
+            this.abrirCifradoDir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.abrirCifradoDir.TabIndex = 14;
+            this.abrirCifradoDir.TabStop = false;
+            this.abrirCifradoDir.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // cifrarButton
             // 
             this.cifrarButton.Location = new System.Drawing.Point(395, 288);
@@ -69,7 +98,7 @@ namespace CryptoRA
             this.cifrarButton.Name = "cifrarButton";
             this.cifrarButton.Size = new System.Drawing.Size(196, 52);
             this.cifrarButton.TabIndex = 13;
-            this.cifrarButton.Text = "CIFRAR DOCUMENTO";
+            this.cifrarButton.Text = "CIFRAR ARCHIVO";
             this.cifrarButton.UseVisualStyleBackColor = true;
             this.cifrarButton.Click += new System.EventHandler(this.CifrarButton_Click);
             // 
@@ -136,6 +165,8 @@ namespace CryptoRA
             this.Text = "CryptoRA";
             this.Load += new System.EventHandler(this.FormCifrado_Load);
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.abrirCifradoDir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -150,5 +181,7 @@ namespace CryptoRA
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox abrirCifradoDir;
+        private System.Windows.Forms.Label label1;
     }
 }

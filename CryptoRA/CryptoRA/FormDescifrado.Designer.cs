@@ -41,9 +41,12 @@ namespace CryptoRA
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.abrirCifradoDir = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abrirCifradoDir)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -54,6 +57,8 @@ namespace CryptoRA
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.abrirCifradoDir);
             this.panel5.Controls.Add(this.extTxBox);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.descifrarButton);
@@ -96,7 +101,7 @@ namespace CryptoRA
             this.descifrarButton.Name = "descifrarButton";
             this.descifrarButton.Size = new System.Drawing.Size(196, 52);
             this.descifrarButton.TabIndex = 13;
-            this.descifrarButton.Text = "DESCIFRAR DOCUMENTO";
+            this.descifrarButton.Text = "DESCIFRAR ARCHIVO";
             this.descifrarButton.UseVisualStyleBackColor = true;
             this.descifrarButton.Click += new System.EventHandler(this.descifrarButton_Click);
             // 
@@ -148,6 +153,30 @@ namespace CryptoRA
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(658, 373);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(173, 19);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Abrir carpeta de descifrado";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // abrirCifradoDir
+            // 
+            this.abrirCifradoDir.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.abrirCifradoDir.ErrorImage = ((System.Drawing.Image)(resources.GetObject("abrirCifradoDir.ErrorImage")));
+            this.abrirCifradoDir.Image = ((System.Drawing.Image)(resources.GetObject("abrirCifradoDir.Image")));
+            this.abrirCifradoDir.InitialImage = ((System.Drawing.Image)(resources.GetObject("abrirCifradoDir.InitialImage")));
+            this.abrirCifradoDir.Location = new System.Drawing.Point(873, 355);
+            this.abrirCifradoDir.Name = "abrirCifradoDir";
+            this.abrirCifradoDir.Size = new System.Drawing.Size(50, 50);
+            this.abrirCifradoDir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.abrirCifradoDir.TabIndex = 16;
+            this.abrirCifradoDir.TabStop = false;
+            this.abrirCifradoDir.Click += new System.EventHandler(this.abrirCifradoDir_Click);
+            // 
             // FormDescifrado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,6 +195,7 @@ namespace CryptoRA
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abrirCifradoDir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,5 +212,7 @@ namespace CryptoRA
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox extTxBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox abrirCifradoDir;
     }
 }

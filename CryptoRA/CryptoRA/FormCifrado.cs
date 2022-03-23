@@ -212,7 +212,7 @@ namespace CryptoRA
                             bytesRead += blockSizeBytes;
                         } while (count > 0);
                     }
-                    outStreamEncrypted.FlushFinalBlock(); MessageBox.Show("Documento cifrado");
+                    outStreamEncrypted.FlushFinalBlock(); MessageBox.Show("Archivo cifrado con éxito");
                 }
             }
         }
@@ -235,7 +235,15 @@ namespace CryptoRA
                 }
             }
         }
-           
-        
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", EncrFolder);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

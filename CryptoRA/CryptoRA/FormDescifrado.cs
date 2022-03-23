@@ -291,5 +291,15 @@ namespace CryptoRA
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void abrirCifradoDir_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", DecrFolder);
+        }
     }
 }
