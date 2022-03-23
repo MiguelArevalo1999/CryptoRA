@@ -39,7 +39,7 @@ namespace CryptoRA
             bool verified = false;
             nombreUsuario = txBoxNombreUsuario.Text;
             aUser = UsuariosDA.RegresaUsuario(nombreUsuario);
-            Console.WriteLine("Hash:"+ByteArrayToString(aUser.Huella));
+            //Console.WriteLine("Hash:"+ByteArrayToString(aUser.Huella));
            
             if (aUser != null)
             {
