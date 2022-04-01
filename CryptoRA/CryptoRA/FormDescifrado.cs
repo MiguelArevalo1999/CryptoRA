@@ -106,6 +106,7 @@ namespace CryptoRA
             // symmetric decryption of the data.
             Aes aes = Aes.Create();
             aes.Mode = CipherMode.CBC;
+            aes.KeySize = 128;
 
             // Create byte arrays to get the length of
             // the encrypted key and IV.

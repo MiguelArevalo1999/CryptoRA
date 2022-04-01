@@ -85,6 +85,12 @@ namespace CryptoRA
             string apellidos = Convert.ToString(apellidosTbox.Text);
             string esAdmin = Convert.ToString(isAdminCb.SelectedItem);
             UsuariosDA.ModificaUsuario(unombreUsuario, correo, nombre, apellidos, esAdmin);
+            if (esAdmin.Equals("False")) 
+            { 
+                Form inicio = new FormInicio();
+                inicio.Show();
+                this.Hide();
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

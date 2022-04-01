@@ -153,6 +153,11 @@ namespace CryptoRA
             // symmetric encryption of the data.
             Aes aes = Aes.Create();
             aes.Mode = CipherMode.CBC;
+            aes.KeySize = 128;
+            Console.WriteLine("Aes KeySize:" + aes.KeySize);
+            Console.WriteLine("Aes BlockSize:" + aes.BlockSize);
+            Console.WriteLine("Aes IV:"+aes.IV.Length);
+
             ICryptoTransform transform = aes.CreateEncryptor();
 
             // Use RSACryptoServiceProvider to
