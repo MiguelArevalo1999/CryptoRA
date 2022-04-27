@@ -58,7 +58,7 @@ namespace CryptoRA
                     Usuario user =  UsuariosDA.RegresaUsuario(nombreusuario);
                     
                     byte[] streamHuella = user.Template;
-                    Console.WriteLine("Clase huella: "+ByteArrayToString(streamHuella));
+                    //Console.WriteLine("Clase huella: "+ByteArrayToString(streamHuella));
                     stream = new MemoryStream(streamHuella);
                     template = new DPFP.Template(stream);
 

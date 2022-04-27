@@ -2,7 +2,7 @@
 using CryptoRA.DA_Layer;
 using System;
 using System.Collections.Generic;
-
+using System.Numerics;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -22,6 +22,13 @@ namespace CryptoRA
         string nombre;
         string apellidos;
         string esAdmin;
+        string HuellaString;
+        byte[] llavePublica;
+        byte[] D;
+        byte[] P;
+        byte[] Q;
+        byte[] N;
+        byte[] Huella;
         public FormBaseDatos(Usuario usuario)
         {
             aUser = usuario;
@@ -69,7 +76,9 @@ namespace CryptoRA
                 nombre = row.Cells[2].Value.ToString();
                 apellidos = row.Cells[3].Value.ToString();
                 esAdmin = row.Cells[4].Value.ToString();
-
+                HuellaString = row.Cells[5].Value.ToString();
+                Huella = Encoding.BigEndianUnicode.GetBytes(HuellaString);
+                BigInteger huella = new BigInteger(Huella);
                 break;
             }
         }
