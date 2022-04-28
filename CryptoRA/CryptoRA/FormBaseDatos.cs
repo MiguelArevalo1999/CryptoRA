@@ -76,9 +76,9 @@ namespace CryptoRA
                 nombre = row.Cells[2].Value.ToString();
                 apellidos = row.Cells[3].Value.ToString();
                 esAdmin = row.Cells[4].Value.ToString();
-                HuellaString = row.Cells[5].Value.ToString();
-                Huella = Encoding.BigEndianUnicode.GetBytes(HuellaString);
-                BigInteger huella = new BigInteger(Huella);
+                //HuellaString = row.Cells[5].Value.ToString();
+                //Huella = Encoding.BigEndianUnicode.GetBytes(HuellaString);
+                //BigInteger huella = new BigInteger(Huella);
                 break;
             }
         }
