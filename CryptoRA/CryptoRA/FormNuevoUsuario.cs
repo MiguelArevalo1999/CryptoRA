@@ -37,42 +37,54 @@ namespace CryptoRA
         private void InscribirBtn_Click(object sender, EventArgs e)
         {
             string nombreUsuario,correo, nombre, apellidos, esAdmin;
-
-            try
+            bool tryAgain = true;
+            while(tryAgain)
             {
-                byte[] streamHuella = Template.Bytes;
-                byte[] hashHuella = CryptoHelper.ComputeHash512(streamHuella);
+                try
+                {
+                    byte[] streamHuella = Template.Bytes;
+                    byte[] hashHuella = CryptoHelper.ComputeHash512(streamHuella);
 
-                //Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
-                //Console.WriteLine("Hash: " + ByteArrayToString(hashHuella));
+                    Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
+                    Console.WriteLine("Hash SHA-512: " + ByteArrayToString(hashHuella));
 
-                RSAParameters rsaParameters = CryptoHelper.getAsymmetricParameters(hashHuella);
-                byte[] pubkey_bytes = rsaParameters.Exponent;
-                byte[] DPbytes = rsaParameters.DP;
-                byte[] DQbytes = rsaParameters.DQ;
-                byte[] inverseQbytes = rsaParameters.InverseQ;
-                byte[] Pbytes = rsaParameters.P;
-                byte[] Qbytes = rsaParameters.Q;
-                byte[] Dbytes = rsaParameters.D;
-                byte[] Nbytes = rsaParameters.Modulus;
+                    RSAParameters rsaParameters = CryptoHelper.getAsymmetricParameters(hashHuella);
+                    Console.WriteLine(rsaParameters.Exponent.Length);
+                    if (rsaParameters.Exponent.Length>1) 
+                    {
+                        Console.WriteLine("Números primos válidos...");
+                        tryAgain = false;
+                        byte[] pubkey_bytes = rsaParameters.Exponent;
+                        byte[] DPbytes = rsaParameters.DP;
+                        byte[] DQbytes = rsaParameters.DQ;
+                        byte[] inverseQbytes = rsaParameters.InverseQ;
+                        byte[] Pbytes = rsaParameters.P;
+                        byte[] Qbytes = rsaParameters.Q;
+                        byte[] Dbytes = rsaParameters.D;
+                        byte[] Nbytes = rsaParameters.Modulus;
 
-                nombreUsuario = Convert.ToString(usuarioTbox.Text);
-                correo = Convert.ToString(correoTbox.Text);
-                nombre = Convert.ToString(nombreTbox.Text);
-                apellidos = Convert.ToString(apellidosTbox.Text);
-                esAdmin = Convert.ToString(isAdminCb.SelectedItem);
+                        nombreUsuario = Convert.ToString(usuarioTbox.Text);
+                        correo = Convert.ToString(correoTbox.Text);
+                        nombre = Convert.ToString(nombreTbox.Text);
+                        apellidos = Convert.ToString(apellidosTbox.Text);
+                        esAdmin = Convert.ToString(isAdminCb.SelectedItem);
 
 
-                UsuariosDA.InsertaUsuario(nombreUsuario, correo, nombre, apellidos, streamHuella, hashHuella, pubkey_bytes, 
-                                            esAdmin,DPbytes,DQbytes,inverseQbytes,Pbytes,Qbytes,Dbytes,Nbytes);
-
-
+                        UsuariosDA.InsertaUsuario(nombreUsuario, correo, nombre, apellidos, streamHuella, hashHuella, pubkey_bytes,
+                                                    esAdmin, DPbytes, DQbytes, inverseQbytes, Pbytes, Qbytes, Dbytes, Nbytes);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Números primos inválidos... Generando otros.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    throw;
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                throw;
-            }
+           
            
         }
         public static string ByteArrayToString(byte[] ba)

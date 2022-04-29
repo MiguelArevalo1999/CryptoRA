@@ -18,8 +18,8 @@ namespace CryptoRA
         // Declare CspParmeters and RsaCryptoServiceProvider
         // objects with global scope of your Form class.
         readonly CspParameters _cspp = new CspParameters();
-        RSACryptoServiceProvider _rsa;
-        RSAParameters rsaParameters;
+        RSACng _rsa;
+        RSAParameters rsaParameters = new RSAParameters();
         string fName;
         OpenFileDialog _encryptOpenFileDialog = new OpenFileDialog();
 
@@ -120,9 +120,9 @@ namespace CryptoRA
 
         public void generateRSAParameters()
         {
-            rsaParameters = new RSAParameters();
             try
-            { 
+            {
+
                 rsaParameters.D = aUser1.D;
                 rsaParameters.P = aUser1.P;
                 rsaParameters.Q = aUser1.Q;
@@ -130,9 +130,11 @@ namespace CryptoRA
                 rsaParameters.DP = aUser1.DP;
                 rsaParameters.DQ = aUser1.DQ;
                 rsaParameters.InverseQ = aUser1.InverseQ;
-                rsaParameters.P = aUser1.P;
-                rsaParameters.Q = aUser1.Q;
                 rsaParameters.Modulus = aUser1.N;
+
+                _rsa = new RSACng(2048);
+                _rsa.ExportParameters(false);
+                //_rsa.ImportParameters(rsaParameters);
 
             }
             catch (Exception ex)
@@ -164,8 +166,29 @@ namespace CryptoRA
             // encrypt the AES key.
             // rsa is previously instantiated:
             //    rsa = new RSACryptoServiceProvider(cspp);
-            byte[] keyEncrypted = _rsa.Encrypt(aes.Key, false);
 
+            BigInteger D = new BigInteger(rsaParameters.D);
+            BigInteger P = new BigInteger(rsaParameters.P);
+            BigInteger Q = new BigInteger(rsaParameters.Q);
+            BigInteger Exponent = new BigInteger(rsaParameters.Exponent);
+            BigInteger DP = new BigInteger(rsaParameters.DP);
+            BigInteger DQ = new BigInteger(rsaParameters.DQ);
+            BigInteger InverseQ = new BigInteger(rsaParameters.InverseQ);
+            BigInteger N = new BigInteger(rsaParameters.Modulus);
+
+            Console.WriteLine("p: " + P);
+            Console.WriteLine("q: " + Q);
+            Console.WriteLine("n: " + N);
+            Console.WriteLine("d (Huella): " + D);
+            Console.WriteLine("e llavePub: " + Exponent);
+            Console.WriteLine("dp: " + DP);
+            Console.WriteLine("dq: " + DQ);
+            Console.WriteLine("InvQ: " + InverseQ);
+
+            byte[] keyEncrypted = _rsa.Encrypt(aes.Key, RSAEncryptionPadding.Pkcs1); Console.WriteLine(keyEncrypted.Length);
+            byte[] KeyDecrypted = _rsa.Decrypt(keyEncrypted, RSAEncryptionPadding.Pkcs1); Console.WriteLine(KeyDecrypted.Length);
+            Console.WriteLine(ByteArrayToString(keyEncrypted));
+            Console.WriteLine(ByteArrayToString(KeyDecrypted));
             // Create byte arrays to contain
             // the length values of the key and IV.
             int lKey = keyEncrypted.Length;
@@ -230,9 +253,8 @@ namespace CryptoRA
                     aUser1 = formllavesPublicas.llavePublicaUsuario;
                 try
                 {
-                    _rsa = new RSACryptoServiceProvider();
                     generateRSAParameters();
-                    _rsa.ImportParameters(rsaParameters);
+                   
                 }
                 catch (Exception ex)
                 {
@@ -250,5 +272,9 @@ namespace CryptoRA
         {
 
         }
+
     }
+
+
 }
+

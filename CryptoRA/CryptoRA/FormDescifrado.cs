@@ -18,8 +18,8 @@ namespace CryptoRA
         // Declare CspParmeters and RsaCryptoServiceProvider
         // objects with global scope of your Form class.
         readonly CspParameters _cspp = new CspParameters();
-        RSACryptoServiceProvider _rsa;
-        RSAParameters rsaParameters;
+        RSACng _rsa = new RSACng(2048);
+        RSAParameters rsaParameters = new RSAParameters();
         string fName;
         OpenFileDialog _decryptOpenFileDialog = new OpenFileDialog();
         private DPFP.Template Template;
@@ -155,7 +155,30 @@ namespace CryptoRA
                 Directory.CreateDirectory(DecrFolder);
                 // Use RSACryptoServiceProvider
                 // to decrypt the AES key.
-                byte[] KeyDecrypted = _rsa.Decrypt(KeyEncrypted, false);
+                Console.WriteLine(ByteArrayToString(KeyEncrypted));
+
+                BigInteger D = new BigInteger(rsaParameters.D);
+                BigInteger P = new BigInteger(rsaParameters.P);
+                BigInteger Q = new BigInteger(rsaParameters.Q);
+                BigInteger Exponent = new BigInteger(rsaParameters.Exponent);
+                BigInteger DP = new BigInteger(rsaParameters.DP);
+                BigInteger DQ = new BigInteger(rsaParameters.DQ);
+                BigInteger InverseQ = new BigInteger(rsaParameters.InverseQ);
+                BigInteger N = new BigInteger(rsaParameters.Modulus);
+
+                Console.WriteLine("p: " + P);
+                Console.WriteLine("q: " + Q);
+                Console.WriteLine("n: " + N);
+                Console.WriteLine("d (Huella): " + D);
+                Console.WriteLine("e llavePub: " + Exponent);
+                Console.WriteLine("dp: " + DP);
+                Console.WriteLine("dq: " + DQ);
+                Console.WriteLine("InvQ: " + InverseQ);
+
+                
+
+                Console.WriteLine(KeyEncrypted.Length);
+                byte[] KeyDecrypted = _rsa.Decrypt(KeyEncrypted, RSAEncryptionPadding.Pkcs1);
 
                 // Decrypt the key.
                 ICryptoTransform transform = aes.CreateDecryptor(KeyDecrypted, IV);
@@ -198,7 +221,7 @@ namespace CryptoRA
 
         public void generateRSAParameters()
         {
-            rsaParameters = new RSAParameters();
+            //rsaParameters = new RSAParameters();
             try
             {
 
@@ -210,8 +233,8 @@ namespace CryptoRA
                 rsaParameters.DQ = aUser1.DQ;
                 rsaParameters.InverseQ = aUser1.InverseQ;
                 rsaParameters.Modulus = aUser1.N;
-
-               
+                _rsa.ExportParameters(true);
+                //_rsa.ImportParameters(rsaParameters);
             }
             catch (Exception ex)
             {
@@ -231,9 +254,8 @@ namespace CryptoRA
                 {
                     try
                     {
-                        _rsa = new RSACryptoServiceProvider();
                         generateRSAParameters();
-                        _rsa.ImportParameters(rsaParameters);
+                      
                     }
                     catch (Exception ex)
                     {
@@ -246,6 +268,10 @@ namespace CryptoRA
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        public static string ByteArrayToString(byte[] ba)
+        {
+            return BitConverter.ToString(ba).Replace("-", "");
         }
 
         private void descifrarButton_Click(object sender, EventArgs e)

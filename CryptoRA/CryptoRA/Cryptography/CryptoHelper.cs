@@ -30,36 +30,66 @@ namespace CryptoRA.Cryptography
         public static BigInteger getPrivateKey(byte[] hashHuella)
         {
             BigInteger privateKey = new BigInteger(hashHuella);
-
+            if(privateKey < 0) { privateKey = -privateKey; }
             if (privateKey.IsEven) { privateKey++; }
             return privateKey;
         }
 
         public static RSAParameters generateAsymmetricParameters(BigInteger hashHuella_BigInt)
         {
-          //  bool correctPrimes = true;
+           
             BigInteger pubkey = 0;
 
-            RSAParameters rsaParameters = new RSAParameters();
+            var rsa = new RSACng(2048);
+            var a = rsa.ExportParameters(true);
 
-           
-                RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(2048);
+            BigInteger p = new BigInteger(a.P.Reverse().Concat(new byte[1]).ToArray());
+            BigInteger q = new BigInteger(a.Q.Reverse().Concat(new byte[1]).ToArray());
+            BigInteger n = new BigInteger(a.Modulus.Reverse().Concat(new byte[1]).ToArray());
+            BigInteger dp = new BigInteger(a.DP.Reverse().Concat(new byte[1]).ToArray());
+            BigInteger dq = new BigInteger(a.DQ.Reverse().Concat(new byte[1]).ToArray());
+            BigInteger invq = new BigInteger(a.InverseQ.Reverse().Concat(new byte[1]).ToArray());
+            BigInteger d = new BigInteger(a.D.Reverse().Concat(new byte[1]).ToArray());
 
-                var a = rsa.ExportParameters(true);
-                BigInteger p = new BigInteger(a.P.Reverse().Concat(new byte[1]).ToArray());
-                BigInteger q = new BigInteger(a.Q.Reverse().Concat(new byte[1]).ToArray());
-                BigInteger n = new BigInteger(a.Modulus.Reverse().Concat(new byte[1]).ToArray());
-                //Console.WriteLine(p * q == n);
-                //Console.WriteLine("p: " + p);
-                //Console.WriteLine("q: " + q);
-                //Console.WriteLine("n: " + n);
-                //Console.WriteLine("Phi(n): " + Phi(p, q));
 
-                pubkey = ModInverse(hashHuella_BigInt, Phi(p, q));
-                rsaParameters = a;
-                
+            Console.WriteLine("HuellaBigInt: " + hashHuella_BigInt);
+            Console.WriteLine(p * q == n);
+            Console.WriteLine("p: " + p);
+            Console.WriteLine("q: " + q);
+            Console.WriteLine("n: " + n);
+            Console.WriteLine("invQ: " + invq);
+            Console.WriteLine("Phi(n): " + Phi(p, q));
+            //Console.WriteLine("dp(0): " + dp);
+            //Console.WriteLine("dq(0): " + dq);
+            //Console.WriteLine(dp == d % (p - 1));
+            //Console.WriteLine(dq == d % (q - 1));
 
-            return rsaParameters;
+            pubkey = ModInverse(hashHuella_BigInt, Phi(p, q));
+            Console.WriteLine("Pubkey: " + pubkey);
+
+            BigInteger remainder1;
+            BigInteger remainder2;
+            remainder1 = BigInteger.Remainder(hashHuella_BigInt, p - 1);
+            remainder2 = BigInteger.Remainder(hashHuella_BigInt, q - 1);
+
+            a.P = p.ToByteArray();
+            a.Q = q.ToByteArray();
+            a.InverseQ = invq.ToByteArray();
+            a.Modulus = n.ToByteArray();
+            a.Exponent = pubkey.ToByteArray();
+            a.D = hashHuella_BigInt.ToByteArray();
+            a.DP = remainder1.ToByteArray();
+            a.DQ = remainder2.ToByteArray();
+
+
+            Console.WriteLine("dp: " + remainder1);
+            Console.WriteLine("dq: " + remainder2);
+            Console.WriteLine(remainder1 == hashHuella_BigInt % (p - 1));
+            Console.WriteLine(remainder2 == hashHuella_BigInt % (q - 1));
+
+            Console.WriteLine("d * e % Phi(n): " + (pubkey * hashHuella_BigInt) % Phi(p, q));
+
+            return a;
 
         }
      
@@ -116,8 +146,6 @@ namespace CryptoRA.Cryptography
         {
             return BitConverter.ToString(ba).Replace("-", "");
         }
-
-
 
     }
 }
