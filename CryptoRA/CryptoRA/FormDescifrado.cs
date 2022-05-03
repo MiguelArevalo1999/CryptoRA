@@ -114,7 +114,7 @@ namespace CryptoRA
             // at the beginning of the encrypted package.
             byte[] LenK = new byte[4];
             byte[] LenIV = new byte[4];
-
+            Console.WriteLine(file);
             // Construct the file name for the decrypted file.
             string outFile =
                 Path.ChangeExtension(file.FullName.Replace("Cifrado", "Descifrado"),"." + extTxBox.Text);
