@@ -59,7 +59,7 @@ namespace CryptoRA.DA_Layer
 
         public static DataTable RegresaTabla()
         {
-            string query = "SELECT nombreUsuario,correo,Nombre,Apellidos,esAdmin,Huella,D,llavePublica,P,Q,N," +
+            string query = "SELECT nombreUsuario,correo,Nombre,Apellidos,esAdmin," +
                            "imagenPerfil FROM cryptora.users";
             cmd = DBHelper.RunQueryPopulate(query);
 
