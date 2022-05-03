@@ -84,8 +84,8 @@ namespace CryptoRA.Cryptography
 
             Console.WriteLine("dp: " + remainder1);
             Console.WriteLine("dq: " + remainder2);
-            Console.WriteLine(remainder1 == hashHuella_BigInt % (p - 1));
-            Console.WriteLine(remainder2 == hashHuella_BigInt % (q - 1));
+            //Console.WriteLine(remainder1 == hashHuella_BigInt % (p - 1));
+            //Console.WriteLine(remainder2 == hashHuella_BigInt % (q - 1));
 
             Console.WriteLine("d * e % Phi(n): " + (pubkey * hashHuella_BigInt) % Phi(p, q));
 
@@ -103,6 +103,7 @@ namespace CryptoRA.Cryptography
                           out BigInteger leftFactor,
                           out BigInteger rightFactor)
         {
+           // Console.WriteLine("Algoritmo Extendido de Euclides: Valor {0}, Modulo{1} ", left, right);
             leftFactor = 0;
             rightFactor = 1;
             BigInteger u = 1;
@@ -116,6 +117,9 @@ namespace CryptoRA.Cryptography
 
                 BigInteger m = leftFactor - u * q;
                 BigInteger n = rightFactor - v * q;
+                
+                //Console.WriteLine("Cociente (modulo/valor): " + q);
+                //Console.WriteLine("Residuo (modulo%valor): " + r);
 
                 right = left;
                 left = r;
@@ -125,6 +129,8 @@ namespace CryptoRA.Cryptography
                 v = n;
 
                 gcd = right;
+
+                //Console.WriteLine("gcd actual:" + gcd);
             }
             //Console.WriteLine(gcd);
             return gcd;

@@ -19,7 +19,7 @@ namespace CryptoRA
         // objects with global scope of your Form class.
         readonly CspParameters _cspp = new CspParameters();
         RSACng _rsa;
-        RSAParameters rsaParameters = new RSAParameters();
+        RSAParameters rsaParameters;
         string fName;
         OpenFileDialog _encryptOpenFileDialog = new OpenFileDialog();
 
@@ -120,21 +120,44 @@ namespace CryptoRA
 
         public void generateRSAParameters()
         {
+
             try
             {
 
-                rsaParameters.D = aUser1.D;
-                rsaParameters.P = aUser1.P;
-                rsaParameters.Q = aUser1.Q;
-                rsaParameters.Exponent = aUser1.llavePublica;
-                rsaParameters.DP = aUser1.DP;
-                rsaParameters.DQ = aUser1.DQ;
-                rsaParameters.InverseQ = aUser1.InverseQ;
-                rsaParameters.Modulus = aUser1.N;
+                rsaParameters.D = new byte[aUser1.D.Length];
+                Array.Copy(aUser1.D, 0, rsaParameters.D, 0, aUser1.D.Length);
 
-                _rsa = new RSACng(2048);
-                _rsa.ExportParameters(false);
-                //_rsa.ImportParameters(rsaParameters);
+                rsaParameters.P = new byte[aUser1.P.Length];
+                Array.Copy(aUser1.P, 0, rsaParameters.P, 0, aUser1.P.Length)
+                    ;
+                rsaParameters.Q = new byte[aUser1.Q.Length];
+                Array.Copy(aUser1.Q,0,rsaParameters.Q, 0,aUser1.Q.Length);
+
+                rsaParameters.InverseQ = new byte[aUser1.InverseQ.Length];
+                Array.Copy(aUser1.InverseQ,0,rsaParameters.InverseQ, 0, aUser1.InverseQ.Length);
+
+                rsaParameters.Exponent = new byte[aUser1.llavePublica.Length];
+                Array.Copy(aUser1.llavePublica, 0, rsaParameters.Exponent, 0, aUser1.llavePublica.Length);
+
+                rsaParameters.DP = new byte[aUser1.DP.Length];
+                Array.Copy(aUser1.DP, 0, rsaParameters.DP, 0, aUser1.DP.Length);
+
+                rsaParameters.DQ = new byte[aUser1.DQ.Length];
+                Array.Copy(aUser1.DQ, 0, rsaParameters.DQ, 0, aUser1.DQ.Length);
+
+                rsaParameters.Modulus = new byte[aUser1.N.Length];
+                Array.Copy(aUser1.N, 0, rsaParameters.Modulus, 0, aUser1.N.Length);
+
+
+
+                //rsaParameters.Q = aUser1.Q;
+                //rsaParameters.Exponent = aUser1.llavePublica;
+                //rsaParameters.DP = aUser1.DP;
+                //rsaParameters.DQ = aUser1.DQ;
+                //rsaParameters.InverseQ = aUser1.InverseQ;
+                //rsaParameters.Modulus = aUser1.N;
+                
+                ////_rsa.ImportParameters(rsaParameters);
 
             }
             catch (Exception ex)
@@ -253,7 +276,11 @@ namespace CryptoRA
                     aUser1 = formllavesPublicas.llavePublicaUsuario;
                 try
                 {
+                    _rsa = new RSACng();
+                    rsaParameters = new RSAParameters();
+                    rsaParameters = _rsa.ExportParameters(false);
                     generateRSAParameters();
+                    //_rsa.ImportParameters(rsaParameters);
                    
                 }
                 catch (Exception ex)

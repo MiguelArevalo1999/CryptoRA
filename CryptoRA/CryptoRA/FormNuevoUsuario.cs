@@ -44,13 +44,18 @@ namespace CryptoRA
                 {
                     byte[] streamHuella = Template.Bytes;
                     byte[] hashHuella = CryptoHelper.ComputeHash512(streamHuella);
+                    
 
                     Console.WriteLine("Huella: " + ByteArrayToString(streamHuella));
                     Console.WriteLine("Hash SHA-512: " + ByteArrayToString(hashHuella));
 
                     RSAParameters rsaParameters = CryptoHelper.getAsymmetricParameters(hashHuella);
-                    Console.WriteLine(rsaParameters.Exponent.Length);
-                    if (rsaParameters.Exponent.Length>1) 
+                    BigInteger p = new BigInteger(rsaParameters.P);
+                    BigInteger q = new BigInteger(rsaParameters.Q);
+                    BigInteger d = new BigInteger(rsaParameters.D);
+                    BigInteger exponent = new BigInteger(rsaParameters.Exponent);
+
+                    if ((BigInteger.Multiply(d,exponent) % Phi(p,q)) == 1) 
                     {
                         Console.WriteLine("Números primos válidos...");
                         tryAgain = false;
@@ -133,6 +138,11 @@ namespace CryptoRA
         private void isAdminCb_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public static BigInteger Phi(BigInteger p, BigInteger q)
+        {
+            return (p - 1) * (q - 1);
         }
     }
 }
