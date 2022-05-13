@@ -13,20 +13,13 @@ namespace CryptoRA.Helper
     {
         private static MySqlConnection connection;
         private static MySqlCommand  cmd = null;
-       
+        private static string cadenaConexion = "Server=cryptora.mysql.database.azure.com;UserID = cryptora;Password=e4e5Cf3Cc6;Database=cryptora;";
 
         public static void EstablishConnection()
         {
             try
             {
-                MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-                builder.Server = "127.0.0.1";
-                builder.UserID = "root";
-                builder.Password = "e4e5Cf3Cc6Ab5+";
-                builder.Database = "cryptora";
-                builder.AllowUserVariables = true;
-                builder.SslMode = MySqlSslMode.None;
-                connection = new MySqlConnection(builder.ToString());
+                connection = new MySqlConnection(cadenaConexion);
                 
                 //MessageBox.Show("Database connection successfull", "Connection", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
